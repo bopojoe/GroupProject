@@ -5,7 +5,5 @@ package project;
  */
 
 
-public class List {
-
-
+public class Movie {
 }
