@@ -7,5 +7,5 @@ package project;
 
 public class Actor {
     //add
-    //
+    //remove
 }
