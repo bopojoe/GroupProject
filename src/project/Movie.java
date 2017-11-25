@@ -13,6 +13,7 @@ private int runningTime;
 private LinkedList genre;
 private String plot;
 private String imgUrl;
+private LinkedList<Actor> actors;
 
 
     public Movie(String title, int year, int runningTime, LinkedList genre, String plot, String imgUrl) {
