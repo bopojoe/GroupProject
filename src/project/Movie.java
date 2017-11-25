@@ -9,7 +9,7 @@ public class Movie {
 
 private String title;
 private int year;
-private int runningTime;
+private int runningTime; //minutes
 private LinkedList genre;
 private String plot;
 private String imgUrl;
