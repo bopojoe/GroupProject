@@ -10,10 +10,10 @@ package project;
         private int age;
         private String gender;
         private String nationality;
-        private list genre; // list of genres so we can make a drop down in javafx | genre they star in maybe
+        private LinkedList genre; // list of genres so we can make a drop down in javafx | genre they star in maybe
 
         // constructor
-        public Actor(String name,int age, String gender, list genre, String nationality) {
+        public Actor(String name,int age, String gender, LinkedList genre, String nationality) {
             this.name = name;
             this.age = age;
             this.gender = gender;
@@ -53,11 +53,11 @@ package project;
             this.nationality = nationality;
         }
 
-        public list getGenre() {
+        public LinkedList getGenre() {
             return genre;
         }
 
-        public void setGenre(list genre) {
+        public void setGenre(LinkedList genre) {
             this.genre = genre;
         }
 
