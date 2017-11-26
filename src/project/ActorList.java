@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class ActorList implements Iterable<Actor>{
     private int index;
-    protected static LinkedList<Actor> actorList = new LinkedList<>();
+    protected static LinkedList<Actor> actorList = new LinkedList<Actor>();
 
     @Override
     public Iterator<Actor> iterator() {
