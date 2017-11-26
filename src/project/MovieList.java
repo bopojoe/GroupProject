@@ -40,10 +40,10 @@ private int index;
 }
 
 
-private void setup(int howMany){
+protected void setup(int howMany){
 
         for(int i =0;i!=howMany;i++){
-            hashlist.add(movielist);
+            hashlist.add(new LinkedList<>());
         }
 
     }

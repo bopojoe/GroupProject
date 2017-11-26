@@ -239,7 +239,7 @@ public class LinkedList<E> implements Iterable
     protected DataLink<E> findLink(int index)
     {
         CheckValidIndex(index);
-        if (size <= 0) return null;
+        if (size <= 0) {return null;}
 
         DataLink<E> theLink = header.nextDataLink;
         if (index == 0)
@@ -248,7 +248,7 @@ public class LinkedList<E> implements Iterable
         }
         else
         {
-            for (int i = 1; i <= index; i++)
+            for (int i = 1; i < index; i++)
             {
                 //move to the link to get
                 theLink = theLink.nextDataLink;

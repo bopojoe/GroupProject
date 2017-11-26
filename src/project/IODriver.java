@@ -150,6 +150,7 @@ public class IODriver {
             System.out.println(listAtIndex.header.toString());
             input.nextLine();
             listAtIndex.add(new Movie(title, year,runningTime,plot,imgUrl));
+        System.out.println(listAtIndex.header.nextDataLink.data.toString());
 
 
     }
@@ -174,8 +175,8 @@ public class IODriver {
     public void listm(int runtime){
         int hash = runtime%50;
         LinkedList<Movie> test = MovieList.hashlist.get(hash);
-
         LinkedList.DataLink head = test.header;
+
 
         while(head.nextDataLink!=null){
             System.out.println(head.nextDataLink.data.toString());
@@ -204,7 +205,6 @@ public class IODriver {
         for (int i = 1; i!= amount; i++){
             int runTime = ((i * i) + 90);
             addMoviehelper("title " + i, i + 1000, runTime, "Plot " + i, "imgUrl " + i);
-            System.out.println(i);
 
 
         }
