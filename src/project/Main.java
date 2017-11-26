@@ -1,6 +1,24 @@
 package project;
 
 
+
+public class Main{
+
+    public static void main(String[] args) {
+        Main test = new Main();
+
+
+    }
+    public Main(){
+        IODriver app = new IODriver();
+
+
+    }
+
+/*
+    }package project;
+
+
         import javafx.application.Application;
         import javafx.fxml.FXMLLoader;
         import javafx.scene.Parent;
@@ -51,4 +69,7 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+}
+*/
+
 }
