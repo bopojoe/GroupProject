@@ -15,26 +15,8 @@ public class Main{
 
     }
 
-/*public class Main extends Application {
-
-    Button button;
-
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        button = new Button("Add");
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
-    }
-
-
-    public static void main(String[] args) {
-        launch(args);
-    }*/
-
-
-/*package project;
+/*
+    }package project;
 
 
         import javafx.application.Application;
@@ -47,47 +29,47 @@ public class Main{
 
 
 
-    public class Main extends Application {
+public class Main extends Application {
 
-        Stage window;
-        BorderPane layout;
+    Stage window;
+    BorderPane layout;
 
-        @Override
-        public void start(Stage primaryStage) throws Exception{
-            window = primaryStage;
-            window.setTitle("Better IMDB");
-            Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        window = primaryStage;
+        window.setTitle("Better IMDB");
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-            //Search Menu
-            Menu searchMenu = new Menu("search");
+        //Search Menu
+        Menu searchMenu = new Menu("search");
 
-            //Menu Items
-            MenuItem newFile = new MenuItem("New");
-            newFile.setOnAction(e -> System.out.println("Create a new file"));
+        //Menu Items
+        MenuItem newFile = new MenuItem("New");
+                newFile.setOnAction(e -> System.out.println("Create a new file"));
+        searchMenu.getItems().add(newFile);
+        searchMenu.getItems().add(new MenuItem("Actor"));
+        searchMenu.getItems().add(new SeparatorMenuItem());
+        searchMenu.getItems().add(new MenuItem("Movie"));
+        searchMenu.getItems().add(new SeparatorMenuItem());
+        searchMenu.getItems().add(new MenuItem("Exit"));
 
-            searchMenu.getItems().add(newFile);
-            searchMenu.getItems().add(new MenuItem("Actor"));
-            searchMenu.getItems().add(new SeparatorMenuItem());
-            searchMenu.getItems().add(new MenuItem("Movie"));
-            searchMenu.getItems().add(new SeparatorMenuItem());
-            searchMenu.getItems().add(new MenuItem("Exit"));
+        //Main menu bar
+        MenuBar menuBar = new MenuBar();
+        menuBar.getMenus().addAll(searchMenu);
 
-            //Main menu bar
-            MenuBar menuBar = new MenuBar();
-            menuBar.getMenus().addAll(searchMenu);
+        layout = new BorderPane();
+        layout.setTop(menuBar);
 
-            layout = new BorderPane();
-            layout.setTop(menuBar);
-
-            Scene scene = new Scene(layout, 400,400);
-            window.setScene(scene);
-            window.show();
-        }
+        Scene scene = new Scene(layout, 400,400);
+        window.setScene(scene);
+        window.show();
+    }
 
 
-        public static void main(String[] args) {
-            launch(args);
-        }
-    }*/
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+*/
 
 }
