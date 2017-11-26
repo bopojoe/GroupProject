@@ -55,11 +55,36 @@ package project;
         Stage window;
         BorderPane layout;
 
-        @Override
-        public void start(Stage primaryStage) throws Exception{
-            window = primaryStage;
-            window.setTitle("Better IMDB");
-            Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        window = primaryStage;
+        window.setTitle("Better IMDB");
+       Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
+
+
+//        bp.setTop(x=new Label("Air"));
+//        x.setAlignment(Pos.CENTER);
+//        x.setBackground(new Background(new BackgroundFill(Color.BISQUE,
+//                new CornerRadii(4),new Insets(3))));
+//        x.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+//        x.setPrefHeight(50);
+
+
+        //Search Menu
+        Menu searchMenu = new Menu("_search");
+
+
+            //Menu Items
+            MenuItem newFile = new MenuItem("New");
+            newFile.setOnAction(e -> System.out.println("Create a new file"));
+            searchMenu.getItems().add(newFile);
+            searchMenu.getItems().add(new MenuItem("Actor"));
+            searchMenu.getItems().add(new SeparatorMenuItem());
+            searchMenu.getItems().add(new MenuItem("Movie"));
+            searchMenu.getItems().add(new SeparatorMenuItem());
+            searchMenu.getItems().add(new MenuItem("Exit"));
 
 
 
@@ -83,6 +108,7 @@ package project;
             searchMenu.getItems().add(new MenuItem("Movie"));
             searchMenu.getItems().add(new SeparatorMenuItem());
             searchMenu.getItems().add(new MenuItem("Exit"));
+
 
             //Main menu bar
             MenuBar menuBar = new MenuBar();

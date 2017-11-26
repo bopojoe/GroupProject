@@ -8,6 +8,7 @@ import java.util.Iterator;
 
 
 public class MovieList implements Iterable<Movie> {
+
 private int index;
 
     protected static LinkedList<LinkedList<Movie>> hashlist = new LinkedList<LinkedList<Movie>>();
@@ -49,27 +50,5 @@ protected void setup(int howMany){
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
