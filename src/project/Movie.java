@@ -10,17 +10,17 @@ public class Movie {
 private String title;
 private int year;
 private int runningTime; //minutes
-private LinkedList genre;
+
 private String plot;
 private String imgUrl;
 private LinkedList<Actor> actors;
 
 
-    public Movie(String title, int year, int runningTime, LinkedList genre, String plot, String imgUrl) {
+    public Movie(String title, int year, int runningTime, String plot, String imgUrl) {
         this.title = title;
         this.year = year;
         this.runningTime = runningTime;
-        this.genre = genre;
+
         this.plot = plot;
         this.imgUrl = imgUrl;
     }
@@ -49,13 +49,6 @@ private LinkedList<Actor> actors;
         this.runningTime = runningTime;
     }
 
-    public LinkedList getGenre() {
-        return genre;
-    }
-
-    public void setGenre(LinkedList genre) {
-        this.genre = genre;
-    }
 
     public String getPlot() {
         return plot;
