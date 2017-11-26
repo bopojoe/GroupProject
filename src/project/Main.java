@@ -8,9 +8,22 @@ package project;
         import javafx.scene.control.Button;
         import javafx.stage.Stage;
 
+        import java.util.Scanner;
+
+public class Main{
+
+    public static void main(String[] args) {
+        Main test = new Main();
 
 
-public class Main extends Application {
+    }
+    public Main(){
+        IODriver app = new IODriver();
+
+
+    }
+
+/*public class Main extends Application {
 
     Button button;
 
@@ -26,5 +39,8 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-    }
+    }*/
+
+
+
 }
