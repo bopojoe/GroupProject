@@ -8,7 +8,7 @@ import java.util.NoSuchElementException;
 
 public class LinkedList<E> implements Iterable
 {
-    private DataLink<E> header = null;
+    protected DataLink<E> header = null;
     private int size;
 
     /**
@@ -57,9 +57,9 @@ public class LinkedList<E> implements Iterable
         DataLink<E> prevLink = null;
         //create a new link and append it to the end of the chain
 
-        int key = index%size;
+
         //hashing the index from the input to place in the list
-        if (key == 0)
+        if (index == 0)
         {
             prevLink = header;
         }
@@ -67,13 +67,54 @@ public class LinkedList<E> implements Iterable
         {
             //find the link at index and it's next link
             //to insert in the middle
-            prevLink = findLink(key - 1);
+            prevLink = findLink(index - 1);
         }
         prevLink.nextDataLink = new DataLink<E>(data, prevLink);
 
         //increment the size
         size++;
     }
+  /*  public void addAtIndexS(int index, E data)
+    {
+        Movie newData  = (Movie) data;
+
+        //can actually add at size since it would be the
+        //tail DataLink
+        if (index < 0 || index > size)
+        {
+            throw new IndexOutOfBoundsException();
+        }
+
+        DataLink<E> prevLink = null;
+        //create a new link and append it to the end of the chain
+
+        int key = index%size;      //hashing the index from the input to place in the list
+        LinkedList<Movie> listAtIndex = MovieList.hashlist.get(key);
+        listAtIndex.add(newData);
+
+        if (key == 0)
+        {
+
+            listAtIndex.add(newData);
+        }
+        else
+        {
+            //find the link at index and it's next link
+            //to insert in the middle
+            prevLink = findLink(key - 1);
+        }
+
+        MovieList.hashlist.header.data.add(newMovie);
+        prevLink.
+        prevLink.nextDataLink = new DataLink<E>(data, prevLink);
+
+        //increment the size
+        size++;
+    }*/
+
+
+
+
 
     /**
      * Remove data from the chain
@@ -149,6 +190,22 @@ public class LinkedList<E> implements Iterable
     }
 
     /**
+     * Get the data from the list at index and hash index for list size 50
+     */
+    public E getHash(int index)
+    {
+        int hash = index%50;
+        //make sure the index is valid
+        CheckValidIndex(hash);
+        DataLink<E> theLink = findLink(hash);
+        if (theLink != null)
+        {
+            return theLink.data;
+        }
+        return null;
+    }
+
+    /**
      * Find the index of the first matching link
      */
     public int findIndex(E data)
@@ -216,11 +273,12 @@ public class LinkedList<E> implements Iterable
     /**
      * DataLink Stores data and links to the next DataLink.
      */
-    private class DataLink<E>
+    protected class DataLink<E>
     {
         private int index;
-        private E data;				  		//the data
-        private DataLink<E> nextDataLink;   //the next link in the chain
+        protected E data;				  		//the data
+        protected DataLink<E> nextDataLink;   //the next link in the chain
+
 
         /**
          * Create a single data link.

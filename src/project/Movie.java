@@ -65,4 +65,10 @@ private LinkedList<Actor> actors;
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
     }
+
+    @Override
+    public String toString() {
+        String str = "Movie info: [name:"+getTitle()+", "+"Year:"+getYear()+", "+"Film Length: "+getRunningTime()+", "+"Plot: "+getPlot()+", "+"Film Img Url"+getImgUrl()+"] \n";
+        return str;
+    }
 }

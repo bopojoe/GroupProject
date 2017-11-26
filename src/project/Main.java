@@ -20,9 +20,22 @@ package project;
         import javafx.scene.paint.Color;
         import javafx.stage.Stage;
 
+        import java.util.Scanner;
+
+public class Main{
+
+    public static void main(String[] args) {
+        Main test = new Main();
 
 
-public class Main extends Application {
+    }
+    public Main(){
+        IODriver app = new IODriver();
+
+
+    }
+
+/*public class Main extends Application {
 
     Stage window;
     BorderPane layout;
@@ -71,5 +84,8 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-    }
+    }*/
+
+
+
 }

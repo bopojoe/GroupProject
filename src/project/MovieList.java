@@ -10,78 +10,43 @@ import java.util.Iterator;
 public class MovieList implements Iterable<Movie> {
 private int index;
 
-    protected static LinkedList<Movie> movieList = new LinkedList<>();
+    protected static LinkedList<LinkedList<Movie>> hashlist = new LinkedList<LinkedList<Movie>>();
+    protected static LinkedList<Movie> movielist = new LinkedList<>();
 
     @Override
     public Iterator<Movie> iterator() {
-        return movieList.iterator();
+        return movielist.iterator();
     }
 
     public MovieList() {
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
-        movieList.add(null);
+        setup(50);
+
 
     }
 
+
+    public void add()
+    {
+        LinkedList<Movie> innerList = hashlist.header.data;
+}
+
+
     public void addMovie(String title, int year, int runningTime, String plot, String imgUrl){
     Movie newMovie = new Movie(title,year, runningTime, plot,imgUrl);
-    movieList.addAtIndex(index,newMovie);
+    int index = runningTime;
+    movielist.addAtIndex(index,newMovie);
     System.out.println("You've just added:" + newMovie.toString());
     this.index ++;
 }
 
 
+private void setup(int howMany){
 
+        for(int i =0;i!=howMany;i++){
+            hashlist.add(movielist);
+        }
 
-
+    }
 
 
 
