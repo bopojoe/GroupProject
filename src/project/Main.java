@@ -55,11 +55,25 @@ package project;
         Stage window;
         BorderPane layout;
 
-        @Override
-        public void start(Stage primaryStage) throws Exception{
-            window = primaryStage;
-            window.setTitle("Better IMDB");
-            Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        window = primaryStage;
+        window.setTitle("Better IMDB");
+       Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
+
+
+//        bp.setTop(x=new Label("Air"));
+//        x.setAlignment(Pos.CENTER);
+//        x.setBackground(new Background(new BackgroundFill(Color.BISQUE,
+//                new CornerRadii(4),new Insets(3))));
+//        x.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+//        x.setPrefHeight(50);
+
+
+        //Search Menu
+        Menu searchMenu = new Menu("_search");
 
 
 
