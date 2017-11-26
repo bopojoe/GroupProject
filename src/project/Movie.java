@@ -10,6 +10,7 @@ public class Movie {
 private String title;
 private int year;
 private int runningTime; //minutes
+
 private String plot;
 private String imgUrl;
 private LinkedList<Actor> actors;
@@ -19,6 +20,7 @@ private LinkedList<Actor> actors;
         this.title = title;
         this.year = year;
         this.runningTime = runningTime;
+
         this.plot = plot;
         this.imgUrl = imgUrl;
     }
@@ -46,6 +48,7 @@ private LinkedList<Actor> actors;
     public void setRunningTime(int runningTime) {
         this.runningTime = runningTime;
     }
+
 
     public String getPlot() {
         return plot;

@@ -45,6 +45,8 @@ public class LinkedList<E> implements Iterable
 
     public void addAtIndex(int index, E data)
     {
+
+
         //can actually add at size since it would be the
         //tail DataLink
         if (index < 0 || index > size)
@@ -54,7 +56,10 @@ public class LinkedList<E> implements Iterable
 
         DataLink<E> prevLink = null;
         //create a new link and append it to the end of the chain
-        if (size == 0)
+
+        int key = index%size;
+        //hashing the index from the input to place in the list
+        if (key == 0)
         {
             prevLink = header;
         }
@@ -62,9 +67,9 @@ public class LinkedList<E> implements Iterable
         {
             //find the link at index and it's next link
             //to insert in the middle
-            prevLink = findLink(index - 1);
+            prevLink = findLink(key - 1);
         }
-        DataLink<E> newLink = new DataLink<E>(data, prevLink);
+        prevLink.nextDataLink = new DataLink<E>(data, prevLink);
 
         //increment the size
         size++;
@@ -213,6 +218,7 @@ public class LinkedList<E> implements Iterable
      */
     private class DataLink<E>
     {
+        private int index;
         private E data;				  		//the data
         private DataLink<E> nextDataLink;   //the next link in the chain
 
@@ -221,6 +227,7 @@ public class LinkedList<E> implements Iterable
          */
         public DataLink(E theData)
         {
+            int index;
             data = theData;
             nextDataLink = null;
         }

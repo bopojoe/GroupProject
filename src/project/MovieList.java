@@ -8,7 +8,7 @@ import java.util.Iterator;
 
 
 public class MovieList implements Iterable<Movie> {
-    private int index;
+private int index;
 
     protected static LinkedList<Movie> movieList = new LinkedList<>();
 
@@ -72,11 +72,11 @@ public class MovieList implements Iterable<Movie> {
     }
 
     public void addMovie(String title, int year, int runningTime, String plot, String imgUrl){
-        Movie newMovie = new Movie(title, year, runningTime, plot,imgUrl);
-        movieList.addAtIndex(index,newMovie);
-        System.out.println("You've just added:" + newMovie.toString());
-        this.index ++;
-    }
+    Movie newMovie = new Movie(title,year, runningTime, plot,imgUrl);
+    movieList.addAtIndex(index,newMovie);
+    System.out.println("You've just added:" + newMovie.toString());
+    this.index ++;
+}
 
 
 
@@ -108,4 +108,3 @@ public class MovieList implements Iterable<Movie> {
 
 
 }
-
