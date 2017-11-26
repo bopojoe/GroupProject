@@ -8,7 +8,7 @@ import java.util.NoSuchElementException;
 
 public class LinkedList<E> implements Iterable
 {
-    private DataLink<E> header = null;
+    protected DataLink<E> header = null;
     private int size;
 
     /**
@@ -45,6 +45,8 @@ public class LinkedList<E> implements Iterable
 
     public void addAtIndex(int index, E data)
     {
+
+
         //can actually add at size since it would be the
         //tail DataLink
         if (index < 0 || index > size)
@@ -54,7 +56,10 @@ public class LinkedList<E> implements Iterable
 
         DataLink<E> prevLink = null;
         //create a new link and append it to the end of the chain
-        if (size == 0)
+
+
+        //hashing the index from the input to place in the list
+        if (index == 0)
         {
             prevLink = header;
         }
@@ -64,11 +69,52 @@ public class LinkedList<E> implements Iterable
             //to insert in the middle
             prevLink = findLink(index - 1);
         }
-        DataLink<E> newLink = new DataLink<E>(data, prevLink);
+        prevLink.nextDataLink = new DataLink<E>(data, prevLink);
 
         //increment the size
         size++;
     }
+  /*  public void addAtIndexS(int index, E data)
+    {
+        Movie newData  = (Movie) data;
+
+        //can actually add at size since it would be the
+        //tail DataLink
+        if (index < 0 || index > size)
+        {
+            throw new IndexOutOfBoundsException();
+        }
+
+        DataLink<E> prevLink = null;
+        //create a new link and append it to the end of the chain
+
+        int key = index%size;      //hashing the index from the input to place in the list
+        LinkedList<Movie> listAtIndex = MovieList.hashlist.get(key);
+        listAtIndex.add(newData);
+
+        if (key == 0)
+        {
+
+            listAtIndex.add(newData);
+        }
+        else
+        {
+            //find the link at index and it's next link
+            //to insert in the middle
+            prevLink = findLink(key - 1);
+        }
+
+        MovieList.hashlist.header.data.add(newMovie);
+        prevLink.
+        prevLink.nextDataLink = new DataLink<E>(data, prevLink);
+
+        //increment the size
+        size++;
+    }*/
+
+
+
+
 
     /**
      * Remove data from the chain
@@ -144,6 +190,22 @@ public class LinkedList<E> implements Iterable
     }
 
     /**
+     * Get the data from the list at index and hash index for list size 50
+     */
+    public E getHash(int index)
+    {
+        int hash = index%50;
+        //make sure the index is valid
+        CheckValidIndex(hash);
+        DataLink<E> theLink = findLink(hash);
+        if (theLink != null)
+        {
+            return theLink.data;
+        }
+        return null;
+    }
+
+    /**
      * Find the index of the first matching link
      */
     public int findIndex(E data)
@@ -177,7 +239,7 @@ public class LinkedList<E> implements Iterable
     protected DataLink<E> findLink(int index)
     {
         CheckValidIndex(index);
-        if (size <= 0) return null;
+        if (size <= 0) {return null;}
 
         DataLink<E> theLink = header.nextDataLink;
         if (index == 0)
@@ -186,7 +248,7 @@ public class LinkedList<E> implements Iterable
         }
         else
         {
-            for (int i = 1; i <= index; i++)
+            for (int i = 1; i < index; i++)
             {
                 //move to the link to get
                 theLink = theLink.nextDataLink;
@@ -211,16 +273,19 @@ public class LinkedList<E> implements Iterable
     /**
      * DataLink Stores data and links to the next DataLink.
      */
-    private class DataLink<E>
+    protected class DataLink<E>
     {
-        private E data;				  		//the data
-        private DataLink<E> nextDataLink;   //the next link in the chain
+        private int index;
+        protected E data;				  		//the data
+        protected DataLink<E> nextDataLink;   //the next link in the chain
+
 
         /**
          * Create a single data link.
          */
         public DataLink(E theData)
         {
+            int index;
             data = theData;
             nextDataLink = null;
         }

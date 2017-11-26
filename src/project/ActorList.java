@@ -4,7 +4,9 @@ import java.util.Iterator;
 
 public class ActorList implements Iterable<Actor>{
     private int index;
+
     protected static LinkedList<Actor> actorList = new LinkedList<Actor>();
+
 
     @Override
     public Iterator<Actor> iterator() {
@@ -21,7 +23,9 @@ public class ActorList implements Iterable<Actor>{
     public Actor findActorByCreds(String name, int age){
         for(Actor actor : this){
             if(actor.getName().equals(name)&& actor.getAge()==(age));
+
                 return actor;
+
         }
         System.out.println(name + age + " not found.");
         return null;
