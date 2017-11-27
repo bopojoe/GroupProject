@@ -3,7 +3,7 @@ package project;
 import java.util.Iterator;
 
 /**
- * @author James O'Rourke_20074556 on 21/11/2017
+ * @author James O'Rourke_20074556 on 25/11/2017
  */
 
 
@@ -55,8 +55,13 @@ private int index;
     }
 
 
+protected void setup(int howMany){
 
+        for(int i =0;i!=howMany;i++){
+            hashlist.add(new LinkedList<>());
+        }
 
+    }
 
 
 }

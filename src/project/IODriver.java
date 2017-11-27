@@ -1,6 +1,5 @@
 package project;
 
-import java.lang.reflect.Type;
 import java.util.Scanner;
 
 /**
@@ -34,7 +33,7 @@ public class IODriver {
                     addMenu();
                     break;
                 case "s":
-
+                    setupAdditions(30);
                     break;
                 case "t":
                     //  completeRlist.show();
@@ -113,7 +112,6 @@ public class IODriver {
                     break;
                 case "f":
                  fillArray(49);
-                    setupAdditions(30);
                     break;
                 case "g":
                     homeMenu();
@@ -161,9 +159,11 @@ public class IODriver {
             plot = input.nextLine();
             System.out.print("Url of movie img: ");
             String imgUrl = input.nextLine();
-
-            MovieList.addMovie(title, year,runningTime,plot,imgUrl);
-
+            LinkedList<Movie> listAtIndex = MovieList.hashlist[runningTime];
+            System.out.println(listAtIndex.header.toString());
+            input.nextLine();
+            listAtIndex.add(new Movie(title, year,runningTime,plot,imgUrl));
+        System.out.println(listAtIndex.header.nextDataLink.data.toString());
 
 
     }
@@ -186,8 +186,11 @@ public class IODriver {
 
         }
     public void listm(int runtime){
-        int hash = runtime%MovieList.hashlist.length;
+        int hash = runtime%50;
         LinkedList<Movie> test = MovieList.hashlist[hash];
+        System.out.println(test);
+        input.nextLine();
+        input.nextLine();
         LinkedList.DataLink head = test.header;
 
 
@@ -204,17 +207,14 @@ public class IODriver {
      * messy system to add loads of test stuff
      *
      */
-   /* private void addMoviehelper(String title, int year,int runningTime,String plot,String imgUrl){
+    private void addMoviehelper(String title, int year,int runningTime,String plot,String imgUrl){
         LinkedList<Movie> listAtIndex = MovieList.hashlist[runningTime];
 
         listAtIndex.add(new Movie(title, year,runningTime,plot,imgUrl));
 
-        LinkedList<Movie> hashedList = MovieList.hashlist[hash];
-        hashedList.add(newMovie);
-
 
     }
-*/
+
     private void setupAdditions(int amount){
 
 
