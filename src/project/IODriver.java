@@ -81,8 +81,8 @@ public class IODriver {
         System.out.println("¦  Movie(m)          ¦");
         System.out.println("¦  print listm(l)    ¦");
         System.out.println("¦  print listh(h)    ¦");
-        System.out.println("¦  Bed(b) 	         ¦");
-        System.out.println("¦  Student to bed(l) ¦");
+        System.out.println("¦  show array(b)     ¦");
+        System.out.println("¦  Fill Array(f) ¦");
         System.out.println("¦  Go Back(g)        ¦");
         System.out.println("____________________");
         System.out.println("     ---------     ");
@@ -108,10 +108,10 @@ public class IODriver {
                     listh();
                     break;
                 case "b":
-                 //   addBed();
+                  showArray(50);
                     break;
-                case "p":
-                 //   addStudentBed();
+                case "f":
+                 fillArray(49);
                     break;
                 case "g":
                     homeMenu();
@@ -132,6 +132,19 @@ public class IODriver {
         exitApp();
 
     }
+    private void  showArray(int amount){
+
+        for (int i = 1; i!= amount; i++)
+             System.out.println(MovieList.hashlist[i]);
+
+
+    }
+
+    private void fillArray(int amount){
+
+        for (int i = 0; i <= amount; i++)
+            MovieList.hashlist[i] = new LinkedList<>();
+    }
 
     private void addMovie() {
         input.nextLine();
@@ -146,7 +159,7 @@ public class IODriver {
             plot = input.nextLine();
             System.out.print("Url of movie img: ");
             String imgUrl = input.nextLine();
-            LinkedList<Movie> listAtIndex = MovieList.hashlist.getHash(runningTime);
+            LinkedList<Movie> listAtIndex = MovieList.hashlist[runningTime];
             System.out.println(listAtIndex.header.toString());
             input.nextLine();
             listAtIndex.add(new Movie(title, year,runningTime,plot,imgUrl));
@@ -161,7 +174,7 @@ public class IODriver {
 
 
     public void listh(){
-        System.out.println(MovieList.hashlist.size());
+        System.out.println(MovieList.hashlist.length);
         }
 
 
@@ -174,7 +187,10 @@ public class IODriver {
         }
     public void listm(int runtime){
         int hash = runtime%50;
-        LinkedList<Movie> test = MovieList.hashlist.get(hash);
+        LinkedList<Movie> test = MovieList.hashlist[hash];
+        System.out.println(test);
+        input.nextLine();
+        input.nextLine();
         LinkedList.DataLink head = test.header;
 
 
@@ -192,7 +208,7 @@ public class IODriver {
      *
      */
     private void addMoviehelper(String title, int year,int runningTime,String plot,String imgUrl){
-        LinkedList<Movie> listAtIndex = MovieList.hashlist.getHash(runningTime);
+        LinkedList<Movie> listAtIndex = MovieList.hashlist[runningTime];
 
         listAtIndex.add(new Movie(title, year,runningTime,plot,imgUrl));
 
