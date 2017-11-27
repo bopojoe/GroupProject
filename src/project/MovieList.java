@@ -3,7 +3,7 @@ package project;
 import java.util.Iterator;
 
 /**
- * @author James O'Rourke_20074556 on 25/11/2017
+ * @author James O'Rourke_20074556 on 21/11/2017
  */
 
 
@@ -11,7 +11,12 @@ public class MovieList implements Iterable<Movie> {
 
 private int index;
 
-    protected static LinkedList<LinkedList<Movie>> hashlist = new LinkedList<LinkedList<Movie>>();
+    protected  static LinkedList<Movie> hashlist[];
+
+    static {
+        hashlist = new LinkedList[50];
+    }
+
     protected static LinkedList<Movie> movielist = new LinkedList<>();
 
     @Override
@@ -20,13 +25,13 @@ private int index;
     }
 
     public MovieList() {
-        setup(50);
+
 
 
     }
 
 
-    public void add()
+   /* public void add()
     {
         LinkedList<Movie> innerList = hashlist.header.data;
 }
@@ -38,16 +43,16 @@ private int index;
     movielist.addAtIndex(index,newMovie);
     System.out.println("You've just added:" + newMovie.toString());
     this.index ++;
-}
+}*/
 
 
-protected void setup(int howMany){
+/*protected void setup(int howMany){
 
         for(int i =0;i!=howMany;i++){
             hashlist.add(new LinkedList<>());
         }
 
-    }
+    }*/
 
 
 }
