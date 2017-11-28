@@ -1,18 +1,7 @@
 package project;
 
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.SeparatorMenuItem;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
-
-public class Main{
+/*public class Main{
 
     public static void main(String[] args) {
         Main test = new Main();
@@ -23,10 +12,9 @@ public class Main{
         IODriver app = new IODriver();
 
 
-    }
+    }*/
 
-/*
-package project;
+
 
 
         import javafx.application.Application;
@@ -101,7 +89,7 @@ package project;
             launch(args);
         }
     }
-*/
 
 
-}
+
+
