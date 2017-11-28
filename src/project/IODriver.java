@@ -112,6 +112,7 @@ public class IODriver {
                     break;
                 case "f":
                  fillArray(49);
+                    setupAdditions(30);
                     break;
                 case "g":
                     homeMenu();
@@ -213,8 +214,8 @@ public class IODriver {
         listAtIndex.add(new Movie(title, year,runningTime,plot,imgUrl));
 
 
-    }
 
+    }
     private void setupAdditions(int amount){
 
 

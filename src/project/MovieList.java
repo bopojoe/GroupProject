@@ -54,17 +54,15 @@ private int index;
         }
     }
 
-
-protected void setup(int howMany){
-
-        for(int i =0;i!=howMany;i++){
-            hashlist.add(new LinkedList<>());
-        }
-
-    }
-
-
 }
+
+
+
+
+
+
+
+
 
 
 
