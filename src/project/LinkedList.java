@@ -294,7 +294,7 @@ public class LinkedList<E> implements Iterable
          * Create a new link and point to a next link.
          */
         public DataLink(E theData, DataLink<E> previousLink)
-        {
+     {
             data = theData;
             nextDataLink = previousLink.nextDataLink;
             previousLink.nextDataLink = this;
