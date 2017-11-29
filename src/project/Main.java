@@ -49,19 +49,6 @@ package project;
             window.setTitle("Better IMDB");
             Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-
-            //Menu Items
-            MenuItem newFile = new MenuItem("New");
-            newFile.setOnAction(e -> System.out.println("Create a new file"));
-            searchMenu.getItems().add(newFile);
-            searchMenu.getItems().add(new MenuItem("Actor"));
-            searchMenu.getItems().add(new SeparatorMenuItem());
-            searchMenu.getItems().add(new MenuItem("Movie"));
-            searchMenu.getItems().add(new SeparatorMenuItem());
-            searchMenu.getItems().add(new MenuItem("Exit"));
-
-
-
 //        bp.setTop(x=new Label("Air"));
 //        x.setAlignment(Pos.CENTER);
 //        x.setBackground(new Background(new BackgroundFill(Color.BISQUE,
