@@ -38,14 +38,14 @@ private int index;
 */
 
 
-    public static void addMovie(String title, int year, int runningTime, String plot, String imgUrl){
-    Movie newMovie = new Movie(title,year, runningTime, plot,imgUrl);
-    int index = runningTime;
-    int hash =index%hashlist.length;
-    LinkedList<Movie> hashedList = hashlist[hash];
-    hashedList.add(newMovie);
-    System.out.println("You've just added:" + newMovie.toString()+"at Location: "+hash);
-
+    public static void addMovie(String title, int year, int runningTime, String plot, String imgUrl) {
+        Movie newMovie = new Movie(title, year, runningTime, plot, imgUrl);
+        int index = runningTime;
+        int hash = index % hashlist.length;
+        LinkedList<Movie> hashedList = hashlist[hash];
+        hashedList.add(newMovie);
+        System.out.println("You've just added:" + newMovie.toString() + "at Location: " + hash);
+    }
     //Kevin Power 20075681
     public void removeMovie(Movie toRemoveMovie){
         LinkedList<Movie> internalList = hashlist[toRemoveMovie.hashCode()];
