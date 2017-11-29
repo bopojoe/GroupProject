@@ -8,7 +8,7 @@ import java.util.Iterator;
 
 
 public class MovieList implements Iterable<Movie> {
-
+private int index;
 
     protected static LinkedList<Movie> hashlist[];
 
@@ -38,14 +38,13 @@ public class MovieList implements Iterable<Movie> {
 */
 
 
-    private static void addMovie(String title, int year, int runningTime, String plot, String imgUrl){
+    public static void addMovie(String title, int year, int runningTime, String plot, String imgUrl){
     Movie newMovie = new Movie(title,year, runningTime, plot,imgUrl);
     int index = runningTime;
     int hash =index%hashlist.length;
     LinkedList<Movie> hashedList = hashlist[hash];
     hashedList.add(newMovie);
     System.out.println("You've just added:" + newMovie.toString()+"at Location: "+hash);
-    }
 
     //Kevin Power 20075681
     public void removeMovie(Movie toRemoveMovie){
