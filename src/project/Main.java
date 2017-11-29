@@ -21,18 +21,19 @@ package project;
         import javafx.fxml.FXMLLoader;
         import javafx.scene.Parent;
         import javafx.scene.Scene;
+        import javafx.stage.*;
         import javafx.scene.control.Label;
-        import javafx.scene.layout.BorderPane;
+        import javafx.scene.layout.*;
+       // import javafx.scene.control.*;
         import javafx.scene.control.MenuItem;
         import javafx.scene.control.Menu;
         import javafx.scene.control.MenuBar;
         import javafx.scene.control.SeparatorMenuItem;
+        import javafx.scene.control.Label;
+        import javafx.scene.control.Button;
         import javafx.scene.control.TextField;
         import javafx.geometry.Insets;
         import javafx.geometry.Pos;
-        import javafx.scene.layout.Background;
-        import javafx.scene.layout.BackgroundFill;
-        import javafx.scene.layout.CornerRadii;
         import javafx.scene.paint.Color;
         import javafx.stage.Stage;
 
@@ -41,12 +42,13 @@ package project;
     public class Main extends Application {
 
         Stage window;
+        Scene scene1, scene2;
         BorderPane layout;
 
         @Override
         public void start(Stage primaryStage) throws Exception{
             window = primaryStage;
-            window.setTitle("Better IMDB");
+
             Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
 //        bp.setTop(x=new Label("Air"));
@@ -78,8 +80,19 @@ package project;
             layout = new BorderPane();
             layout.setTop(menuBar);
 
-            Scene scene = new Scene(layout, 400,400);
-            window.setScene(scene);
+            //button 1
+            Label label1 = new Label("Welcome to the first scene!");
+            Button button1 = new Button("Go to scene 2");
+            button1.setOnAction(e -> window.setScene(scene2));
+
+            //layout 1
+            VBox layout1 = new VBox(20);
+            layout1.getChildren().addAll(label1,button1);
+            Scene scene1 = new Scene(layout, 400,400);
+
+
+            window.setScene(scene1);
+            window.setTitle("Better IMDB");
             window.show();
         }
 
