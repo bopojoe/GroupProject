@@ -10,6 +10,7 @@ public class Movie {
 private String title;
 private int year;
 private int runningTime; //minutes
+
 private String plot;
 private String imgUrl;
 private LinkedList<Actor> actors;
@@ -19,6 +20,7 @@ private LinkedList<Actor> actors;
         this.title = title;
         this.year = year;
         this.runningTime = runningTime;
+
         this.plot = plot;
         this.imgUrl = imgUrl;
     }
@@ -48,7 +50,6 @@ private LinkedList<Actor> actors;
     }
 
 
-
     public String getPlot() {
         return plot;
     }
@@ -69,5 +70,9 @@ private LinkedList<Actor> actors;
     public String toString() {
         String str = "Movie info: [name:"+getTitle()+", "+"Year:"+getYear()+", "+"Film Length: "+getRunningTime()+", "+"Plot: "+getPlot()+", "+"Film Img Url"+getImgUrl()+"] \n";
         return str;
+    }
+    @Override
+    public int hashCode(){
+        return this.toString().hashCode();
     }
 }

@@ -109,7 +109,7 @@ public class IODriver {
                     listh();
                     break;
                 case "b":
-                  showArray(50);
+                 //   addBed();
                     break;
                 case "f":
                  fillArray(49);
@@ -221,6 +221,7 @@ public class IODriver {
         for (int i = 1; i!= amount; i++){
             int runTime = ((i * i) + 90);
             MovieList.addMovie("title " + i, i + 1000, runTime, "Plot " + i, "imgUrl " + i);
+            ActorList.addActor("name" +i, i + 10, "gender", "nationality", new LinkedList());
 
 
         }
