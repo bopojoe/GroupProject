@@ -116,7 +116,7 @@ public class IODriver {
                    break;
                 case "b":
                    showArray(50);
-                   break;
+                    break;
                 case "f":
                    fillArray(49);
                    setupAdditions(30);
@@ -186,11 +186,7 @@ public class IODriver {
         String nationality = input.nextLine();
         //System.out.print("What is the genre: ");
         //LinkedList<> genre = input.nextLine();
-            LinkedList<Movie> listAtIndex = MovieList.hashlist[runningTime];
-            System.out.println(listAtIndex.header.toString());
-            input.nextLine();
-            listAtIndex.add(new Movie(title, year,runningTime,plot,imgUrl));
-        System.out.println(listAtIndex.header.nextDataLink.data.toString());
+
 
 
     }
@@ -244,7 +240,7 @@ public class IODriver {
 
 
     }
-    */
+*/
     private void setupAdditions(int amount){
 
 
