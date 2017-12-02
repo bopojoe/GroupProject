@@ -116,7 +116,7 @@ public class IODriver {
                    break;
                 case "b":
                    showArray(50);
-                    break;
+                   break;
                 case "f":
                    fillArray(49);
                    setupAdditions(30);
@@ -186,9 +186,6 @@ public class IODriver {
         String nationality = input.nextLine();
         //System.out.print("What is the genre: ");
         //LinkedList<> genre = input.nextLine();
-
-
-
     }
 
 
@@ -209,11 +206,8 @@ public class IODriver {
 
         }
     public void listm(int runtime){
-        int hash = runtime%50;
+        int hash = runtime%MovieList.hashlist.length;
         LinkedList<Movie> test = MovieList.hashlist[hash];
-        System.out.println(test);
-        input.nextLine();
-        input.nextLine();
         LinkedList.DataLink head = test.header;
 
 
