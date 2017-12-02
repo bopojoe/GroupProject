@@ -10,11 +10,13 @@ import java.util.Scanner;
 
 public class IODriver {
     MovieList test;
+    ActorList testA;
     private Scanner input;
 
     public IODriver() {
         input = new Scanner(System.in);
         test = new MovieList();
+        testA = new ActorList();
 
         homeMenu();
 
@@ -83,7 +85,8 @@ public class IODriver {
         System.out.println("¦  print listm(l)    ¦");
         System.out.println("¦  print listh(h)    ¦");
         System.out.println("¦  show array(b)     ¦");
-        System.out.println("¦  Fill Array(f) ¦");
+        System.out.println("¦  Fill MovieArray(f)¦");
+        System.out.println("¦  Fill ActorArray(l)¦");
         System.out.println("¦  Go Back(g)        ¦");
         System.out.println("____________________");
         System.out.println("     ---------     ");
@@ -101,23 +104,26 @@ public class IODriver {
             switch (option) {
                 case "m":
                    addMovie();
-                    break;
+                   break;
+                case "a":
+                   addActor();
+                   break;
                 case "l":
-                    runt();
-                    break;
+                   runt();
+                   break;
                 case "h":
-                    listh();
-                    break;
+                   listh();
+                   break;
                 case "b":
-                  showArray(50);
-                    break;
+                   showArray(50);
+                   break;
                 case "f":
-                 fillArray(49);
-                    setupAdditions(30);
-                    break;
+                   fillArray(49);
+                   setupAdditions(30);
+                   break;
                 case "g":
-                    homeMenu();
-                    break;
+                   homeMenu();
+                   break;
                 default:
                     System.out.println("Invalid option entered: " + option);
                     break;
@@ -146,6 +152,8 @@ public class IODriver {
 
         for (int i = 0; i <= amount; i++)
             MovieList.hashlist[i] = new LinkedList<>();
+        for (int j = 0; j <= amount; j++)
+            ActorList.hashlist[j] = new LinkedList<>();
     }
 
     private void addMovie() {
@@ -163,9 +171,21 @@ public class IODriver {
             String imgUrl = input.nextLine();
 
             MovieList.addMovie(title, year,runningTime,plot,imgUrl);
+    }
 
-
-
+    private void addActor(){
+        input.nextLine();
+        System.out.print("what is the title of the movie?");
+        String name = input.nextLine();
+        System.out.print("Year of Release: ");
+        int age = input.nextInt();
+        System.out.print("Please enter length of movie: ");
+        String gender = input.nextLine();
+        gender = input.nextLine();
+        System.out.print("Url of movie img: ");
+        String nationality = input.nextLine();
+        //System.out.print("What is the genre: ");
+        //LinkedList<> genre = input.nextLine();
     }
 
 
@@ -221,7 +241,7 @@ public class IODriver {
         for (int i = 1; i!= amount; i++){
             int runTime = ((i * i) + 90);
             MovieList.addMovie("title " + i, i + 1000, runTime, "Plot " + i, "imgUrl " + i);
-            ActorList.addActor("name" +i, i + 10, "gender", "nationality", new LinkedList());
+            ActorList.addActor("name" + i, i + 10, "gender" + i, "nationality" + i, new LinkedList());
 
 
         }
