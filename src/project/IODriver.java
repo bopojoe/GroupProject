@@ -36,7 +36,7 @@ public class IODriver {
                     addMenu();
                     break;
                 case "s":
-
+                    setupAdditions(30);
                     break;
                 case "t":
                     //  completeRlist.show();
