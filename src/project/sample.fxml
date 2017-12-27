@@ -8,19 +8,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20121f;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20121f;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller">
    <children>
-      <AnchorPane layoutX="350.0" layoutY="23.0" prefHeight="348.0" prefWidth="318.0" style="-fx-background-color: #9c2b26;">
+      <AnchorPane layoutX="364.0" layoutY="40.0" prefHeight="325.0" prefWidth="300.0" style="-fx-background-color: #9c2b2f;">
          <children>
-            <ChoiceBox layoutX="84.0" layoutY="109.0" prefWidth="150.0" />
-            <TextField layoutX="41.0" layoutY="206.0" prefHeight="25.0" prefWidth="236.0" />
-            <Button layoutX="41.0" layoutY="276.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="236.0" text="Search" />
-            <Label alignment="CENTER" layoutX="104.0" layoutY="30.0" prefHeight="43.0" prefWidth="110.0" text="Search" textOverrun="CLIP">
+            <ChoiceBox layoutX="85.0" layoutY="109.0" prefWidth="150.0" />
+            <TextField alignment="CENTER" layoutX="40.0" layoutY="206.0" prefHeight="25.0" prefWidth="245.0" />
+            <Button alignment="CENTER" layoutX="40.0" layoutY="276.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="245.0" text="Search" />
+            <Label alignment="CENTER" layoutX="110.0" layoutY="30.0" prefHeight="45.0" prefWidth="110.0" text="Search" textOverrun="CLIP">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
          </children></AnchorPane>
-      <ListView layoutX="14.0" layoutY="28.0" prefHeight="348.0" prefWidth="318.0" />
+      <ListView layoutX="25.0" layoutY="40.0" prefHeight="325.0" prefWidth="300.0" style="-fx-background-color: #9c2b2f"/>
+      <Label fx:id="exit" layoutX="677.0" onMousePressed="#handleClose" prefHeight="35.0" prefWidth="18.0" text="X" textFill="#e52019dc">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
