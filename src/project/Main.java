@@ -18,9 +18,11 @@ package project;
 
 
         import javafx.application.Application;
+        import javafx.event.EventHandler;
         import javafx.fxml.FXMLLoader;
         import javafx.scene.Parent;
         import javafx.scene.Scene;
+        import javafx.scene.input.MouseEvent;
         import javafx.stage.*;
         import javafx.scene.control.Label;
         import javafx.scene.layout.*;
@@ -36,64 +38,40 @@ package project;
         import javafx.geometry.Pos;
         import javafx.scene.paint.Color;
         import javafx.stage.Stage;
+        import javafx.stage.StageStyle;
 
 
 
     public class Main extends Application {
 
-        Stage window;
-        Scene scene1, scene2;
-        BorderPane layout;
+        private double xOffset = 0;
+        private double yOffset = 0;
 
         @Override
-        public void start(Stage primaryStage) throws Exception{
-            window = primaryStage;
+        public void start(Stage stage) throws Exception{
 
             Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+                stage.initStyle(StageStyle.UNDECORATED);
+                    root.setOnMousePressed(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    xOffset = event.getSceneX();
+                    yOffset = event.getSceneY();
+                    }
+                });
 
-//        bp.setTop(x=new Label("Air"));
-//        x.setAlignment(Pos.CENTER);
-//        x.setBackground(new Background(new BackgroundFill(Color.BISQUE,
-//                new CornerRadii(4),new Insets(3))));
-//        x.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-//        x.setPrefHeight(50);
+                root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    stage.setX(event.getScreenX() - xOffset);
+                    stage.setY(event.getScreenY() - yOffset);
+                    }
+                });
 
+            Scene scene1 = new Scene(root);
 
-            //Search Menu
-            Menu searchMenu = new Menu("_search");
-
-            //Menu Items
-            MenuItem newFile = new MenuItem("New");
-            newFile.setOnAction(e -> System.out.println("Create a new file"));
-            searchMenu.getItems().add(newFile);
-            searchMenu.getItems().add(new MenuItem("Actor"));
-            searchMenu.getItems().add(new SeparatorMenuItem());
-            searchMenu.getItems().add(new MenuItem("Movie"));
-            searchMenu.getItems().add(new SeparatorMenuItem());
-            searchMenu.getItems().add(new MenuItem("Exit"));
-
-
-            //Main menu bar
-            MenuBar menuBar = new MenuBar();
-            menuBar.getMenus().addAll(searchMenu);
-
-            layout = new BorderPane();
-            layout.setTop(menuBar);
-
-            //button 1
-            Label label1 = new Label("Welcome to the first scene!");
-            Button button1 = new Button("Go to scene 2");
-            button1.setOnAction(e -> window.setScene(scene2));
-
-            //layout 1
-            VBox layout1 = new VBox(20);
-            layout1.getChildren().addAll(label1,button1);
-            Scene scene1 = new Scene(layout, 400,400);
-
-
-            window.setScene(scene1);
-            window.setTitle("Better IMDB");
-            window.show();
+            stage.setScene(scene1);
+            stage.show();
         }
 
 
