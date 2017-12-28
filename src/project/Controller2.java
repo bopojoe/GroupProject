@@ -1,5 +1,4 @@
 package project;
-
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
@@ -13,9 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import java.io.IOException;
 
-public class Controller implements EventHandler<ActionEvent>{
-    IODriver test = new IODriver();
-
+public class Controller2{
 
     @FXML
     private Label exit;
@@ -27,7 +24,6 @@ public class Controller implements EventHandler<ActionEvent>{
     private Button btn2;
 
 
-
     @FXML
     private void handleClose(MouseEvent event) {
         if(event.getSource()== exit)
@@ -35,19 +31,10 @@ public class Controller implements EventHandler<ActionEvent>{
             System.exit(0);
         }
     }
+
     public void handle(ActionEvent event){
 
     }
-    @FXML
-    public void test()
-    {
-        System.out.println("test");
-        test.fillArray(49);
-        test.setupAdditions(30);
-
-    }
-
-
 
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException{
@@ -63,11 +50,5 @@ public class Controller implements EventHandler<ActionEvent>{
             stage=(Stage) btn2.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("Scene2.fxml"));
         }
-        //create a new scene with root and set the stage
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
     }
-
-
 }

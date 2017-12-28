@@ -13,9 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import java.io.IOException;
 
-public class Controller implements EventHandler<ActionEvent>{
-    IODriver test = new IODriver();
-
+public class Controller1{
 
     @FXML
     private Label exit;
@@ -26,8 +24,12 @@ public class Controller implements EventHandler<ActionEvent>{
     @FXML
     private Button btn2;
 
+    @FXML
+    public  void initialize(){
+        comboBox.getItems().addAll("movie", "actor");
 
-
+        comboBox.setValue("movie");
+    }
     @FXML
     private void handleClose(MouseEvent event) {
         if(event.getSource()== exit)
@@ -35,19 +37,10 @@ public class Controller implements EventHandler<ActionEvent>{
             System.exit(0);
         }
     }
+
     public void handle(ActionEvent event){
 
     }
-    @FXML
-    public void test()
-    {
-        System.out.println("test");
-        test.fillArray(49);
-        test.setupAdditions(30);
-
-    }
-
-
 
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException{
@@ -57,17 +50,11 @@ public class Controller implements EventHandler<ActionEvent>{
             //get reference to the button's stage
             stage=(Stage) btn1.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root = FXMLLoader.load(getClass().getResource("scene2.fxml"));
         }
         else{
             stage=(Stage) btn2.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("Scene2.fxml"));
+            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         }
-        //create a new scene with root and set the stage
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-
+}
 }
