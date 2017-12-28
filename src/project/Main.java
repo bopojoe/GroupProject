@@ -1,19 +1,21 @@
 package project;
 
 
-/*public class Main{
+public class Main {
 
     public static void main(String[] args) {
         Main test = new Main();
 
 
     }
-    public Main(){
+
+    public Main() {
         IODriver app = new IODriver();
 
 
-    }*/
-
+    }
+}
+/*
 
 
 
@@ -79,6 +81,7 @@ package project;
             launch(args);
         }
     }
+*/
 
 
 
