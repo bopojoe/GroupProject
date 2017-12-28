@@ -36,6 +36,10 @@ public class IODriver {
                     addMenu();
                     break;
                 case "s":
+                    searchMenu();
+                    break;
+                case "q":
+                    fillArray(49);
                     setupAdditions(30);
                     break;
                 case "t":
@@ -63,6 +67,7 @@ public class IODriver {
         System.out.println("__________________");
         System.out.println("¦   Add(a)       ¦");
         System.out.println("¦   Search(s)    ¦");
+        System.out.println("¦   initilize(q)    ¦");
         System.out.println("__________________");
         System.out.println("     ---------     ");
         System.out.println("   e) Exit");
@@ -85,8 +90,6 @@ public class IODriver {
         System.out.println("¦  print listm(l)    ¦");
         System.out.println("¦  print listh(h)    ¦");
         System.out.println("¦  show array(b)     ¦");
-        System.out.println("¦  Fill MovieArray(f)¦");
-        System.out.println("¦  Fill ActorArray(l)¦");
         System.out.println("¦  Go Back(g)        ¦");
         System.out.println("____________________");
         System.out.println("     ---------     ");
@@ -117,10 +120,6 @@ public class IODriver {
                 case "b":
                    showArray(50);
                    break;
-                case "f":
-                   fillArray(49);
-                   setupAdditions(30);
-                   break;
                 case "g":
                    homeMenu();
                    break;
@@ -148,7 +147,7 @@ public class IODriver {
 
     }
 
-    private void fillArray(int amount){
+    protected void fillArray(int amount){
 
         for (int i = 0; i <= amount; i++)
             MovieList.hashlist[i] = new LinkedList<>();
@@ -172,6 +171,50 @@ public class IODriver {
 
             MovieList.addMovie(title, year,runningTime,plot,imgUrl);
     }
+
+    private String search() {
+        System.out.println("Search Menu");
+        System.out.println("What do you want to Search?");
+        System.out.println("___________________");
+        System.out.println("¦  Movie(m)          ¦");
+        System.out.println("¦  Go Back(g)        ¦");
+        System.out.println("____________________");
+        System.out.println("     ---------     ");
+        System.out.println("   e) Exit");
+        System.out.print("==>> ");
+        String option = input.next();
+        option = option.toLowerCase();
+        return option;
+    }
+
+    private void searchMenu() {
+        String option = search();
+        while (!option.equals("e")) {
+
+            switch (option) {
+                case "m":
+                    runt();
+                    break;
+                case "g":
+                    homeMenu();
+                    break;
+                default:
+                    System.out.println("Invalid option entered: " + option);
+                    break;
+            }
+
+            // pause the program so that the user can read what was just printed
+            // to the terminal window
+            System.out.println("\nPress Return to continue...");
+            input.nextLine();
+            input.nextLine();
+
+            option = search();
+        }
+        exitApp();
+
+    }
+
 
     private void addActor(){
         input.nextLine();
@@ -235,7 +278,7 @@ public class IODriver {
 
     }
 */
-    private void setupAdditions(int amount){
+    protected void setupAdditions(int amount){
 
 
         for (int i = 1; i!= amount; i++){

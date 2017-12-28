@@ -1,6 +1,5 @@
 package project;
 
-
 public class Main {
 
     public static void main(String[] args) {
@@ -49,26 +48,32 @@ public class Main {
         private double xOffset = 0;
         private double yOffset = 0;
 
+
         @Override
         public void start(Stage stage) throws Exception{
 
+
+
             Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-                stage.initStyle(StageStyle.UNDECORATED);
-                    root.setOnMousePressed(new EventHandler<MouseEvent>() {
+            stage.initStyle(StageStyle.UNDECORATED);
+            root.setOnMousePressed(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
                     xOffset = event.getSceneX();
                     yOffset = event.getSceneY();
-                    }
-                });
+                }
+            });
 
-                root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            root.setOnMouseDragged(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
                     stage.setX(event.getScreenX() - xOffset);
                     stage.setY(event.getScreenY() - yOffset);
-                    }
-                });
+                }
+            });
+
+
+
 
             Scene scene1 = new Scene(root);
 
@@ -81,8 +86,8 @@ public class Main {
             launch(args);
         }
     }
-*/
 
+*/
 
 
 

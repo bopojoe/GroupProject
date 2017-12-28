@@ -10,7 +10,7 @@ package project;
         private int age;
         private String gender;
         private String nationality;
-        private LinkedList genre; // list of genres so we can make a drop down in javafx | genre they star in maybe
+
 
         // constructor
         public Actor(String name,int age, String gender, String nationality, LinkedList genre) {
@@ -18,7 +18,7 @@ package project;
             this.age = age;
             this.gender = gender;
             this.nationality = nationality;
-            this.genre = genre;
+
 
         }
 
@@ -55,17 +55,13 @@ package project;
             this.nationality = nationality;
         }
 
-        public LinkedList getGenre() {
-            return genre;
-        }
 
-        public void setGenre(LinkedList genre) {
-            this.genre = genre;
-        }
+
+
 
         @Override
         public String toString() {
-            String str = "Actor info:[name:"+getName() +", "+"age:"+getAge()+", "+"gender: "+getGender()+", "+"nationality: "+getNationality()+", "+"genre=" + getGenre()+"] \n";
+            String str = "Actor info:[name:"+getName() +", "+"age:"+getAge()+", "+"gender: "+getGender()+", "+"nationality: "+getNationality()+"] \n";
             return str;
         }
 
