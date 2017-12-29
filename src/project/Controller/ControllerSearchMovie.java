@@ -3,12 +3,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import project.IODriver;
+
 import java.io.IOException;
 
 public class ControllerSearchMovie {
@@ -20,7 +23,10 @@ public class ControllerSearchMovie {
     @FXML
     private Button btn1;
     @FXML
-    private Button btn2;
+    private Button btn2, btn7, btn8, btn9;
+    @FXML
+    private TextField sTitle, sYear, sRuntime;
+
 
 
     @FXML
@@ -52,5 +58,15 @@ public class ControllerSearchMovie {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+    }
+
+    @FXML
+    private void handleButtonNine(ActionEvent event){
+        if(sRuntime!=null){
+            int runtime= Integer.parseInt(sRuntime.getText());
+            IODriver.listm(runtime);
+        }
+
     }
 }
