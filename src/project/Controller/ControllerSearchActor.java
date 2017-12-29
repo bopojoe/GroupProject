@@ -1,30 +1,27 @@
 package project.Controller;
 
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-
-import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+
 import java.io.IOException;
 
-public class Controller implements EventHandler<ActionEvent> {
-
-
-
+public class ControllerSearchActor {
     @FXML
     private Label exit;
+
     @FXML
     private Button btn1;
     @FXML
     private Button btn2;
-
-
+    @FXML
+    private Button btn3;
 
     @FXML
     private void handleClose(MouseEvent event) {
@@ -33,31 +30,31 @@ public class Controller implements EventHandler<ActionEvent> {
             System.exit(0);
         }
     }
+
     public void handle(ActionEvent event){
 
     }
 
     @FXML
-    private void handleButtonAction(ActionEvent event) throws IOException{
+    private void handleButtonAction(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
         if(event.getSource()==btn1){
             //get reference to the button's stage
             stage=(Stage) btn1.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getResource("../View/sample.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../View/Name.fxml"));
+        }
+        else if(event.getSource()==btn2){
+            stage=(Stage) btn2.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("../View/Gender.fxml"));
         }
         else{
-            stage=(Stage) btn2.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("../View/sample.fxml"));
+            stage=(Stage) btn3.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("../View/Nationality.fxml"));
         }
-
-        //create a new scene with root and set the stage
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-
-
-
 }

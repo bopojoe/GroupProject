@@ -26,6 +26,7 @@ public class Main extends Application {
     private Stage stage;
     private Scene scene0, scene1, scene2;
     private Button btnScene0, btnScene1, getBtnScene2;
+    private AnchorPane pane1,pane2;
 
 
 
@@ -60,6 +61,10 @@ public class Main extends Application {
             scene0.setFill(Color.TRANSPARENT);
             stage.setScene(scene0);
             stage.show();
+
+
+
+
 
             btnScene0 = new Button("I'm bored");
             btnScene0.setOnAction(e -> stage.setScene(scene1));

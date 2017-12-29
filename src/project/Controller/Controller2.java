@@ -1,5 +1,4 @@
 package project.Controller;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -48,7 +47,7 @@ public class Controller2{
         }
         else{
             stage=(Stage) btn2.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("../View/Scene2.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../View/AddActor.fxml"));
         }
         Scene scene = new Scene(root);
         stage.setScene(scene);

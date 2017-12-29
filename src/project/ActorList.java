@@ -18,8 +18,8 @@ public class ActorList implements Iterable<Actor>{
         return actorlist.iterator();
     }
 
-    public static void addActor(String name, int age, String gender, String nationality, LinkedList genre){
-        Actor newActor = new Actor(name, age, gender, nationality, genre);
+    public static void addActor(String name, int age, String gender, String nationality){
+        Actor newActor = new Actor(name, age, gender, nationality);
         int index = age;
         int hash = index % hashlist.length;
         LinkedList<Actor> hashedList = hashlist[index];

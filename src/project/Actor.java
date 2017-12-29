@@ -13,13 +13,11 @@ package project;
 
 
         // constructor
-        public Actor(String name,int age, String gender, String nationality, LinkedList genre) {
+        public Actor(String name,int age, String gender, String nationality) {
             this.name = name;
             this.age = age;
             this.gender = gender;
             this.nationality = nationality;
-
-
         }
 
 
@@ -54,9 +52,6 @@ package project;
         public void setNationality(String nationality) {
             this.nationality = nationality;
         }
-
-
-
 
 
         @Override
