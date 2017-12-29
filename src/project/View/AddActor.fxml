@@ -27,10 +27,10 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <TextField layoutX="72.0" layoutY="118.0" promptText="Name" />
-      <DatePicker layoutX="72.0" layoutY="175.0" promptText="Date of Birth" />
-      <TextField layoutX="72.0" layoutY="225.0" promptText="Gender" />
-      <TextField layoutX="72.0" layoutY="282.0" promptText="Nationality" />
+      <TextField id="name" fx:id="name" layoutX="72.0" layoutY="118.0" promptText="Name" />
+      <TextField id="age" fx:id="age" layoutX="72.0" layoutY="175.0" promptText="Date of Birth" />
+      <TextField id="gender" fx:id="gender" layoutX="72.0" layoutY="225.0" promptText="Gender" />
+      <TextField id="nationality" fx:id="nationality" layoutX="72.0" layoutY="282.0" promptText="Nationality" />
 
 
 

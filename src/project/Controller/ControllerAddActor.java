@@ -10,7 +10,11 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import javafx.scene.control.TextField;
+import project.ActorList;
+
 import java.io.IOException;
+
 
 public class ControllerAddActor {
     @FXML
@@ -20,6 +24,9 @@ public class ControllerAddActor {
     private Button btn1;
     @FXML
     private Button btn2;
+    @FXML
+    private TextField name,gender,nationality,age;
+
 
     @FXML
     private void handleClose(MouseEvent event) {
@@ -28,6 +35,7 @@ public class ControllerAddActor {
             System.exit(0);
         }
     }
+
 
     public void handle(ActionEvent event){
 
@@ -50,5 +58,15 @@ public class ControllerAddActor {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        if(name.getText() != null){
+            String name = this.name.getText();
+            int age = Integer.parseInt(this.age.getText());
+            String gender = this.gender.getText();
+            String nationality = this.nationality.getText();
+
+            ActorList.addActor(name,age,gender,nationality);
+
+        }
+
     }
 }

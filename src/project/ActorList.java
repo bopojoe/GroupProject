@@ -22,7 +22,7 @@ public class ActorList implements Iterable<Actor>{
         Actor newActor = new Actor(name, age, gender, nationality);
         int index = age;
         int hash = index % hashlist.length;
-        LinkedList<Actor> hashedList = hashlist[name.hashCode()];
+        LinkedList<Actor> hashedList = hashlist[index];
         if(hashedList == null)
             hashedList = new LinkedList<Actor>();
         hashedList.add(newActor);
