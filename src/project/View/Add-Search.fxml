@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20121f" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.Controller1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20121f" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerAddSearch">
    <children>
       <Label fx:id="exit" layoutX="677.0" onMousePressed="#handleClose" prefHeight="35.0" prefWidth="18.0" text="X" textFill="#e52019dc">
          <font>
