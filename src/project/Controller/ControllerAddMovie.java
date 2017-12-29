@@ -7,15 +7,33 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import project.MovieList;
 
+import javax.xml.ws.soap.Addressing;
 import java.io.IOException;
 
 public class ControllerAddMovie {
 
     @FXML
     private Label exit;
+
+    @FXML
+    private TextField year;
+    @FXML
+    private TextField runtime;
+    @FXML
+    private TextArea plot;
+    @FXML
+    private TextField url;
+    @FXML
+    private TextField mTitle;
+
+
+
 
     @FXML
     private Button btn1;
@@ -51,5 +69,15 @@ public class ControllerAddMovie {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+        if(mTitle.getText() != null){
+            String title = this.mTitle.getText();
+            int year = Integer.parseInt(this.year.getText());
+            int runtime = Integer.parseInt(this.runtime.getText());
+            String plot = this.plot.getText();
+            String url = this.url.getText();
+            MovieList.addMovie(title, year, runtime, plot, url);
+
+        }
     }
 }
