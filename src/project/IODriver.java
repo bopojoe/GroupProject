@@ -250,7 +250,7 @@ public class IODriver {
             listm(hash);
 
         }
-    public void listm(int runtime){
+    public static void listm(int runtime){
         int hash = runtime%MovieList.hashlist.length;
         LinkedList<Movie> test = MovieList.hashlist[hash];
         LinkedList.DataLink head = test.header;

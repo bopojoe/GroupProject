@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -17,8 +18,13 @@ public class ControllerSearchActor {
     private Label exit;
 
     @FXML
-    private Button btn1, btn2, btn3, btn4;
-
+    private Button btn1;
+    @FXML
+    private Button btn2;
+    @FXML
+    private Button btn3;
+    @FXML
+    private TextField sName, sAge, sGender, sNationality;
 
     @FXML
     private void handleClose(MouseEvent event) {
@@ -40,19 +46,15 @@ public class ControllerSearchActor {
             //get reference to the button's stage
             stage=(Stage) btn1.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getResource("../View/ActorName.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../View/Name.fxml"));
         }
         else if(event.getSource()==btn2){
             stage=(Stage) btn2.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("../View/ActorAge.fxml"));
-        }
-        else if(event.getSource().equals(btn3)){
-            stage=(Stage) btn3.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("../View/ActorGender.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../View/Gender.fxml"));
         }
         else{
-            stage=(Stage) btn4.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("../View/ActorNationality.fxml"));
+            stage=(Stage) btn3.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("../View/Nationality.fxml"));
         }
         Scene scene = new Scene(root);
         stage.setScene(scene);
