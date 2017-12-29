@@ -27,6 +27,7 @@ public class Main extends Application {
     private Scene scene0, scene1, scene2;
     private Button btnScene0, btnScene1, getBtnScene2;
     private AnchorPane pane1,pane2;
+    private IODriver setup = new IODriver();
 
 
 

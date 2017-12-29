@@ -17,8 +17,10 @@ public class IODriver {
         input = new Scanner(System.in);
         test = new MovieList();
         testA = new ActorList();
+        fillArray(49);
+        setupAdditions(30);
 
-        homeMenu();
+        //homeMenu();
 
 
     }
@@ -218,17 +220,17 @@ public class IODriver {
 
     private void addActor(){
         input.nextLine();
-        System.out.print("what is the title of the movie?");
+        System.out.print("what is the Actors name?");
         String name = input.nextLine();
-        System.out.print("Year of Release: ");
-        int age = input.nextInt();
-        System.out.print("Please enter length of movie: ");
+        System.out.print("Age of actor: ");
+       // int age = input.nextInt();
+        System.out.print("Actors gender: ");
         String gender = input.nextLine();
         gender = input.nextLine();
         System.out.print("Url of movie img: ");
         String nationality = input.nextLine();
-        //System.out.print("What is the genre: ");
-        //LinkedList<> genre = input.nextLine();
+       // ActorList.addActor(name,age,gender,nationality);
+
     }
 
 
