@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -29,9 +30,9 @@
             </font>
         </Label>
       <TextField layoutX="72.0" layoutY="118.0" promptText="Title" />
-      <TextField layoutX="72.0" layoutY="175.0" promptText="Year of release" />
+      <DatePicker layoutX="72.0" layoutY="175.0" promptText="Date of Birth" />
       <TextField layoutX="72.0" layoutY="225.0" promptText="Runtime" />
-      <TextArea layoutX="477.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0" promptText="Plot " />
+      <TextArea layoutX="444.0" layoutY="118.0" prefHeight="200.0" prefWidth="200.0" promptText="Plot " />
       <TextField layoutX="72.0" layoutY="282.0" promptText="Image URL" />
     </children>
     <opaqueInsets>
