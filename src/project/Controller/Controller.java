@@ -1,4 +1,4 @@
-package project;
+package project.Controller;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -11,25 +11,24 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+
+
+import javax.swing.text.View;
 import java.io.IOException;
 
-public class Controller1{
+public class Controller implements EventHandler<ActionEvent> {
+
+
 
     @FXML
     private Label exit;
-    @FXML
-    private ComboBox comboBox;
     @FXML
     private Button btn1;
     @FXML
     private Button btn2;
 
-    @FXML
-    public  void initialize(){
-        comboBox.getItems().addAll("movie", "actor");
 
-        comboBox.setValue("movie");
-    }
+
     @FXML
     private void handleClose(MouseEvent event) {
         if(event.getSource()== exit)
@@ -37,7 +36,6 @@ public class Controller1{
             System.exit(0);
         }
     }
-
     public void handle(ActionEvent event){
 
     }
@@ -50,11 +48,19 @@ public class Controller1{
             //get reference to the button's stage
             stage=(Stage) btn1.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getResource("scene2.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../View/sample.fxml"));
         }
         else{
             stage=(Stage) btn2.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../View/sample.fxml"));
         }
-}
+
+        //create a new scene with root and set the stage
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+
 }

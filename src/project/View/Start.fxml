@@ -8,13 +8,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20121f; -fx-background-radius: 20px; -fx-border-radius: 20px;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20121f; -fx-background-radius: 20px; -fx-border-radius: 20px;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.Controller">
     <children>
         <AnchorPane layoutX="183.0" layoutY="36.0" prefHeight="197.0" prefWidth="334.0" style="-fx-background-color: #9c2b2f">
          <children>
             <ImageView fitHeight="197.0" fitWidth="335.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../home-page.png" />
+                  <Image url="@../../home-page.png" />
                </image>
             </ImageView>
          </children></AnchorPane>
@@ -32,7 +32,7 @@
          <children>
             <ImageView fitHeight="116.0" fitWidth="273.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../enter.png" />
+                  <Image url="@../../enter.png" />
                </image>
             </ImageView>
             <Button fx:id="btn1" mnemonicParsing="false" onAction="#handleButtonAction" opacity="0.0" prefHeight="61.0" prefWidth="273.0" />

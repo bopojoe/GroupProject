@@ -1,4 +1,4 @@
-package project;
+package project.Controller;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
@@ -44,11 +44,14 @@ public class Controller2{
             //get reference to the button's stage
             stage=(Stage) btn1.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../View/sample.fxml"));
         }
         else{
             stage=(Stage) btn2.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("Scene2.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../View/Scene2.fxml"));
         }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

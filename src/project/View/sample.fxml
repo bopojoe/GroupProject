@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20121f; -fx-background-radius: 20px; -fx-border-radius: 20px;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20121f; -fx-background-radius: 20px; -fx-border-radius: 20px;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.Controller1">
    <children>
       <AnchorPane layoutX="377.0" layoutY="40.0" prefHeight="325.0" prefWidth="300.0" style="-fx-background-color: #9c2b2f; -fx-background-radius: 20px; -fx-border-radius: 20px;">
          <children>
@@ -37,7 +37,7 @@
          <children>
             <ImageView fitHeight="325.0" fitWidth="300.0" style="-fx-background-color: #9c2b2f; -fx-background-radius: 20px; -fx-border-radius: 20px;">
                <image>
-                  <Image url="@../../../../Documents/ShareX/Screenshots/2017-12/chrome_2017-12-28_19-15-12.png" />
+                  <Image url="@../../../../../Documents/ShareX/Screenshots/2017-12/chrome_2017-12-28_19-15-12.png" />
                </image>
             </ImageView>
          </children>
