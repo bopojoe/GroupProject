@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Button;
+import javafx.scene.text.TextFlow;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
@@ -30,6 +31,10 @@ public class ControllerSearchMovie {
     private Button btn2, btn7, btn8, btn9;
     @FXML
     private TextField sTitle, sYear, sRuntime;
+
+    protected static Text savedText;
+    protected static String savedString;
+    protected static Movie savedMovie;
 
 
 
@@ -79,14 +84,16 @@ public class ControllerSearchMovie {
                 runtime = Integer.parseInt(sRuntime.getText());
                 if (runtime != 0) {
                     Movie returnedMovie = IODriver.listm(runtime);
-                    System.out.println("this?" + returnedMovie.toString());
-                    Text t = new Text(returnedMovie.toString());
-                    ControllerResults.resultText.getChildren().add(t);
+                    savedText = new Text(returnedMovie.toString());
+                    savedString = returnedMovie.toString();
+                    savedMovie = returnedMovie;
                     stage = (Stage) btn9.getScene().getWindow();
                     root = FXMLLoader.load(getClass().getResource("../View/ResultsPage.fxml"));
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
                     stage.show();
+                    //ControllerResults.resultText.getChildren().add(t);
+
                     }
 
                 else {

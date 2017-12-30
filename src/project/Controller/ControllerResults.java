@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Button;
 import javafx.scene.text.TextFlow;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -29,7 +30,17 @@ public class ControllerResults implements Initializable {
     @FXML
     private Button btn2;
     @FXML
-    protected static TextFlow resultText;
+    private Label year1;
+    @FXML
+    private Label runtime1;
+    @FXML
+    private Label plot1;
+    @FXML
+    private Label url1;
+    @FXML
+    private Label mTitle1;
+    @FXML
+     Label resultText;
 
     @FXML
     private void handleClose(MouseEvent event) {
@@ -64,6 +75,16 @@ public class ControllerResults implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        String runt = Integer.toString(ControllerSearchMovie.savedMovie.getRunningTime());
+        String year = Integer.toString(ControllerSearchMovie.savedMovie.getYear());
+        String title = ControllerSearchMovie.savedMovie.getTitle();
+        String plot = ControllerSearchMovie.savedMovie.getPlot();
+        String url = ControllerSearchMovie.savedMovie.getImgUrl();
+        mTitle1.setText(title);
+        plot1.setText(plot);
+        url1.setText(url);
+        year1.setText(year);
+        runtime1.setText(runt);
 
     }
 }
