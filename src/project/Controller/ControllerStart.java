@@ -3,6 +3,7 @@ package project.Controller;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
 import javafx.scene.input.MouseEvent;
@@ -12,8 +13,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.scene.image.ImageView;
 
-public class ControllerStart implements EventHandler<ActionEvent> {
+public class ControllerStart implements EventHandler<ActionEvent>, Initializable {
 
     private Scene scene;
     private Stage stage;
@@ -25,6 +29,13 @@ public class ControllerStart implements EventHandler<ActionEvent> {
     @FXML
     private Button btn2;
 
+
+
+     @FXML
+     public void initialize(URL location, ResourceBundle resources) {
+
+        // ImageView.fitWidth().bind(stage.getWidth());
+    }
 
 
     @FXML

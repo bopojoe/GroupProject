@@ -35,8 +35,8 @@ public class Main extends Application {
 
 
         Parent root = FXMLLoader.load(getClass().getResource("View/Start.fxml"));
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.initStyle(StageStyle.TRANSPARENT);
+       // stage.initStyle(StageStyle.UNDECORATED);
+       // stage.initStyle(StageStyle.TRANSPARENT);
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {

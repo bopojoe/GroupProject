@@ -56,14 +56,14 @@ private int index;
 
         int rtHash = runningTime % runtimeHashlist.length;
         int yearHash  = year % yearHashlist.length;
-        int titleHash  = Math.abs(title.hashCode()) % yearHashlist.length;
+        int titleHash  = Math.abs(title.hashCode()) % titleHashlist.length;
         LinkedList<Movie> yearHashedList = yearHashlist[yearHash];
         LinkedList<Movie> rtHashedList = runtimeHashlist[rtHash];
         LinkedList<Movie> titleHashedList = titleHashlist[titleHash];
         yearHashedList.add(newMovie);
         titleHashedList.add(newMovie);
         rtHashedList.add(newMovie);
-        System.out.println("You've just added:" + newMovie.toString());
+        System.out.println("You've just added: " + newMovie.toString());
     }
 
 

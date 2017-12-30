@@ -48,5 +48,6 @@
             <Button fx:id="btn4" contentDisplay="CENTER" text="Search" />
          </children>
       </VBox>
+      <Button fx:id="btn5" layoutX="43.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Back" />
     </children>
 </AnchorPane>

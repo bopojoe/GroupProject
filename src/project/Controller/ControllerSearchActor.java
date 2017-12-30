@@ -22,7 +22,7 @@ public class ControllerSearchActor {
     @FXML
     private Button btn2;
     @FXML
-    private Button btn3;
+    private Button btn3, btn5;
     @FXML
     private TextField sName, sAge, sGender, sNationality;
 
@@ -52,9 +52,13 @@ public class ControllerSearchActor {
             stage=(Stage) btn2.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("../View/Gender.fxml"));
         }
-        else{
+        else if(event.getSource().equals(btn3)){
             stage=(Stage) btn3.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("../View/Nationality.fxml"));
+        }
+        else{
+            stage=(Stage) btn5.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("../View/Search.fxml"));
         }
         Scene scene = new Scene(root);
         stage.setScene(scene);
