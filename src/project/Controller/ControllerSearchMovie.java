@@ -6,16 +6,20 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Button;
+import javafx.scene.text.TextFlow;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import project.IODriver;
 import project.Main;
+import project.Movie;
 
 import java.io.IOException;
 
 public class ControllerSearchMovie {
+
 
     @FXML
     private Label exit;
@@ -27,6 +31,12 @@ public class ControllerSearchMovie {
     private Button btn2, btn7, btn8, btn9;
     @FXML
     private TextField sTitle, sYear, sRuntime;
+
+    protected static Text savedText;
+    protected static String savedString;
+    protected static Movie savedMovie;
+
+
 
 
     @FXML
@@ -40,38 +50,53 @@ public class ControllerSearchMovie {
 
     }
 
-    @FXML
-    private void handleButtonAction(ActionEvent event) throws IOException {
-        Stage stage;
-        Parent root;
-        if (event.getSource() == btn1) {
-            //get reference to the button's stage
-            stage = (Stage) btn1.getScene().getWindow();
-            //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getResource("../View/Add-Search.fxml"));
-        } else {
-            stage = (Stage) btn2.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("../View/AddActor.fxml"));
-        }
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-    }
+//    @FXML
+//    private void handleButtonAction(ActionEvent event) throws IOException {
+//        Stage stage;
+//        Parent root;
+//        if (event.getSource() == btn1) {
+//            //get reference to the button's stage
+//            stage = (Stage) btn1.getScene().getWindow();
+//            //load up OTHER FXML document
+//            root = FXMLLoader.load(getClass().getResource("../View/Add-Search.fxml"));
+//        } else {
+//            stage = (Stage) btn2.getScene().getWindow();
+//            root = FXMLLoader.load(getClass().getResource("../View/AddActor.fxml"));
+//        }
+//        Scene scene = new Scene(root);
+//        stage.setScene(scene);
+//        stage.show();
+//
+//    }
 
     /*This is the Movie runtime search, it hashes thr runtime,
     finds it's position in the array and then linearly searches
      in case of multiple hashes to this point */
     @FXML
-    private void handleButtonNine(ActionEvent event) {
+    private void handleButtonNine(ActionEvent event) throws IOException {
+        Stage stage;
+        Parent root;
         int runtime;
+
         if (sRuntime != null) {
             boolean check = Main.parceCheck(sRuntime.getText());
             if (check) {
                 runtime = Integer.parseInt(sRuntime.getText());
                 if (runtime != 0) {
-                    IODriver.listm(runtime);
-                } else {
+                    Movie returnedMovie = IODriver.listm(runtime);
+                    savedText = new Text(returnedMovie.toString());
+                    savedString = returnedMovie.toString();
+                    savedMovie = returnedMovie;
+                    stage = (Stage) btn9.getScene().getWindow();
+                    root = FXMLLoader.load(getClass().getResource("../View/ResultsPage.fxml"));
+                    Scene scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
+                    //ControllerResults.resultText.getChildren().add(t);
+
+                    }
+
+                else {
                     System.out.println("Please Enter a number for runtime in minutes ie. 106 ");
                 }
             } else {
