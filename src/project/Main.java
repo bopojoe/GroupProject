@@ -26,14 +26,12 @@ public class Main extends Application {
     private Stage stage;
     private Scene scene0, scene1, scene2;
     private Button btnScene0, btnScene1, getBtnScene2;
-    private AnchorPane pane1,pane2;
+    private AnchorPane pane1, pane2;
     private IODriver setup = new IODriver();
 
 
-
-
     @Override
-    public void start(Stage stage) throws Exception{
+    public void start(Stage stage) throws Exception {
 
 
         Parent root = FXMLLoader.load(getClass().getResource("View/Start.fxml"));
@@ -56,35 +54,36 @@ public class Main extends Application {
         });
 
 
+        stage.setTitle("Better IMDB");
+        scene0 = new Scene(root);
+        scene0.setFill(Color.TRANSPARENT);
+        stage.setScene(scene0);
+        stage.show();
 
-            stage.setTitle("Better IMDB");
-            scene0 = new Scene(root);
-            scene0.setFill(Color.TRANSPARENT);
-            stage.setScene(scene0);
-            stage.show();
-
-
-
-
-
-            btnScene0 = new Button("I'm bored");
-            btnScene0.setOnAction(e -> stage.setScene(scene1));
-
-            AnchorPane anchorPane2 = new AnchorPane();
-            anchorPane2.getChildren().add(btnScene0);
-            scene2 = new Scene(anchorPane2, 700, 400);
 
     }
 
-        public void ButtonClicked(ActionEvent e)
-        {
-            if (e.getSource() == btnScene0)
-                stage.setScene(scene0);
-            else if(e.getSource() == btnScene1)
-                stage.setScene(scene1);
-            else
-                stage.setScene(scene2);
+    public void ButtonClicked(ActionEvent e) {
+        if (e.getSource() == btnScene0)
+            stage.setScene(scene0);
+        else if (e.getSource() == btnScene1)
+            stage.setScene(scene1);
+        else
+            stage.setScene(scene2);
+    }
+
+    public static boolean parceCheck(String V) {
+
+        boolean parsable = true;
+        try {
+            Integer.parseInt(V);
+        } catch (NumberFormatException e) {
+            parsable = false;
         }
+        return parsable;
+    }
+
+
 
 
 

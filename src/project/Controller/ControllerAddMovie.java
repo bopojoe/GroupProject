@@ -13,7 +13,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import project.MovieList;
 
-import javax.xml.ws.soap.Addressing;
 import java.io.IOException;
 
 public class ControllerAddMovie {
@@ -56,11 +55,11 @@ public class ControllerAddMovie {
     private void handleButtonAction(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-        if(event.getSource()==btn1){
+        if(event.getSource().equals(btn1)){
             //get reference to the button's stage
             stage=(Stage) btn1.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getResource("../View/sample.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../View/Add-Search.fxml"));
         }
         else{
             stage=(Stage) btn2.getScene().getWindow();

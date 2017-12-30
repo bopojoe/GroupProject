@@ -68,7 +68,7 @@ private LinkedList<Actor> actors;
 
     @Override
     public String toString() {
-        String str = "Movie info: [name:"+getTitle()+", "+"Year:"+getYear()+", "+"Film Length: "+getRunningTime()+", "+"Plot: "+getPlot()+", "+"Film Img Url"+getImgUrl()+"] \n";
+        String str = "Movie info: [name:"+getTitle()+", "+"Year:"+getYear()+", "+"Film Length: "+getRunningTime()+", "+"Plot: "+getPlot()+", "+"Film Img Url: "+getImgUrl()+"] \n";
         return str;
     }
     @Override

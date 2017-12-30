@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20121f" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerAddMovie">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2c2c2c" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerAddMovie">
     <children>
         <Label fx:id="exit" layoutX="677.0" onMousePressed="#handleClose" prefHeight="35.0" prefWidth="18.0" text="X" textFill="#e52019dc">
             <font>
@@ -20,11 +19,11 @@
                 <Font size="25" />
             </font>
         </Label>
-        <AnchorPane layoutX="266.0" layoutY="312.0" prefHeight="51.0" prefWidth="165.0" style="-fx-background-color: #9c2b2f">
+        <AnchorPane layoutX="266.0" layoutY="312.0" prefHeight="51.0" prefWidth="165.0" style="-fx-background-color: #2c2c2c">
             <children>
                 <Button fx:id="btn1" alignment="CENTER" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="36.0" prefWidth="137.0" text="Submit" />
             </children></AnchorPane>
-        <Label layoutX="313.0" layoutY="68.0" text="Movie" textFill="#e52019dc">
+        <Label layoutX="260.0" layoutY="71.0" text="Add New Movie" textFill="#e52019dc">
             <font>
                 <Font size="25.0" />
             </font>

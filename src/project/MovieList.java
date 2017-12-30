@@ -1,5 +1,6 @@
 package project;
 
+
 import java.util.Iterator;
 
 /**
@@ -7,13 +8,25 @@ import java.util.Iterator;
  */
 
 
-public class MovieList implements Iterable<Movie> {
+public class MovieList implements Iterable<Movie>{
 private int index;
 
-    protected static LinkedList<Movie> hashlist[];
+    protected static LinkedList<Movie> runtimeHashlist[];
 
     static {
-        hashlist = new LinkedList[50];
+        runtimeHashlist = new LinkedList[50];
+    }
+
+    protected static LinkedList<Movie> yearHashlist[];
+
+    static {
+        yearHashlist = new LinkedList[50];
+    }
+
+    protected static LinkedList<Movie> titleHashlist[];
+
+    static {
+        titleHashlist = new LinkedList[50];
     }
 
     protected static LinkedList<Movie> movielist = new LinkedList<>();
@@ -40,15 +53,25 @@ private int index;
 
     public static void addMovie(String title, int year, int runningTime, String plot, String imgUrl) {
         Movie newMovie = new Movie(title, year, runningTime, plot, imgUrl);
-        int index = runningTime;
-        int hash = index % hashlist.length;
-        LinkedList<Movie> hashedList = hashlist[hash];
-        hashedList.add(newMovie);
-        System.out.println("You've just added:" + newMovie.toString() + "at Location: " + hash);
+
+        int rtHash = runningTime % runtimeHashlist.length;
+        int yearHash  = year % yearHashlist.length;
+        int titleHash  = Math.abs(title.hashCode()) % yearHashlist.length;
+        LinkedList<Movie> yearHashedList = yearHashlist[yearHash];
+        LinkedList<Movie> rtHashedList = runtimeHashlist[rtHash];
+        LinkedList<Movie> titleHashedList = titleHashlist[titleHash];
+        yearHashedList.add(newMovie);
+        titleHashedList.add(newMovie);
+        rtHashedList.add(newMovie);
+        System.out.println("You've just added:" + newMovie.toString());
     }
+
+
+
+
     //Kevin Power 20075681
     public void removeMovie(Movie toRemoveMovie){
-        LinkedList<Movie> internalList = hashlist[toRemoveMovie.hashCode()];
+        LinkedList<Movie> internalList = runtimeHashlist[toRemoveMovie.hashCode()];
         if (internalList != null){
             internalList.remove(toRemoveMovie);
         }
