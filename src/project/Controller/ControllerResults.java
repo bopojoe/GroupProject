@@ -29,7 +29,7 @@ public class ControllerResults implements Initializable {
     @FXML
     private Button btn2;
     @FXML
-    protected TextFlow resultText;
+    protected static TextFlow resultText;
 
     @FXML
     private void handleClose(MouseEvent event) {

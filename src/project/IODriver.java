@@ -262,8 +262,10 @@ public class IODriver {
 
         while(head.nextDataLink!=null){
             Movie test = (Movie)head.nextDataLink.data;
-            if(test.getRunningTime() == runtime)
-                return test;
+
+            if(test.getRunningTime() == runtime){
+                System.out.println(test.toString());
+            return test;}
             //System.out.println(head.nextDataLink.data.toString());
             head = head.nextDataLink;
         }
