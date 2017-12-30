@@ -66,14 +66,6 @@ public class Main extends Application {
 
 
 
-
-//            btnScene0 = new Button("I'm bored");
-//            btnScene0.setOnAction(e -> stage.setScene(scene1));
-//
-//            AnchorPane anchorPane2 = new AnchorPane();
-//            anchorPane2.getChildren().add(btnScene0);
-//            scene2 = new Scene(anchorPane2, 700, 400);
-
     }
 
         public void ButtonClicked(ActionEvent e)

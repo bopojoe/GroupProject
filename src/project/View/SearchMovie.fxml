@@ -2,10 +2,13 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20121f" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerSearchMovie">
+<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2c2c2c" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerSearchMovie">
 
     <children>
         <Label fx:id="exit" layoutX="677.0" onMousePressed="#handleClose" prefHeight="35.0" prefWidth="18.0" text="X" textFill="#e52019dc">
@@ -18,14 +21,32 @@
                 <Font size="25" />
             </font>
         </Label>
-        <Label layoutX="294.0" layoutY="70.0" text="Movie Search" textFill="#e52019dc">
+        <Label layoutX="276.0" layoutY="73.0" text="Movie Search" textFill="#e52019dc">
             <font>
                 <Font size="25.0" />
             </font>
         </Label>
-        <Button fx:id="btn1" layoutX="329.0" layoutY="128.0" prefHeight="10.0" prefWidth="48.0" text="Title" />
-        <Button fx:id="btn2" layoutX="333.0" layoutY="188.0" text="Year" />
-        <Button fx:id="btn3" contentDisplay="CENTER" layoutX="323.0" layoutY="243.0" text="Runtime" />
-        <Button fx:id="btn4" layoutX="331.0" layoutY="303.0" text="Actor" />
+      <VBox layoutX="150.0" layoutY="128.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+              <TextField prefHeight="10.0" prefWidth="48.0" promptText="Title" />
+            <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
+              <TextField promptText="Year" />
+            <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
+              <TextField promptText="Runtime" />
+            <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
+              <TextField promptText="Actor" />
+         </children>
+      </VBox>
+        <VBox layoutX="443.0" layoutY="128.0" prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <Button prefHeight="25.0" prefWidth="115.0" text="Title" />
+                <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
+                <Button prefHeight="25.0" prefWidth="105.0" text="Year" />
+                <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
+                <Button prefHeight="25.0" prefWidth="114.0" text="Runtime" />
+                <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
+                <Button prefHeight="25.0" prefWidth="132.0" text="Actor" />
+            </children>
+        </VBox>
     </children>
 </AnchorPane>

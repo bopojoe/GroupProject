@@ -15,7 +15,8 @@ import java.io.IOException;
 
 public class ControllerStart implements EventHandler<ActionEvent> {
 
-
+    private Scene scene;
+    private Stage stage;
 
     @FXML
     private Label exit;
@@ -58,6 +59,12 @@ public class ControllerStart implements EventHandler<ActionEvent> {
         stage.show();
     }
 
+    public void setScene(Scene scene){
+        this.scene = scene;
+    }
 
+    public void setStage(Stage stage){
+        this.stage = stage;
+    }
 
 }
