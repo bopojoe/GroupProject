@@ -56,9 +56,7 @@ private int index;
 
         int rtHash = runningTime % runtimeHashlist.length;
         int yearHash  = year % yearHashlist.length;
-        System.out.println(title.hashCode());
         int titleHash  = Math.abs(title.hashCode()) % yearHashlist.length;
-        System.out.println(titleHash);
         LinkedList<Movie> yearHashedList = yearHashlist[yearHash];
         LinkedList<Movie> rtHashedList = runtimeHashlist[rtHash];
         LinkedList<Movie> titleHashedList = titleHashlist[titleHash];
