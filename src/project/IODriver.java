@@ -1,5 +1,6 @@
 package project;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.util.Scanner;
 
@@ -144,17 +145,20 @@ public class IODriver {
     private void  showArray(int amount){
 
         for (int i = 1; i!= amount; i++)
-             System.out.println(MovieList.hashlist[i]);
+             System.out.println(MovieList.runtimeHashlist[i]);
 
 
     }
 
     protected void fillArray(int amount){
 
-        for (int i = 0; i <= amount; i++)
-            MovieList.hashlist[i] = new LinkedList<>();
-        for (int j = 0; j <= amount; j++)
-            ActorList.hashlist[j] = new LinkedList<>();
+        for (int i = 0; i <= amount; i++) {
+            MovieList.runtimeHashlist[i] = new LinkedList<>();
+            MovieList.yearHashlist[i] = new LinkedList<>();
+            MovieList.titleHashlist[i] = new LinkedList<>();
+            ActorList.hashlist[i] = new LinkedList<>();
+        }
+
     }
 
     private void addMovie() {
@@ -239,7 +243,7 @@ public class IODriver {
 
 
     public void listh(){
-        System.out.println(MovieList.hashlist.length);
+        System.out.println(MovieList.runtimeHashlist.length);
         }
 
 
@@ -250,10 +254,38 @@ public class IODriver {
             listm(hash);
 
         }
-    public static void listm(int runtime){
-        int hash = runtime%MovieList.hashlist.length;
-        LinkedList<Movie> test = MovieList.hashlist[hash];
-        LinkedList.DataLink head = test.header;
+    public static void listm(int runtime ){
+        int hash = runtime%MovieList.runtimeHashlist.length;
+        LinkedList<Movie> location = MovieList.runtimeHashlist[hash];
+        LinkedList.DataLink head = location.header;
+
+
+        while(head.nextDataLink!=null){
+            System.out.println(head.nextDataLink.data.toString());
+            head = head.nextDataLink;
+        }
+
+
+    }
+
+    public static void yearSearch(int year ){
+        int hash = year%MovieList.yearHashlist.length;
+        LinkedList<Movie> location = MovieList.yearHashlist[hash];
+        LinkedList.DataLink head = location.header;
+
+
+        while(head.nextDataLink!=null){
+            System.out.println(head.nextDataLink.data.toString());
+            head = head.nextDataLink;
+        }
+
+
+    }
+
+    public static void titleSearch(String title){
+        int hash = Math.abs(title.hashCode()) %MovieList.titleHashlist.length;
+        LinkedList<Movie> location = MovieList.titleHashlist[hash];
+        LinkedList.DataLink head = location.header;
 
 
         while(head.nextDataLink!=null){

@@ -28,13 +28,13 @@
         </Label>
         <VBox layoutX="150.0" layoutY="128.0" prefHeight="200.0" prefWidth="140.0">
          <children>
-            <TextField id="sName" fx:id="sName"promptText="Name" />
+            <TextField id="sName" fx:id="sName" promptText="Name" />
             <Separator prefHeight="32.0" prefWidth="100.0" visible="false" />
             <TextField id="sAge" fx:id="sAge" prefWidth="100.0" promptText="Age" />
             <Separator prefHeight="32.0" prefWidth="100.0" visible="false" />
             <TextField id="sGender" fx:id="sGender" promptText="Gender" />
             <Separator prefHeight="32.0" prefWidth="100.0" visible="false" />
-            <TextField id="sNationality" fx:id="sNationality"promptText="Nationality" />
+            <TextField id="sNationality" fx:id="sNationality" promptText="Nationality" />
         </children>
     </VBox>
     <VBox layoutX="434.0" layoutY="128.0" prefHeight="200.0" prefWidth="100.0">
