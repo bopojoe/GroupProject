@@ -254,16 +254,20 @@ public class IODriver {
             listm(hash);
 
         }
-    public static void listm(int runtime ){
+    public static Movie listm(int runtime ){
         int hash = runtime%MovieList.runtimeHashlist.length;
         LinkedList<Movie> location = MovieList.runtimeHashlist[hash];
         LinkedList.DataLink head = location.header;
 
 
         while(head.nextDataLink!=null){
-            System.out.println(head.nextDataLink.data.toString());
+            Movie test = (Movie)head.nextDataLink.data;
+            if(test.getRunningTime() == runtime)
+                return test;
+            //System.out.println(head.nextDataLink.data.toString());
             head = head.nextDataLink;
         }
+        return null;
 
 
     }

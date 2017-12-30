@@ -6,16 +6,19 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import project.IODriver;
 import project.Main;
+import project.Movie;
 
 import java.io.IOException;
 
 public class ControllerSearchMovie {
+
 
     @FXML
     private Label exit;
@@ -27,6 +30,7 @@ public class ControllerSearchMovie {
     private Button btn2, btn7, btn8, btn9;
     @FXML
     private TextField sTitle, sYear, sRuntime;
+    private ControllerResults test;
 
 
     @FXML
@@ -70,7 +74,9 @@ public class ControllerSearchMovie {
             if (check) {
                 runtime = Integer.parseInt(sRuntime.getText());
                 if (runtime != 0) {
-                    IODriver.listm(runtime);
+                    Movie returnedMovie = IODriver.listm(runtime);
+                    Text text =new Text(returnedMovie.toString());
+                    test.resultText.getChildren().add(text);
                 } else {
                     System.out.println("Please Enter a number for runtime in minutes ie. 106 ");
                 }
