@@ -1,5 +1,6 @@
 package project;
 
+import java.lang.annotation.ElementType;
 import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.util.Scanner;
@@ -156,7 +157,10 @@ public class IODriver {
             MovieList.runtimeHashlist[i] = new LinkedList<>();
             MovieList.yearHashlist[i] = new LinkedList<>();
             MovieList.titleHashlist[i] = new LinkedList<>();
-            ActorList.hashlist[i] = new LinkedList<>();
+            ActorList.nameHashlist[i] = new LinkedList<>();
+            ActorList.ageHashlist[i] = new LinkedList<>();
+            ActorList.genderHashlist[i] = new LinkedList<>();
+            ActorList.natHashlist[i] = new LinkedList<>();
         }
 
     }
@@ -305,6 +309,87 @@ public class IODriver {
             head = head.nextDataLink;}
         }
             return null;
+
+    }
+
+
+
+    public static LinkedList<Actor> nameSearch(String name) {
+        String hname = name.toLowerCase();
+        int hash = Math.abs(hname.hashCode()) % ActorList.nameHashlist.length;
+        LinkedList<Actor> location = ActorList.nameHashlist[hash];
+        LinkedList.DataLink head = location.header;
+
+
+        while (head.nextDataLink != null) {
+            Actor actor = (Actor) head.nextDataLink.data;
+            if (actor.getName().toLowerCase().equals(hname)){
+                return location;
+            }else{
+                head = head.nextDataLink;
+            }
+        }
+        return null;
+
+
+    }
+
+    public static LinkedList<Actor> ageSearch(int age) {
+        int hash = age % ActorList.ageHashlist.length;
+        LinkedList<Actor> location = ActorList.ageHashlist[hash];
+        LinkedList.DataLink head = location.header;
+
+
+        while (head.nextDataLink != null) {
+            Actor actor = (Actor) head.nextDataLink.data;
+            if (actor.getAge() == age){
+                return location;
+            }else{
+                head = head.nextDataLink;
+            }
+        }
+        return null;
+
+
+    }
+
+    public static LinkedList<Actor> genderSearch(String gender) {
+        String hGender = gender.toLowerCase();
+        int hash = Math.abs(hGender.hashCode()) % ActorList.genderHashlist.length;
+        LinkedList<Actor> location = ActorList.genderHashlist[hash];
+        LinkedList.DataLink head = location.header;
+
+
+        while (head.nextDataLink != null) {
+            Actor actor = (Actor) head.nextDataLink.data;
+            if (actor.getGender().toLowerCase().equals(hGender)){
+                return location;
+            }else{
+                head = head.nextDataLink;
+            }
+        }
+        return null;
+
+
+    }
+
+    public static LinkedList<Actor> natSearch(String nat) {
+        String hNat = nat.toLowerCase();
+        int hash = Math.abs(hNat.hashCode()) % ActorList.natHashlist.length;
+        LinkedList<Actor> location = ActorList.natHashlist[hash];
+        LinkedList.DataLink head = location.header;
+
+
+        while (head.nextDataLink != null) {
+            Actor actor = (Actor) head.nextDataLink.data;
+            if (actor.getNationality().toLowerCase().equals(hNat)){
+                return location;
+            }else{
+                head = head.nextDataLink;
+            }
+        }
+        return null;
+
 
     }
 
