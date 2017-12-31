@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Button;
 import javafx.scene.text.TextFlow;
@@ -34,6 +35,8 @@ public class ControllerResults implements Initializable {
     private Button btn2;
     @FXML
     private Label year1, runtime1, plot1, url1, mTitle1, name1 ,age1, gender1, nationality1;
+    @FXML
+    private TextField year2, runtime2, plot2, url2, mTitle2;
 
 
     @FXML
@@ -69,25 +72,39 @@ public class ControllerResults implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        if (ControllerSearchMovie.savedMovie!=null){
-        String runt = Integer.toString(ControllerSearchMovie.savedMovie.getRunningTime());
-        String year = Integer.toString(ControllerSearchMovie.savedMovie.getYear());
-        String title = ControllerSearchMovie.savedMovie.getTitle();
-        String plot = ControllerSearchMovie.savedMovie.getPlot();
-        String url = ControllerSearchMovie.savedMovie.getImgUrl();
-        mTitle1.setText(title);
-        plot1.setText(plot);
-        url1.setText(url);
-        year1.setText(year);
-        runtime1.setText(runt);}else {
-            String name = ControllerSearchActor.savedActor.getName();
-            String age = Integer.toString(ControllerSearchActor.savedActor.getAge());
-            String gender = ControllerSearchActor.savedActor.getGender();
-            String nationality = ControllerSearchActor.savedActor.getNationality();
-            name1.setText(name);
-            age1.setText(age);
-            gender1.setText(gender);
-            nationality1.setText(nationality);
-        }
+        boolean test = false;
+
+            if (ControllerSearchMovie.savedMovie != null) {
+
+                String runt = Integer.toString(ControllerSearchMovie.savedMovie.getRunningTime());
+                String year = Integer.toString(ControllerSearchMovie.savedMovie.getYear());
+                String title = ControllerSearchMovie.savedMovie.getTitle();
+                String plot = ControllerSearchMovie.savedMovie.getPlot();
+                String url = ControllerSearchMovie.savedMovie.getImgUrl();
+                try {
+                mTitle1.setText(title);
+                plot1.setText(plot);
+                url1.setText(url);
+                year1.setText(year);
+                runtime1.setText(runt);
+            } catch (NullPointerException e) {test = true;}
+                if (test){
+                    mTitle2.setText(title);
+                    plot2.setText(plot);
+                    url2.setText(url);
+                    year2.setText(year);
+                    runtime2.setText(runt);
+                }
+            } else {
+                String name = ControllerSearchActor.savedActor.getName();
+                String age = Integer.toString(ControllerSearchActor.savedActor.getAge());
+                String gender = ControllerSearchActor.savedActor.getGender();
+                String nationality = ControllerSearchActor.savedActor.getNationality();
+                name1.setText(name);
+                age1.setText(age);
+                gender1.setText(gender);
+                nationality1.setText(nationality);
+            }
+
     }
 }

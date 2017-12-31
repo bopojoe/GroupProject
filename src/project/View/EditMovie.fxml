@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerAdd">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerSearchMovie">
     <children>
         <Label fx:id="exit" layoutX="677.0" onMousePressed="#handleClose" prefHeight="35.0" prefWidth="18.0" text="X" textFill="#e52019dc">
             <font>
@@ -36,11 +36,11 @@
         </VBox>
         <VBox layoutX="434.0" layoutY="128.0" prefHeight="200.0" prefWidth="100.0">
             <children>
-                <Button fx:id="btn7" mnemonicParsing="false"  text="Search" />
+                <Button fx:id="btn7" mnemonicParsing="false" onAction="#handleButtonTitle" text="Search" />
                 <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
-                <Button fx:id="btn8"  prefHeight="25.0" prefWidth="52.0" text="Search" />
+                <Button fx:id="btn8" onAction="#handleButtonyear" prefHeight="25.0" prefWidth="52.0" text="Search" />
                 <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
-                <Button fx:id="btn9"  text="Search" />
+                <Button fx:id="btn9" onAction="#handleButtonRuntime" text="Search" />
             </children>
         </VBox>
     </children>
