@@ -14,7 +14,7 @@ package project;
 
         // constructor
         public Actor(String name,int age, String gender, String nationality) {
-            this.name = name;
+            this.name = sanitizeName(name);
             this.age = age;
             this.gender = gender;
             this.nationality = nationality;
@@ -25,8 +25,18 @@ package project;
             return name;
         }
 
+        private String sanitizeName (String name) {
+
+            if (name.length() > 30) {
+                return name.substring(0, 30);
+            }
+            else {
+                return name;
+            }
+        }
+
         public void setName(String name) {
-            this.name = name;
+            this.name = sanitizeName(name);
         }
 
         public int getAge() {
@@ -60,10 +70,7 @@ package project;
             return str;
         }
 
-        @Override
-        public int hashCode(){
-            return this.toString().hashCode();
-        }
+
     }
 
 

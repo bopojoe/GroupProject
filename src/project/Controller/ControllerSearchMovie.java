@@ -59,7 +59,7 @@ public class ControllerSearchMovie {
         int runtime;
 
         if (sRuntime != null) {
-            boolean check = Main.parceCheck(sRuntime.getText());
+            boolean check = Main.parseCheck(sRuntime.getText());
             if (check) {
                 runtime = Integer.parseInt(sRuntime.getText());
                 if (runtime != 0) {
@@ -82,7 +82,7 @@ public class ControllerSearchMovie {
     private void handleButtonEight(ActionEvent event) throws IOException {
         int year;
         if (sYear != null) {
-            boolean check = Main.parceCheck(sYear.getText());
+            boolean check = Main.parseCheck(sYear.getText());
             if (check) {
                 year = Integer.parseInt(sYear.getText());
                 if (year != 0) {

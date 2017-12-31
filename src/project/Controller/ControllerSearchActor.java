@@ -15,7 +15,6 @@ import project.Actor;
 import project.IODriver;
 import project.LinkedList;
 import project.Main;
-import project.Actor;
 
 import java.io.IOException;
 
@@ -90,7 +89,7 @@ public class ControllerSearchActor {
     private void handleButtonTwo(ActionEvent event) throws IOException {
         int age;
         if (sAge != null) {
-            boolean check = Main.parceCheck(sAge.getText());
+            boolean check = Main.parseCheck(sAge.getText());
             if (check) {
                 age = Integer.parseInt(sAge.getText());
                 if (age != 0) {
