@@ -20,7 +20,7 @@ public class ControllerSearch {
     @FXML
     private Button btn1;
     @FXML
-    private Button btn2;
+    private Button btn2, btn22;
 
     @FXML
     private void handleClose(MouseEvent event) {
@@ -51,5 +51,39 @@ public class ControllerSearch {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    @FXML
+    private void handleButtonActor(ActionEvent event) throws IOException {
+        Parent root;
+        Stage stage;
+        stage = (Stage) btn2.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("../View/EditActor.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+
+    }
+    @FXML
+    private void handleButtonMovie(ActionEvent event) throws IOException {
+        Parent root;
+        Stage stage;
+        stage = (Stage) btn22.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("../View/EditMovie.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+    @FXML
+    private void handleButtonEdit(ActionEvent event) throws IOException {
+        Parent root;
+        Stage stage;
+        stage = (Stage) btn2.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("../View/Edit.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
     }
 }
