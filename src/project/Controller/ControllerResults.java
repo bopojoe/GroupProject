@@ -30,17 +30,8 @@ public class ControllerResults implements Initializable {
     @FXML
     private Button btn2;
     @FXML
-    private Label year1;
-    @FXML
-    private Label runtime1;
-    @FXML
-    private Label plot1;
-    @FXML
-    private Label url1;
-    @FXML
-    private Label mTitle1;
-    @FXML
-     Label resultText;
+    private Label year1, runtime1, plot1, url1, mTitle1, name1 ,age1, gender1, nationality1;
+
 
     @FXML
     private void handleClose(MouseEvent event) {
@@ -85,6 +76,13 @@ public class ControllerResults implements Initializable {
         url1.setText(url);
         year1.setText(year);
         runtime1.setText(runt);
-
+        String name = ControllerSearchActor.savedActor.getName();
+        String age = Integer.toString(ControllerSearchActor.savedActor.getAge());
+        String gender = ControllerSearchActor.savedActor.getGender();
+        String nationality = ControllerSearchActor.savedActor.getNationality();
+        name1.setText(name);
+        age1.setText(age);
+        gender1.setText(gender);
+        nationality1.setText(nationality);
     }
 }

@@ -22,7 +22,7 @@
                 <Font name="Helvetica" size="25.0" />
             </font>
         </Label>
-        <Label layoutX="25.0" prefHeight="36.0" prefWidth="225.0" text="Better IMDB" textFill="#e52019dc">
+        <Label layoutX="25.0" prefHeight="36.0" prefWidth="147.0" text="Better IMDB" textFill="#e52019dc" wrapText="true">
             <font>
                 <Font size="25.0" />
             </font>
