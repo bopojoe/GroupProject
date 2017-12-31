@@ -26,7 +26,7 @@ public class ActorList implements Iterable<Actor>{
         if(hashedList == null)
             hashedList = new LinkedList<Actor>();
         hashedList.add(newActor);
-        System.out.println("You've just added:" + newActor.toString()+"at Location: "+hash);
+        System.out.println("You've just added:" + newActor.toString());
     }
 
     // Kevin Power 2075681

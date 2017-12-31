@@ -84,16 +84,12 @@ public class ControllerSearchMovie {
                 runtime = Integer.parseInt(sRuntime.getText());
                 if (runtime != 0) {
                     Movie returnedMovie = IODriver.listm(runtime);
-                    savedText = new Text(returnedMovie.toString());
-                    savedString = returnedMovie.toString();
                     savedMovie = returnedMovie;
                     stage = (Stage) btn9.getScene().getWindow();
-                    root = FXMLLoader.load(getClass().getResource("../View/ResultsPage.fxml"));
+                    root = FXMLLoader.load(getClass().getResource("../View/MovieResultsPage.fxml"));
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
                     stage.show();
-                    //ControllerResults.resultText.getChildren().add(t);
-
                     }
 
                 else {
@@ -107,14 +103,22 @@ public class ControllerSearchMovie {
     }
 
     @FXML
-    private void handleButtonEight(ActionEvent event) {
+    private void handleButtonEight(ActionEvent event) throws IOException {
+        Stage stage;
+        Parent root;
         int year;
         if (sYear != null) {
             boolean check = Main.parceCheck(sYear.getText());
             if (check) {
                 year = Integer.parseInt(sYear.getText());
                 if (year != 0) {
-                    IODriver.yearSearch(year);
+                    Movie returnedMovie = IODriver.yearSearch(year);
+                    savedMovie = returnedMovie;
+                    stage = (Stage) btn9.getScene().getWindow();
+                    root = FXMLLoader.load(getClass().getResource("../View/MovieResultsPage.fxml"));
+                    Scene scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
                 } else {
                     System.out.println("Please Enter a number for year ie. 1998");
                 }
@@ -127,10 +131,18 @@ public class ControllerSearchMovie {
 
 
     @FXML
-    private void handleButtonSeven(ActionEvent event) {
+    private void handleButtonSeven(ActionEvent event) throws IOException {
+        Stage stage;
+        Parent root;
         if (sTitle != null) {
                 String title = sTitle.getText();
-            IODriver.titleSearch(title);
+            Movie returnedMovie = IODriver.titleSearch(title);
+            savedMovie = returnedMovie;
+            stage = (Stage) btn9.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("../View/MovieResultsPage.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
 
         }
     }

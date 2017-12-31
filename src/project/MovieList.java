@@ -53,10 +53,10 @@ private int index;
 
     public static void addMovie(String title, int year, int runningTime, String plot, String imgUrl) {
         Movie newMovie = new Movie(title, year, runningTime, plot, imgUrl);
-
+        String title1 = title.toLowerCase();
         int rtHash = runningTime % runtimeHashlist.length;
         int yearHash  = year % yearHashlist.length;
-        int titleHash  = Math.abs(title.hashCode()) % titleHashlist.length;
+        int titleHash  = Math.abs(title1.hashCode()) % titleHashlist.length;
         LinkedList<Movie> yearHashedList = yearHashlist[yearHash];
         LinkedList<Movie> rtHashedList = runtimeHashlist[rtHash];
         LinkedList<Movie> titleHashedList = titleHashlist[titleHash];

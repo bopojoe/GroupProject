@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import project.Actor;
 
 import java.io.IOException;
 
@@ -26,6 +27,7 @@ public class ControllerSearchActor {
     @FXML
     private TextField sName, sAge, sGender, sNationality;
 
+    protected static Actor savedActor;
     @FXML
     private void handleClose(MouseEvent event) {
         if(event.getSource()== exit)
