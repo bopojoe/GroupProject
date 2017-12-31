@@ -19,13 +19,13 @@
         </Label>
         <AnchorPane layoutX="255.0" layoutY="122.0" prefHeight="90.0" prefWidth="190.0" style="-fx-background-color: #1C1F25">
             <children>
-                <Button fx:id="btn1" alignment="CENTER" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleButtonEdit" prefHeight="65.0" prefWidth="165.0" text="Edit" />
+                <Button fx:id="btn22" alignment="CENTER" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleButtonMovie" prefHeight="65.0" prefWidth="165.0" text="Movie" />
             </children></AnchorPane>
-        <AnchorPane layoutX="255.0" layoutY="274.0" prefHeight="90.0" prefWidth="190.0" style="-fx-background-color: #1C1F25">
+        <AnchorPane layoutX="255.0" layoutY="212.0" prefHeight="90.0" prefWidth="190.0" style="-fx-background-color: #1C1F25">
             <children>
-                <Button fx:id="btn2" alignment="CENTER" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="65.0" prefWidth="160.0" text="Delete" />
+                <Button fx:id="btn13" alignment="CENTER" layoutX="15.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonActor" prefHeight="65.0" prefWidth="160.0" text="Actor" />
             </children></AnchorPane>
-      <Label layoutX="311.0" layoutY="67.0" text="Modify" textFill="#e52019dc">
+      <Label layoutX="329.0" layoutY="65.0" text="Edit" textFill="#e52019dc">
          <font>
             <Font size="25.0" />
          </font>

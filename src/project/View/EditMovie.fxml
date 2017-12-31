@@ -36,11 +36,11 @@
         </VBox>
         <VBox layoutX="434.0" layoutY="128.0" prefHeight="200.0" prefWidth="100.0">
             <children>
-                <Button fx:id="btn7" mnemonicParsing="false" onAction="#handleButtonSeven" text="Search" />
+                <Button fx:id="btn7" mnemonicParsing="false"  text="Search" />
                 <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
-                <Button fx:id="btn8" onAction="#handleButtonEight" prefHeight="25.0" prefWidth="52.0" text="Search" />
+                <Button fx:id="btn8"  prefHeight="25.0" prefWidth="52.0" text="Search" />
                 <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
-                <Button fx:id="btn9" onAction="#handleButtonNine" text="Search" />
+                <Button fx:id="btn9"  text="Search" />
             </children>
         </VBox>
     </children>
