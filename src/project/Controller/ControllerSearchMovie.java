@@ -101,8 +101,6 @@ public class ControllerSearchMovie {
 
     @FXML
     private void handleButtonSeven(ActionEvent event) throws IOException {
-        /*Stage stage = new Stage();
-        Parent root;*/
         if (sTitle != null) {
                 String title = sTitle.getText();
             LinkedList<Movie> returnedMovieList = IODriver.titleSearch(title);
@@ -117,7 +115,7 @@ public class ControllerSearchMovie {
         while(data.nextDataLink!=null){
             savedMovie = (Movie)data.nextDataLink.data;
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../View/MovieResultsPage.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
+            Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Better IMDB");
             stage.getIcons().add(new Image("@../../home-page.png"));
@@ -125,6 +123,46 @@ public class ControllerSearchMovie {
             stage.show();
             data = data.nextDataLink;
         }
+    }
+
+    private void multiListEdit(LinkedList.DataLink data) throws IOException {
+        while(data.nextDataLink!=null){
+            savedMovie = (Movie)data.nextDataLink.data;
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../View/EditMovieResult.fxml"));
+            Parent root1 = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Better IMDB");
+            stage.getIcons().add(new Image("@../../home-page.png"));
+            stage.setScene(new Scene(root1));
+            stage.show();
+            data = data.nextDataLink;
+        }
+    }
+
+    @FXML
+    private void handleButtonTitle(ActionEvent event) throws IOException {
+        if (sTitle != null) {
+            String title = sTitle.getText();
+            LinkedList<Movie> returnedMovieList = IODriver.titleSearch(title);
+            LinkedList.DataLink head = returnedMovieList.header;
+            multiListEdit(head);
+
+
+        }
+
+
+    }
+
+    @FXML
+    private void handleButtonyear(ActionEvent event) throws IOException {
+
+
+    }
+
+    @FXML
+    private void handleButtonRuntime(ActionEvent event) throws IOException {
+
+
     }
 
 }
