@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -16,22 +17,21 @@
             <children>
                 <Button fx:id="btn1" alignment="CENTER" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="36.0" prefWidth="137.0" text="Submit" />
             </children></AnchorPane>
-        <Label layoutX="274.0" layoutY="36.0" text="Movie Results" textFill="#e52019dc">
+        <Label layoutX="248.0" layoutY="36.0" text="Edit Movie Results" textFill="#e52019dc">
             <font>
                 <Font size="25.0" />
             </font>
         </Label>
         <Label id="mTitle" fx:id="mTitle" layoutX="72.0" layoutY="118.0" style="-fx-font-weight: bold" text="Movie Title" textFill="#42A5DC" />
-      <Label id="mTitle" fx:id="mTitle1" layoutX="72.0" layoutY="136.0" prefHeight="17.0" prefWidth="179.0" text="Movie Title" textFill="#e52019dc" />
-
+      <TextField id="mTitle" fx:id="" layoutX="72.0" layoutY="136.0" prefHeight="17.0" prefWidth="179.0" text="Movie Title" />
         <Label id="year" fx:id="year" layoutX="72.0" layoutY="175.0" style="-fx-font-weight: bold" text="Year Of Release" textFill="#42A5DC" />
-      <Label id="year" fx:id="year1" layoutX="72.0" layoutY="192.0" prefHeight="17.0" prefWidth="137.0" text="Year Of Release" textFill="#e52019dc" />
+      <TextField id="year" fx:id="" layoutX="72.0" layoutY="192.0" prefHeight="25.0" prefWidth="179.0" text="Year Of Release" />
         <Label id="runtime" fx:id="runtime" layoutX="72.0" layoutY="225.0" style="-fx-font-weight: bold" text="Runtime" textFill="#42A5DC" />
-      <Label id="runtime" fx:id="runtime1" layoutX="72.0" layoutY="242.0" prefHeight="17.0" prefWidth="78.0" text="Runtime" textFill="#e52019dc" />
+      <TextField id="runtime" fx:id="" layoutX="72.0" layoutY="242.0" prefHeight="17.0" prefWidth="78.0" text="Runtime" />
         <Label id="plot" fx:id="plot" layoutX="444.0" layoutY="118.0" prefHeight="26.0" prefWidth="137.0" style="-fx-font-weight: bold" text="Plot" textFill="#42A5DC" />
-      <Label id="plot" fx:id="plot1" layoutX="444.0" layoutY="140.0" prefHeight="175.0" prefWidth="204.0" text="Plot" textFill="#e52019dc" wrapText="true" />
+      <TextField id="plot" fx:id="" layoutX="444.0" layoutY="140.0" prefHeight="175.0" prefWidth="204.0" text="Plot" />
         <Label id="url" fx:id="url" layoutX="72.0" layoutY="282.0" style="-fx-font-weight: bold" text="Img url" textFill="#42A5DC" />
-      <Label id="url" fx:id="url1" layoutX="69.0" layoutY="304.0" prefHeight="17.0" prefWidth="137.0" text="Img url" textFill="#e52019dc" />
+      <TextField id="url" fx:id="" layoutX="69.0" layoutY="304.0" prefHeight="25.0" prefWidth="179.0" text="Img url" />
     </children>
     <opaqueInsets>
 

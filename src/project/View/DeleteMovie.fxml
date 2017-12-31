@@ -14,7 +14,7 @@
         </Label>
         <AnchorPane layoutX="266.0" layoutY="312.0" prefHeight="51.0" prefWidth="165.0" style="-fx-background-color: #1C1F25">
             <children>
-                <Button fx:id="btn1" alignment="CENTER" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="36.0" prefWidth="137.0" text="Submit" />
+                <Button fx:id="btn1" alignment="CENTER" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="36.0" prefWidth="137.0" text="Delete" />
             </children></AnchorPane>
         <Label layoutX="274.0" layoutY="36.0" text="Movie Results" textFill="#e52019dc">
             <font>
