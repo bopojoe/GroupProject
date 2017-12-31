@@ -5,6 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -119,6 +120,7 @@ public class ControllerSearchMovie {
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Better IMDB");
+            stage.getIcons().add(new Image("@../../home-page.png"));
             stage.setScene(new Scene(root1));
             stage.show();
             data = data.nextDataLink;

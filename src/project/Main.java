@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 // import javafx.scene.control.*;
@@ -57,6 +58,7 @@ public class Main extends Application {
         stage.setTitle("Better IMDB");
         scene0 = new Scene(root);
         scene0.setFill(Color.TRANSPARENT);
+        stage.getIcons().add(new Image("@../../home-page.png"));
         stage.setScene(scene0);
         stage.show();
 
