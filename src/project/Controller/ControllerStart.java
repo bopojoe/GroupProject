@@ -15,7 +15,6 @@ import javafx.scene.Scene;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.scene.image.ImageView;
 
 public class ControllerStart implements EventHandler<ActionEvent>, Initializable {
 
@@ -57,11 +56,11 @@ public class ControllerStart implements EventHandler<ActionEvent>, Initializable
             //get reference to the button's stage
             stage=(Stage) btn1.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getResource("../View/Add-Search.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../View/Add-Search-Modify.fxml"));
         }
         else{
             stage=(Stage) btn2.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("../View/Add-Search.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../View/Add-Search-Modify.fxml"));
         }
 
         //create a new scene with root and set the stage
