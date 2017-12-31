@@ -76,13 +76,13 @@ public class ControllerResults implements Initializable {
         url1.setText(url);
         year1.setText(year);
         runtime1.setText(runt);
-        String name = ControllerSearchActor.savedActor.getName();
-        String age = Integer.toString(ControllerSearchActor.savedActor.getAge());
-        String gender = ControllerSearchActor.savedActor.getGender();
-        String nationality = ControllerSearchActor.savedActor.getNationality();
-        name1.setText(name);
-        age1.setText(age);
-        gender1.setText(gender);
-        nationality1.setText(nationality);
+        //String name = ControllerSearchActor.savedActor.getName();
+        //String age = Integer.toString(ControllerSearchActor.savedActor.getAge());
+       // String gender = ControllerSearchActor.savedActor.getGender();
+      //  String nationality = ControllerSearchActor.savedActor.getNationality();
+      //  name1.setText(name);
+      //  age1.setText(age);
+      //  gender1.setText(gender);
+      //  nationality1.setText(nationality);
     }
 }

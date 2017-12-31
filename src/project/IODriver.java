@@ -27,9 +27,6 @@ public class IODriver {
     }
 
 
-
-
-
     private void homeMenu() {
         String option = home();
         while (!option.equals("e")) {
@@ -65,6 +62,7 @@ public class IODriver {
         exitApp();
 
     }
+
     private String home() {
         System.out.println("");
         System.out.println("__________________");
@@ -222,49 +220,51 @@ public class IODriver {
     }
 
 
-    private void addActor(){
+    private void addActor() {
         input.nextLine();
         System.out.print("what is the Actors name?");
         String name = input.nextLine();
         System.out.print("Age of actor: ");
-       // int age = input.nextInt();
+        // int age = input.nextInt();
         System.out.print("Actors gender: ");
         String gender = input.nextLine();
         gender = input.nextLine();
         System.out.print("Url of movie img: ");
         String nationality = input.nextLine();
-       // ActorList.addActor(name,age,gender,nationality);
+        // ActorList.addActor(name,age,gender,nationality);
 
     }
 
 
-
-
-
-
-    public void listh(){
+    public void listh() {
         System.out.println(MovieList.runtimeHashlist.length);
-        }
+    }
 
 
+    public void runt() {
+        System.out.print("enter a runtime to hash: ");
+        int hash = input.nextInt();
+        listm(hash);
 
-        public void runt(){
-            System.out.print("enter a runtime to hash: ");
-            int hash= input.nextInt();
-            listm(hash);
+    }
 
-        }
-    public static Movie listm(int runtime ){
-        int hash = runtime%MovieList.runtimeHashlist.length;
+    public static Movie listm(int runtime) {
+        int hash = runtime % MovieList.runtimeHashlist.length;
         LinkedList<Movie> location = MovieList.runtimeHashlist[hash];
         LinkedList.DataLink head = location.header;
 
 
-        while(head.nextDataLink!=null){
-            Movie test = (Movie)head.nextDataLink.data;
+        while (head.nextDataLink != null) {
+            Movie movie = (Movie) head.nextDataLink.data;
 
-            if(test.getRunningTime() == runtime){
-            return test;}
+
+            if(movie.getRunningTime() == runtime){
+            return movie;}
+
+            if (movie.getRunningTime() == runtime) {
+                return movie;
+            }
+
             //System.out.println(head.nextDataLink.data.toString());
             head = head.nextDataLink;
         }
@@ -273,31 +273,39 @@ public class IODriver {
 
     }
 
-    public static void yearSearch(int year ){
-        int hash = year%MovieList.yearHashlist.length;
+    public static Movie yearSearch(int year) {
+        int hash = year % MovieList.yearHashlist.length;
         LinkedList<Movie> location = MovieList.yearHashlist[hash];
         LinkedList.DataLink head = location.header;
 
 
-        while(head.nextDataLink!=null){
-            System.out.println(head.nextDataLink.data.toString());
+        while (head.nextDataLink != null) {
+            Movie movie = (Movie) head.nextDataLink.data;
+            if (movie.getYear() == year){
+                return movie;
+        }else{
             head = head.nextDataLink;
         }
-
-
     }
+            return null;
 
-    public static void titleSearch(String title){
-        int hash = Math.abs(title.hashCode()) %MovieList.titleHashlist.length;
+
+}
+
+    public static Movie titleSearch(String title){
+        String title1 = title.toLowerCase();
+        int hash = Math.abs(title1.hashCode()) %MovieList.titleHashlist.length;
         LinkedList<Movie> location = MovieList.titleHashlist[hash];
         LinkedList.DataLink head = location.header;
 
 
         while(head.nextDataLink!=null){
-            System.out.println(head.nextDataLink.data.toString());
-            head = head.nextDataLink;
+            Movie movie = (Movie)head.nextDataLink.data;
+            if(movie.getTitle().toLowerCase().equals(title.toLowerCase())){
+            return movie;}else{
+            head = head.nextDataLink;}
         }
-
+            return null;
 
     }
 
