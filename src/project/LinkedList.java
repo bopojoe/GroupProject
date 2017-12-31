@@ -8,7 +8,7 @@ import java.util.NoSuchElementException;
 
 public class LinkedList<E> implements Iterable
 {
-    protected DataLink<E> header = null;
+    public DataLink<E> header = null;
     private int size;
 
     /**
@@ -273,11 +273,11 @@ public class LinkedList<E> implements Iterable
     /**
      * DataLink Stores data and links to the next DataLink.
      */
-    protected class DataLink<E>
+    public class DataLink<E>
     {
         private int index;
-        protected E data;				  		//the data
-        protected DataLink<E> nextDataLink;   //the next link in the chain
+        public E data;				  		//the data
+        public DataLink<E> nextDataLink;   //the next link in the chain
 
 
         /**
