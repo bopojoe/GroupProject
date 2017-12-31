@@ -250,7 +250,7 @@ public class IODriver {
 
     }
 
-    public static Movie listm(int runtime) {
+    public static LinkedList<Movie> listm(int runtime) {
         int hash = runtime % MovieList.runtimeHashlist.length;
         LinkedList<Movie> location = MovieList.runtimeHashlist[hash];
         LinkedList.DataLink head = location.header;
@@ -261,11 +261,8 @@ public class IODriver {
 
 
             if(movie.getRunningTime() == runtime){
-            return movie;}
+            return location;}
 
-            if (movie.getRunningTime() == runtime) {
-                return movie;
-            }
 
             //System.out.println(head.nextDataLink.data.toString());
             head = head.nextDataLink;
@@ -275,7 +272,7 @@ public class IODriver {
 
     }
 
-    public static Movie yearSearch(int year) {
+    public static LinkedList<Movie> yearSearch(int year) {
         int hash = year % MovieList.yearHashlist.length;
         LinkedList<Movie> location = MovieList.yearHashlist[hash];
         LinkedList.DataLink head = location.header;
@@ -284,7 +281,7 @@ public class IODriver {
         while (head.nextDataLink != null) {
             Movie movie = (Movie) head.nextDataLink.data;
             if (movie.getYear() == year){
-                return movie;
+                return location;
         }else{
             head = head.nextDataLink;
         }
@@ -294,7 +291,7 @@ public class IODriver {
 
 }
 
-    public static Movie titleSearch(String title){
+    public static LinkedList<Movie> titleSearch(String title){
         String title1 = title.toLowerCase();
         int hash = Math.abs(title1.hashCode()) %MovieList.titleHashlist.length;
         LinkedList<Movie> location = MovieList.titleHashlist[hash];
@@ -304,7 +301,7 @@ public class IODriver {
         while(head.nextDataLink!=null){
             Movie movie = (Movie)head.nextDataLink.data;
             if(movie.getTitle().toLowerCase().equals(title.toLowerCase())){
-            return movie;}else{
+            return location;}else{
             head = head.nextDataLink;}
         }
             return null;
