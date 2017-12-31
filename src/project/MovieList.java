@@ -70,14 +70,23 @@ private int index;
 
 
     //Kevin Power 20075681
-    public void removeMovie(Movie toRemoveMovie){
-        LinkedList<Movie> internalList = runtimeHashlist[toRemoveMovie.hashCode()];
-        if (internalList != null){
-            internalList.remove(toRemoveMovie);
+    public static void removeMovie(Movie movie){
+        int runtime = movie.getRunningTime();
+        int year = movie.getYear();
+        String title = movie.getTitle();
+        int rtHash = runtime % runtimeHashlist.length;
+        int yearHash = year %yearHashlist.length;
+        int titleHash =Math.abs(title.hashCode())%titleHashlist.length;
+        LinkedList<Movie> runList = runtimeHashlist[rtHash];
+        LinkedList<Movie> yearList = yearHashlist[yearHash];
+        LinkedList<Movie> titleList = titleHashlist[titleHash];
+        runList.remove(movie);
+        yearList.remove(movie);
+        titleList.remove(movie);
         }
     }
 
-}
+
 
 
 
