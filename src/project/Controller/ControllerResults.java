@@ -69,6 +69,7 @@ public class ControllerResults implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        if (ControllerSearchMovie.savedMovie!=null){
         String runt = Integer.toString(ControllerSearchMovie.savedMovie.getRunningTime());
         String year = Integer.toString(ControllerSearchMovie.savedMovie.getYear());
         String title = ControllerSearchMovie.savedMovie.getTitle();
@@ -78,14 +79,15 @@ public class ControllerResults implements Initializable {
         plot1.setText(plot);
         url1.setText(url);
         year1.setText(year);
-        runtime1.setText(runt);
-        //String name = ControllerSearchActor.savedActor.getName();
-        //String age = Integer.toString(ControllerSearchActor.savedActor.getAge());
-       // String gender = ControllerSearchActor.savedActor.getGender();
-      //  String nationality = ControllerSearchActor.savedActor.getNationality();
-      //  name1.setText(name);
-      //  age1.setText(age);
-      //  gender1.setText(gender);
-      //  nationality1.setText(nationality);
+        runtime1.setText(runt);}else {
+            String name = ControllerSearchActor.savedActor.getName();
+            String age = Integer.toString(ControllerSearchActor.savedActor.getAge());
+            String gender = ControllerSearchActor.savedActor.getGender();
+            String nationality = ControllerSearchActor.savedActor.getNationality();
+            name1.setText(name);
+            age1.setText(age);
+            gender1.setText(gender);
+            nationality1.setText(nationality);
+        }
     }
 }

@@ -11,6 +11,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import project.Actor;
+import project.IODriver;
+import project.LinkedList;
+import project.Main;
+import project.Actor;
 
 import java.io.IOException;
 
@@ -65,5 +69,79 @@ public class ControllerSearchActor {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    private void handleButtonOne(ActionEvent event) throws IOException {
+        String name;
+        if (sName != null) {
+            name = sName.getText();
+                    LinkedList<Actor> returnedActorList = IODriver.nameSearch(name);
+                    LinkedList.DataLink head = returnedActorList.header;
+                    multiList(head);} else {
+                    System.out.println("Please Enter a valid search for name");
+                }
+
+        }
+
+
+    @FXML
+    private void handleButtonTwo(ActionEvent event) throws IOException {
+        int age;
+        if (sAge != null) {
+            boolean check = Main.parceCheck(sAge.getText());
+            if (check) {
+                age = Integer.parseInt(sAge.getText());
+                if (age != 0) {
+                    LinkedList<Actor> returnedActorList = IODriver.ageSearch(age);
+                    LinkedList.DataLink head = returnedActorList.header;
+                    multiList(head);} else {
+                    System.out.println("Please Enter a number for year ie. 1998");
+                }
+            } else {
+                System.out.println("Please Enter a number for year ie. 1998");
+            }
+
+        }
+    }
+
+    @FXML
+    private void handleButtonThree(ActionEvent event) throws IOException {
+        String gender;
+        if (sGender != null) {
+            gender = sGender.getText();
+            LinkedList<Actor> returnedActorList = IODriver.genderSearch(gender);
+            LinkedList.DataLink head = returnedActorList.header;
+            multiList(head);} else {
+            System.out.println("Please Enter a valid search for gender");
+        }
+
+    }
+
+    @FXML
+    private void handleButtonFour(ActionEvent event) throws IOException {
+        String nat;
+        if (sNationality != null) {
+            nat = sNationality.getText();
+            LinkedList<Actor> returnedActorList = IODriver.natSearch(nat);
+            LinkedList.DataLink head = returnedActorList.header;
+            multiList(head);} else {
+            System.out.println("Please Enter a valid search for nationality");
+        }
+
+    }
+
+
+    private void multiList(LinkedList.DataLink data) throws IOException {
+        while(data.nextDataLink!=null){
+            savedActor = (Actor)data.nextDataLink.data;
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../View/ActorResultsPage.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Better IMDB");
+            stage.setScene(new Scene(root1));
+            stage.show();
+            data = data.nextDataLink;
+        }
     }
 }

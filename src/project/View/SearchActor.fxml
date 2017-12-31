@@ -39,13 +39,13 @@
     </VBox>
     <VBox layoutX="434.0" layoutY="128.0" prefHeight="200.0" prefWidth="100.0">
         <children>
-            <Button fx:id="btn1" mnemonicParsing="false" text="Search" />
+            <Button fx:id="btn1" mnemonicParsing="false" onAction="#handleButtonOne" text="Search" />
             <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
-            <Button fx:id="btn2" prefHeight="25.0" prefWidth="52.0" text="Search" />
+            <Button fx:id="btn2" onAction="#handleButtonTwo" prefHeight="25.0" prefWidth="52.0" text="Search" />
             <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
-            <Button fx:id="btn3" text="Search" />
+            <Button fx:id="btn3" onAction="#handleButtonThree" text="Search" />
             <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
-            <Button fx:id="btn4" contentDisplay="CENTER" text="Search" />
+            <Button fx:id="btn4" contentDisplay="CENTER" onAction="#handleButtonFour" text="Search" />
          </children>
       </VBox>
       <Button fx:id="btn5" layoutX="43.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Back" />
