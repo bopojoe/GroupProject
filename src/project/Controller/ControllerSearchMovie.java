@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Button;
+import javafx.scene.text.TextFlow;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
@@ -89,8 +90,6 @@ public class ControllerSearchMovie {
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
                     stage.show();
-                    //ControllerResults.resultText.getChildren().add(t);
-
                     }
 
                 else {
