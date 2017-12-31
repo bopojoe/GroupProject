@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -65,6 +66,7 @@ public class ControllerStart implements EventHandler<ActionEvent>, Initializable
 
         //create a new scene with root and set the stage
         Scene scene = new Scene(root);
+        stage.getIcons().add(new Image("@../../home-page.png"));
         stage.setScene(scene);
         stage.show();
     }
