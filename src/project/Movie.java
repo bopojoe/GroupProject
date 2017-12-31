@@ -71,8 +71,5 @@ private LinkedList<Actor> actors;
         String str = "Movie info: [name:"+getTitle()+", "+"Year:"+getYear()+", "+"Film Length: "+getRunningTime()+", "+"Plot: "+getPlot()+", "+"Film Img Url: "+getImgUrl()+"] \n";
         return str;
     }
-    @Override
-    public int hashCode(){
-        return this.toString().hashCode();
-    }
+
 }

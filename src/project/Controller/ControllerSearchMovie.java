@@ -59,7 +59,7 @@ public class ControllerSearchMovie {
         int runtime;
 
         if (sRuntime != null) {
-            boolean check = Main.parceCheck(sRuntime.getText());
+            boolean check = Main.parseCheck(sRuntime.getText());
             if (check) {
                 runtime = Integer.parseInt(sRuntime.getText());
                 if (runtime != 0) {
@@ -82,7 +82,7 @@ public class ControllerSearchMovie {
     private void handleButtonEight(ActionEvent event) throws IOException {
         int year;
         if (sYear != null) {
-            boolean check = Main.parceCheck(sYear.getText());
+            boolean check = Main.parseCheck(sYear.getText());
             if (check) {
                 year = Integer.parseInt(sYear.getText());
                 if (year != 0) {
@@ -155,13 +155,34 @@ public class ControllerSearchMovie {
 
     @FXML
     private void handleButtonyear(ActionEvent event) throws IOException {
+        int year;
+        if (sYear != null) {
+            boolean check = Main.parseCheck(sYear.getText());
+            if (check) {
+                year = Integer.parseInt(sYear.getText());
+                if (year != 0) {
+                    LinkedList<Movie> returnedMovieList = IODriver.yearSearch(year);
+                    LinkedList.DataLink head = returnedMovieList.header;
+                    multiListEdit(head);} else {
+                    System.out.println("Please Enter a number for year ie. 1998");
+                }
+            } else {
+                System.out.println("Please Enter a number for year ie. 1998");
+            }
 
-
+        }
     }
 
     @FXML
     private void handleButtonRuntime(ActionEvent event) throws IOException {
+        if (sRuntime != null) {
+            String title = sRuntime.getText();
+            LinkedList<Movie> returnedMovieList = IODriver.titleSearch(title);
+            LinkedList.DataLink head = returnedMovieList.header;
+            multiListEdit(head);
 
+
+        }
 
     }
 

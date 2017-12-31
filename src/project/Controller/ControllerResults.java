@@ -18,6 +18,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import project.Movie;
+import project.MovieList;
 
 import java.io.IOException;
 import java.net.URL;
@@ -30,13 +31,13 @@ public class ControllerResults implements Initializable {
     private Label exit;
 
     @FXML
-    private Button btn1;
+    private Button btn1, changeBtn;
     @FXML
     private Button btn2;
     @FXML
     private Label year1, runtime1, plot1, url1, mTitle1, name1 ,age1, gender1, nationality1;
     @FXML
-    private TextField year2, runtime2, plot2, url2, mTitle2;
+    private TextField year2, runtime2, plot2, url2, mTitle2, sName, sAge, sGender, sNationality;
 
 
     @FXML
@@ -45,6 +46,23 @@ public class ControllerResults implements Initializable {
         {
             System.exit(0);
         }
+    }
+
+    @FXML
+    private void handleButtonChange(ActionEvent event) throws IOException {
+       Movie movie = ControllerSearchMovie.savedMovie;
+       MovieList.removeMovie(movie);
+        String title = this.mTitle2.getText();
+        int year = Integer.parseInt(this.year2.getText());
+        int runtime = Integer.parseInt(this.runtime2.getText());
+        String plot = this.plot2.getText();
+        String url = this.url2.getText();
+        MovieList.addMovie(title, year, runtime, plot, url);
+
+        Stage stage = (Stage) changeBtn.getScene().getWindow();
+        // do what you have to do
+        stage.close();
+
     }
 
     public void handle(ActionEvent event){
@@ -81,7 +99,7 @@ public class ControllerResults implements Initializable {
                 String title = ControllerSearchMovie.savedMovie.getTitle();
                 String plot = ControllerSearchMovie.savedMovie.getPlot();
                 String url = ControllerSearchMovie.savedMovie.getImgUrl();
-                try {
+                try{
                 mTitle1.setText(title);
                 plot1.setText(plot);
                 url1.setText(url);
@@ -89,6 +107,7 @@ public class ControllerResults implements Initializable {
                 runtime1.setText(runt);
             } catch (NullPointerException e) {test = true;}
                 if (test){
+
                     mTitle2.setText(title);
                     plot2.setText(plot);
                     url2.setText(url);
@@ -100,10 +119,18 @@ public class ControllerResults implements Initializable {
                 String age = Integer.toString(ControllerSearchActor.savedActor.getAge());
                 String gender = ControllerSearchActor.savedActor.getGender();
                 String nationality = ControllerSearchActor.savedActor.getNationality();
-                name1.setText(name);
-                age1.setText(age);
-                gender1.setText(gender);
-                nationality1.setText(nationality);
+                try {
+                    name1.setText(name);
+                    age1.setText(age);
+                    gender1.setText(gender);
+                    nationality1.setText(nationality);
+                }catch (NullPointerException e) {test = true;}
+                if (test) {
+                    sName.setText(name);
+                    sAge.setText(age);
+                    sGender.setText(gender);
+                    sNationality.setText(nationality);
+                }
             }
 
     }

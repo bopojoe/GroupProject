@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ToolBar;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
@@ -38,6 +39,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("View/Start.fxml"));
        // stage.initStyle(StageStyle.UNDECORATED);
        // stage.initStyle(StageStyle.TRANSPARENT);
+
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -74,7 +76,7 @@ public class Main extends Application {
             stage.setScene(scene2);
     }
 
-    public static boolean parceCheck(String V) {
+    public static boolean parseCheck(String V) {
 
         boolean parsable = true;
         try {
