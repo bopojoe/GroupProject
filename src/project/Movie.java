@@ -20,9 +20,8 @@ private LinkedList<Actor> actors;
         this.title = title;
         this.year = year;
         this.runningTime = runningTime;
-
         this.plot = plot;
-        this.imgUrl = imgUrl;
+        this.imgUrl = sanitizeImgUrl(imgUrl);
     }
 
     public String getTitle() {
@@ -62,6 +61,16 @@ private LinkedList<Actor> actors;
         return imgUrl;
     }
 
+    private String sanitizeImgUrl (String imgUrl) {
+
+        if (imgUrl.length() > 40) {
+            return imgUrl.substring(0, 40);
+        }
+        else {
+            return imgUrl;
+        }
+    }
+
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
     }
@@ -71,8 +80,5 @@ private LinkedList<Actor> actors;
         String str = "Movie info: [name:"+getTitle()+", "+"Year:"+getYear()+", "+"Film Length: "+getRunningTime()+", "+"Plot: "+getPlot()+", "+"Film Img Url: "+getImgUrl()+"] \n";
         return str;
     }
-    @Override
-    public int hashCode(){
-        return this.toString().hashCode();
-    }
+
 }

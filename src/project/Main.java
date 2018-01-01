@@ -10,11 +10,9 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
-// import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 
 
@@ -36,8 +34,8 @@ public class Main extends Application {
 
 
         Parent root = FXMLLoader.load(getClass().getResource("View/Start.fxml"));
-       // stage.initStyle(StageStyle.UNDECORATED);
-       // stage.initStyle(StageStyle.TRANSPARENT);
+        // stage.initStyle(StageStyle.UNIFIED);
+        // stage.initStyle(StageStyle.TRANSPARENT);
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -65,16 +63,16 @@ public class Main extends Application {
 
     }
 
-    public void ButtonClicked(ActionEvent e) {
+/*    public void ButtonClicked(ActionEvent e) {
         if (e.getSource() == btnScene0)
             stage.setScene(scene0);
         else if (e.getSource() == btnScene1)
             stage.setScene(scene1);
         else
             stage.setScene(scene2);
-    }
+    }*/
 
-    public static boolean parceCheck(String V) {
+    public static boolean parseCheck(String V) {
 
         boolean parsable = true;
         try {
