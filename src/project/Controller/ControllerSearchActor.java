@@ -83,8 +83,13 @@ public class ControllerSearchActor {
         if (sName != null) {
             name = sName.getText();
                     LinkedList<Actor> returnedActorList = IODriver.nameSearch(name);
-                    LinkedList.DataLink head = returnedActorList.header;
-                    multiList(head);} else {
+            LinkedList.DataLink head =null;
+            boolean test = true;
+            try{
+                head = returnedActorList.header;}catch (NullPointerException e){test = false;}
+            if(test){
+                multiList(head);}else{System.out.println("Search did not return a movie.");}
+        } else {
                     System.out.println("Please Enter a valid search for name");
                 }
 
@@ -100,8 +105,13 @@ public class ControllerSearchActor {
                 age = Integer.parseInt(sAge.getText());
                 if (age != 0) {
                     LinkedList<Actor> returnedActorList = IODriver.ageSearch(age);
-                    LinkedList.DataLink head = returnedActorList.header;
-                    multiList(head);} else {
+                    LinkedList.DataLink head =null;
+                    boolean test = true;
+                    try{
+                        head = returnedActorList.header;}catch (NullPointerException e){test = false;}
+                    if(test){
+                        multiList(head);}else{System.out.println("Search did not return a movie.");}
+                } else {
                     System.out.println("Please Enter a number for year ie. 1998");
                 }
             } else {
@@ -117,8 +127,13 @@ public class ControllerSearchActor {
         if (sGender != null) {
             gender = sGender.getText();
             LinkedList<Actor> returnedActorList = IODriver.genderSearch(gender);
-            LinkedList.DataLink head = returnedActorList.header;
-            multiList(head);} else {
+            LinkedList.DataLink head =null;
+            boolean test = true;
+            try{
+                head = returnedActorList.header;}catch (NullPointerException e){test = false;}
+            if(test){
+                multiList(head);}else{System.out.println("Search did not return a movie.");}
+        } else {
             System.out.println("Please Enter a valid search for gender");
         }
 
@@ -130,8 +145,13 @@ public class ControllerSearchActor {
         if (sNationality != null) {
             nat = sNationality.getText();
             LinkedList<Actor> returnedActorList = IODriver.natSearch(nat);
-            LinkedList.DataLink head = returnedActorList.header;
-            multiList(head);} else {
+            LinkedList.DataLink head =null;
+            boolean test = true;
+            try{
+                head = returnedActorList.header;}catch (NullPointerException e){test = false;}
+            if(test){
+                multiList(head);}else{System.out.println("Search did not return a movie.");}
+        } else {
             System.out.println("Please Enter a valid search for nationality");
         }
 
@@ -174,8 +194,13 @@ public class ControllerSearchActor {
         if (sName != null) {
             name = sName.getText();
             LinkedList<Actor> returnedActorList = IODriver.nameSearch(name);
-            LinkedList.DataLink head = returnedActorList.header;
-            multiListEdit(head);} else {
+            LinkedList.DataLink head =null;
+            boolean test = true;
+            try{
+                head = returnedActorList.header;}catch (NullPointerException e){test = false;}
+            if(test){
+                multiListEdit(head);}else{System.out.println("Search did not return a movie.");}
+        } else {
             System.out.println("Please Enter a valid search for name");
         }
 
@@ -191,8 +216,13 @@ public class ControllerSearchActor {
                 age = Integer.parseInt(sAge.getText());
                 if (age != 0) {
                     LinkedList<Actor> returnedActorList = IODriver.ageSearch(age);
-                    LinkedList.DataLink head = returnedActorList.header;
-                    multiListEdit(head);} else {
+                    LinkedList.DataLink head =null;
+                    boolean test = true;
+                    try{
+                        head = returnedActorList.header;}catch (NullPointerException e){test = false;}
+                    if(test){
+                        multiListEdit(head);}else{System.out.println("Search did not return a movie.");}
+                } else {
                     System.out.println("Please Enter a number for year ie. 1998");
                 }
             } else {
@@ -209,8 +239,13 @@ public class ControllerSearchActor {
         if (sGender != null) {
             gender = sGender.getText();
             LinkedList<Actor> returnedActorList = IODriver.genderSearch(gender);
-            LinkedList.DataLink head = returnedActorList.header;
-            multiListEdit(head);} else {
+            LinkedList.DataLink head =null;
+            boolean test = true;
+            try{
+                head = returnedActorList.header;}catch (NullPointerException e){test = false;}
+            if(test){
+                multiListEdit(head);}else{System.out.println("Search did not return a movie.");}
+        } else {
             System.out.println("Please Enter a valid search for gender");
         }
 
@@ -223,8 +258,13 @@ public class ControllerSearchActor {
         if (sNationality != null) {
             nat = sNationality.getText();
             LinkedList<Actor> returnedActorList = IODriver.natSearch(nat);
-            LinkedList.DataLink head = returnedActorList.header;
-            multiListEdit(head);} else {
+            LinkedList.DataLink head =null;
+            boolean test = true;
+            try{
+                head = returnedActorList.header;}catch (NullPointerException e){test = false;}
+            if(test){
+                multiListEdit(head);}else{System.out.println("Search did not return a movie.");}
+        } else {
             System.out.println("Please Enter a valid search for nationality");
         }
 

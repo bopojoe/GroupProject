@@ -65,7 +65,10 @@ public class ControllerResults implements Initializable {
         String plot = this.plot2.getText();
         String url = this.url2.getText();
         MovieList.addMovie(title, year, runtime, plot, url);
-
+        try{
+            MovieList.save();}catch (Exception e){
+            System.out.println("Error writing to file: " + e);
+        }
         Stage stage = (Stage) changeBtn.getScene().getWindow();
         // do what you have to do
         stage.close();
@@ -125,6 +128,10 @@ public class ControllerResults implements Initializable {
     private void handleMovieDelete(ActionEvent event) throws IOException {
         Movie movie = ControllerSearchMovie.savedMovie;
         MovieList.removeMovie(movie);
+        try{
+        MovieList.save();}catch (Exception e){
+            System.out.println("Error writing to file: " + e);
+        }
         Stage stage = (Stage) changeBtn.getScene().getWindow();
         // do what you have to do
         stage.close();

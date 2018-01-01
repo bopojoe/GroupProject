@@ -1,6 +1,13 @@
 package project;
 
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Iterator;
 
 /**
@@ -85,6 +92,37 @@ private int index;
         yearList.remove(movie);
         titleList.remove(movie);
         }
+
+
+    public static void save() throws Exception
+    {
+        XStream xstream = new XStream(new DomDriver());
+        ObjectOutputStream out;
+        out = xstream.createObjectOutputStream(new FileWriter("runtime.xml"));
+        out.writeObject(runtimeHashlist);
+        out.close();
+        out = xstream.createObjectOutputStream(new FileWriter("title.xml"));
+        out.writeObject(titleHashlist);
+        out.close();
+        out = xstream.createObjectOutputStream(new FileWriter("year.xml"));
+        out.writeObject(yearHashlist);
+        out.close();
+    }
+
+    public static void load() throws Exception
+    {
+        XStream xstream = new XStream(new DomDriver());
+        ObjectInputStream is;
+        is = xstream.createObjectInputStream(new FileReader("runtime.xml"));
+        runtimeHashlist =(LinkedList<Movie>[]) is.readObject();
+        is.close();
+        is = xstream.createObjectInputStream(new FileReader("title.xml"));
+        titleHashlist =(LinkedList<Movie>[]) is.readObject();
+        is.close();
+        is = xstream.createObjectInputStream(new FileReader("year.xml"));
+        yearHashlist =(LinkedList<Movie>[]) is.readObject();
+        is.close();
+    }
     }
 
 

@@ -11,7 +11,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerSearchActor">
 
     <children>
-        <Label fx:id="exit" layoutX="25.0" prefHeight="36.0" prefWidth="225.0" text="Better IMDB" textFill="#e52019dc">
+        <Label fx:id="exit" onMousePressed="#handleClose" layoutX="25.0" prefHeight="36.0" prefWidth="225.0" text="Better IMDB" textFill="#e52019dc">
             <font>
                 <Font size="25" />
             </font>

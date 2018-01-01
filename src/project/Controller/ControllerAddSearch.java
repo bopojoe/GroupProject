@@ -63,7 +63,7 @@ public class ControllerAddSearch {
         Parent root;
         Stage stage;
         stage = (Stage) btn2.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("../View/Modify.fxml"));
+        root = FXMLLoader.load(getClass().getResource("../View/Edit.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
