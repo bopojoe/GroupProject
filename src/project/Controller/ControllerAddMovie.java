@@ -40,10 +40,15 @@ public class ControllerAddMovie {
     private Button btn2;
 
     @FXML
-    private void handleClose(MouseEvent event) {
-        if(event.getSource()== exit)
-        {
-            System.exit(0);
+    private void handleClose(MouseEvent event) throws IOException {
+        if (event.getSource() == exit) {
+            Parent root;
+            Stage stage;
+            stage = (Stage) btn2.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("../View/Start.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }
     }
 

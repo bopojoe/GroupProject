@@ -13,7 +13,7 @@
                 <Font size="25" />
             </font>
         </Label>
-        <AnchorPane layoutX="266.0" layoutY="312.0" prefHeight="51.0" prefWidth="165.0" style="-fx-background-color: #1C1F25">
+        <AnchorPane layoutX="501.0" layoutY="150.0" prefHeight="51.0" prefWidth="165.0" style="-fx-background-color: #1C1F25">
             <children>
                 <Button fx:id="changeBtn" alignment="CENTER" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleButtonChange" prefHeight="36.0" prefWidth="137.0" text="Submit" />
             </children></AnchorPane>
@@ -28,10 +28,11 @@
       <TextField id="year" fx:id="year2" layoutX="72.0" layoutY="192.0" prefHeight="25.0" prefWidth="179.0" text="Year Of Release" />
         <Label id="runtime" fx:id="runtime" layoutX="72.0" layoutY="225.0" style="-fx-font-weight: bold" text="Runtime" textFill="#42A5DC" />
       <TextField id="runtime" fx:id="runtime2" layoutX="72.0" layoutY="242.0" prefHeight="17.0" prefWidth="78.0" text="Runtime" />
-        <Label id="plot" fx:id="plot" layoutX="444.0" layoutY="118.0" prefHeight="26.0" prefWidth="137.0" style="-fx-font-weight: bold" text="Plot" textFill="#42A5DC" />
-      <TextField id="plot" fx:id="plot2" layoutX="444.0" layoutY="140.0" prefHeight="175.0" prefWidth="204.0" text="Plot" />
+        <Label id="plot" fx:id="plot" layoutX="266.0" layoutY="114.0" prefHeight="26.0" prefWidth="137.0" style="-fx-font-weight: bold" text="Plot" textFill="#42A5DC" />
+      <TextField id="plot" fx:id="plot2" layoutX="266.0" layoutY="134.0" prefHeight="204.0" prefWidth="204.0" text="Plot" />
         <Label id="url" fx:id="url" layoutX="72.0" layoutY="282.0" style="-fx-font-weight: bold" text="Img url" textFill="#42A5DC" />
       <TextField id="url" fx:id="url2" layoutX="69.0" layoutY="304.0" prefHeight="25.0" prefWidth="179.0" text="Img url" />
+      <Button layoutX="517.0" layoutY="219.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="137.0" text="Delete" />
     </children>
     <opaqueInsets>
 
