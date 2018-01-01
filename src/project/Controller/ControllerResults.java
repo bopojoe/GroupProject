@@ -17,6 +17,8 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import project.Actor;
+import project.ActorList;
 import project.Movie;
 import project.MovieList;
 
@@ -31,7 +33,7 @@ public class ControllerResults implements Initializable {
     private Label exit;
 
     @FXML
-    private Button btn1, changeBtn;
+    private Button btn1, changeBtn, BtnAtr;
     @FXML
     private Button btn2;
     @FXML
@@ -60,6 +62,22 @@ public class ControllerResults implements Initializable {
         MovieList.addMovie(title, year, runtime, plot, url);
 
         Stage stage = (Stage) changeBtn.getScene().getWindow();
+        // do what you have to do
+        stage.close();
+
+    }
+
+    @FXML
+    private void changeActorBtn(ActionEvent event) throws IOException {
+        Actor actor = ControllerSearchActor.savedActor;
+        ActorList.removeActor(actor);
+        String name = this.sName.getText();
+        int age = Integer.parseInt(this.sAge.getText());
+        String gender = this.sGender.getText();
+        String nat = this.sNationality.getText();
+        ActorList.addActor(name,age,gender,nat);
+
+        Stage stage = (Stage) BtnAtr.getScene().getWindow();
         // do what you have to do
         stage.close();
 

@@ -55,14 +55,26 @@ public class ActorList implements Iterable<Actor>{
 
     }
 
-    // Kevin Power 2075681
-    public void removeActor(Actor toRemove){
-        LinkedList<Actor> internalList = ageHashlist[toRemove.hashCode()];
-        if (internalList != null){
-            internalList.remove(toRemove);
-        }
+    public static void removeActor(Actor actor){
+        int age = actor.getAge();
+        String name = actor.getName();
+        String nat = actor.getNationality();
+        String gender = actor.getGender();
+        int nameHash = Math.abs(name.hashCode())%nameHashlist.length;
+        int natHash = Math.abs(nat.hashCode())%natHashlist.length;
+        int genderHash =Math.abs(gender.hashCode())%genderHashlist.length;
+        int ageHash = age % ageHashlist.length;
+        LinkedList<Actor> nameList = nameHashlist[nameHash];
+        LinkedList<Actor> natList = natHashlist[natHash];
+        LinkedList<Actor> genderList = genderHashlist[genderHash];
+        LinkedList<Actor> ageList = ageHashlist[ageHash];
+        natList.remove(actor);
+        nameList.remove(actor);
+        genderList.remove(actor);
+        ageList.remove(actor);
     }
-
-
-
 }
+
+
+
+

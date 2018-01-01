@@ -69,11 +69,12 @@ private int index;
 
 
 
-    //Kevin Power 20075681
+
     public static void removeMovie(Movie movie){
         int runtime = movie.getRunningTime();
         int year = movie.getYear();
         String title = movie.getTitle();
+        System.out.println(title);
         int rtHash = runtime % runtimeHashlist.length;
         int yearHash = year %yearHashlist.length;
         int titleHash =Math.abs(title.hashCode())%titleHashlist.length;
