@@ -63,7 +63,7 @@ public class ControllerSearchMovie {
             if (check) {
                 runtime = Integer.parseInt(sRuntime.getText());
                 if (runtime != 0) {
-                    LinkedList<Movie> returnedMovieList = IODriver.listm(runtime);
+                    LinkedList<Movie> returnedMovieList = IODriver.runtimeSearch(runtime);
                     LinkedList.DataLink head = returnedMovieList.header;
                     multiList(head);
                     }
@@ -175,17 +175,24 @@ public class ControllerSearchMovie {
 
     @FXML
     private void handleButtonRuntime(ActionEvent event) throws IOException {
-        if (sRuntime != null) {
-            String title = sRuntime.getText();
-            LinkedList<Movie> returnedMovieList = IODriver.titleSearch(title);
+
+            int runtime;
+            if (sRuntime != null) {
+                boolean check = Main.parseCheck(sRuntime.getText());
+                if (check) {
+                    runtime = Integer.parseInt(sRuntime.getText());
+                    if (runtime != 0) {
+            LinkedList<Movie> returnedMovieList = IODriver.runtimeSearch(runtime);
             LinkedList.DataLink head = returnedMovieList.header;
             multiListEdit(head);
+                        System.out.println("Please Enter a number for runtime in minutes ie. 106");
+                    }
+                } else {
+                    System.out.println("Please Enter a number for runtime in minutes ie. 106");
+                }
 
-
-        }
-
+            }
     }
-
 }
 
 

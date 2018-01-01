@@ -1,8 +1,5 @@
 package project;
 
-import java.lang.annotation.ElementType;
-import java.lang.reflect.Array;
-import java.lang.reflect.Type;
 import java.util.Scanner;
 
 /**
@@ -91,7 +88,7 @@ public class IODriver {
         System.out.println("What do you want to add?");
         System.out.println("___________________");
         System.out.println("¦  Movie(m)          ¦");
-        System.out.println("¦  print listm(l)    ¦");
+        System.out.println("¦  print runtimeSearch(l)    ¦");
         System.out.println("¦  print listh(h)    ¦");
         System.out.println("¦  show array(b)     ¦");
         System.out.println("¦  Go Back(g)        ¦");
@@ -250,11 +247,11 @@ public class IODriver {
     public void runt() {
         System.out.print("enter a runtime to hash: ");
         int hash = input.nextInt();
-        listm(hash);
+        runtimeSearch(hash);
 
     }
 
-    public static LinkedList<Movie> listm(int runtime) {
+    public static LinkedList<Movie> runtimeSearch(int runtime) {
         int hash = runtime % MovieList.runtimeHashlist.length;
         LinkedList<Movie> location = MovieList.runtimeHashlist[hash];
         LinkedList.DataLink head = location.header;
