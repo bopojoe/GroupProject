@@ -32,7 +32,7 @@
       <TextField id="plot" fx:id="plot2" layoutX="266.0" layoutY="134.0" prefHeight="204.0" prefWidth="204.0" text="Plot" />
         <Label id="url" fx:id="url" layoutX="72.0" layoutY="282.0" style="-fx-font-weight: bold" text="Img url" textFill="#42A5DC" />
       <TextField id="url" fx:id="url2" layoutX="69.0" layoutY="304.0" prefHeight="25.0" prefWidth="179.0" text="Img url" />
-      <Button layoutX="517.0" layoutY="219.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="137.0" text="Delete" />
+      <Button fx:id="deleteMovieBtn" layoutX="517.0" layoutY="219.0" mnemonicParsing="false" onAction="#handleMovieDelete" prefHeight="36.0" prefWidth="137.0" text="Delete" />
     </children>
     <opaqueInsets>
 

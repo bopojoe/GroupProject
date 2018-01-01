@@ -33,7 +33,7 @@ public class ControllerResults implements Initializable {
     private Label exit;
 
     @FXML
-    private Button btn1, changeBtn, BtnAtr;
+    private Button btn1, changeBtn, BtnAtr, deleteActorBtn, deleteMovieBtn;
     @FXML
     private Button btn2;
     @FXML
@@ -110,6 +110,28 @@ public class ControllerResults implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
+
+    @FXML
+    private void handleActorDelete(ActionEvent event) throws IOException {
+        Actor actor = ControllerSearchActor.savedActor;
+        ActorList.removeActor(actor);
+        Stage stage = (Stage) BtnAtr.getScene().getWindow();
+        // do what you have to do
+        stage.close();
+    }
+
+    @FXML
+    private void handleMovieDelete(ActionEvent event) throws IOException {
+        Movie movie = ControllerSearchMovie.savedMovie;
+        MovieList.removeMovie(movie);
+        Stage stage = (Stage) changeBtn.getScene().getWindow();
+        // do what you have to do
+        stage.close();
+
+    }
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
