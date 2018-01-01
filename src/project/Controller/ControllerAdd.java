@@ -56,6 +56,13 @@ public class ControllerAdd{
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
+    private void handleButtonActorMovie(ActionEvent event) throws IOException {
+
+
+
+    }
+
 
 
 
