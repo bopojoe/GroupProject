@@ -14,10 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import java.io.FileWriter;
-import java.io.ObjectOutputStream;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
+
 
 
 public class Main extends Application {

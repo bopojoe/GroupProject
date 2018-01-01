@@ -571,8 +571,8 @@
             <title>title 1</title>
             <year>1001</year>
             <runningTime>91</runningTime>
-            <plot>asdfgasfg</plot>
-            <imgUrl>asgasfg</imgUrl>
+            <plot>Plot 1</plot>
+            <imgUrl>imgUrl 1</imgUrl>
           </data>
           <outer-class reference="../../.."/>
         </nextDataLink>

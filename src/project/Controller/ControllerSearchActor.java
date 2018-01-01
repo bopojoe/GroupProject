@@ -45,7 +45,7 @@ public class ControllerSearchActor {
             stage.show();
         }
     }
-
+/*
     public void handle(ActionEvent event){
 
     }
@@ -75,7 +75,7 @@ public class ControllerSearchActor {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }
+    }*/
 
     @FXML
     private void handleButtonOne(ActionEvent event) throws IOException {
@@ -176,7 +176,7 @@ public class ControllerSearchActor {
         while(data.nextDataLink!=null){
             savedActor = (Actor)data.nextDataLink.data;
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../View/EditActorResult.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
+            Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Better IMDB");
             stage.setScene(new Scene(root1));

@@ -16,17 +16,17 @@ public class IODriver {
         input = new Scanner(System.in);
         test = new MovieList();
         testA = new ActorList();
-        try{
+        /*try{
         MovieList.load();
         } catch (Exception e)
         {System.out.println("Error loading Movie lists");}
         try{
             ActorList.load();
         } catch (Exception e)
-        {System.out.println("Error loading Actor lists");}
+        {System.out.println("Error loading Actor lists");}*/
 
-       /* fillArray(49);
-        setupAdditions(30);*/
+        fillArray(49);
+        setupAdditions(30);
 
         //homeMenu();
 
