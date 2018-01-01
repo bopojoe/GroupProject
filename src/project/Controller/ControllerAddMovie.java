@@ -44,7 +44,7 @@ public class ControllerAddMovie {
         if (event.getSource() == exit) {
             Parent root;
             Stage stage;
-            stage = (Stage) btn2.getScene().getWindow();
+            stage = (Stage) btn1.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("../View/Start.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
