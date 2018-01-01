@@ -69,6 +69,7 @@ public class ControllerResults implements Initializable {
             MovieList.save();}catch (Exception e){
             System.out.println("Error writing to file: " + e);
         }
+        ControllerSearchMovie.savedMovie = null;
         Stage stage = (Stage) changeBtn.getScene().getWindow();
         // do what you have to do
         stage.close();
@@ -88,7 +89,7 @@ public class ControllerResults implements Initializable {
             ActorList.save();}catch (Exception e){
             System.out.println("Error writing to file: " + e);
         }
-
+        ControllerSearchActor.savedActor = null;
         Stage stage = (Stage) BtnAtr.getScene().getWindow();
         // do what you have to do
         stage.close();
@@ -127,6 +128,7 @@ public class ControllerResults implements Initializable {
             ActorList.save();}catch (Exception e){
             System.out.println("Error writing to file: " + e);
         }
+        ControllerSearchActor.savedActor = null;
         Stage stage = (Stage) BtnAtr.getScene().getWindow();
         // do what you have to do
         stage.close();
@@ -140,6 +142,7 @@ public class ControllerResults implements Initializable {
         MovieList.save();}catch (Exception e){
             System.out.println("Error writing to file: " + e);
         }
+        ControllerSearchMovie.savedMovie = null;
         Stage stage = (Stage) changeBtn.getScene().getWindow();
         // do what you have to do
         stage.close();

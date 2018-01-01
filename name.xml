@@ -188,18 +188,18 @@
         <nextDataLink>
           <index>0</index>
           <data class="project.Actor">
-            <name>name25</name>
-            <age>35</age>
-            <gender>gender25</gender>
-            <nationality>nationality25</nationality>
+            <name>name1</name>
+            <age>11</age>
+            <gender>gender1</gender>
+            <nationality>nationality1</nationality>
           </data>
           <nextDataLink>
             <index>0</index>
             <data class="project.Actor">
-              <name>name1</name>
-              <age>11</age>
-              <gender>gender1</gender>
-              <nationality>nationality1</nationality>
+              <name>name25</name>
+              <age>35</age>
+              <gender>gender25</gender>
+              <nationality>nationality25</nationality>
             </data>
             <outer-class reference="../../../.."/>
           </nextDataLink>
