@@ -431,19 +431,30 @@
           <nextDataLink>
             <index>0</index>
             <data class="project.Movie">
-              <title>title 22</title>
-              <year>1022</year>
-              <runningTime>574</runningTime>
-              <plot>Plot 22</plot>
-              <imgUrl>imgUrl 22</imgUrl>
+              <title>cob</title>
+              <year>1001</year>
+              <runningTime>91</runningTime>
+              <plot>Plot 1</plot>
+              <imgUrl>imgUrl 1</imgUrl>
             </data>
+            <nextDataLink>
+              <index>0</index>
+              <data class="project.Movie">
+                <title>title 22</title>
+                <year>1022</year>
+                <runningTime>574</runningTime>
+                <plot>Plot 22</plot>
+                <imgUrl>imgUrl 22</imgUrl>
+              </data>
+              <outer-class reference="../../../../.."/>
+            </nextDataLink>
             <outer-class reference="../../../.."/>
           </nextDataLink>
           <outer-class reference="../../.."/>
         </nextDataLink>
         <outer-class reference="../.."/>
       </header>
-      <size>2</size>
+      <size>3</size>
     </project.LinkedList>
     <project.LinkedList>
       <header>
@@ -542,20 +553,9 @@
     <project.LinkedList>
       <header>
         <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 1</title>
-            <year>1001</year>
-            <runningTime>91</runningTime>
-            <plot>Plot 1</plot>
-            <imgUrl>imgUrl 1</imgUrl>
-          </data>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
         <outer-class reference="../.."/>
       </header>
-      <size>1</size>
+      <size>0</size>
     </project.LinkedList>
     <project.LinkedList>
       <header>

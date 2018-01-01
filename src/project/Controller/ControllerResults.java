@@ -70,6 +70,7 @@ public class ControllerResults implements Initializable {
             System.out.println("Error writing to file: " + e);
         }
         ControllerSearchMovie.savedMovie = null;
+            System.out.println(ControllerSearchMovie.savedMovie);
         Stage stage = (Stage) changeBtn.getScene().getWindow();
         // do what you have to do
         stage.close();

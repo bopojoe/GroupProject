@@ -17,7 +17,6 @@ public class ActorList implements Iterable<Actor>{
     static {
         nameHashlist = new LinkedList[50];
     }
-
     protected static LinkedList<Actor> ageHashlist[];
 
     static {
@@ -29,9 +28,7 @@ public class ActorList implements Iterable<Actor>{
     static {
         genderHashlist = new LinkedList[50];
     }
-
     protected static LinkedList<Actor> natHashlist[];
-
     static {
         natHashlist = new LinkedList[50];
     }

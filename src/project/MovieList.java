@@ -25,7 +25,6 @@ private int index;
     }
 
     protected static LinkedList<Movie> yearHashlist[];
-
     static {
         yearHashlist = new LinkedList[50];
     }
@@ -59,35 +58,53 @@ private int index;
 
 
     public static void addMovie(String title, int year, int runningTime, String plot, String imgUrl) {
+        // make a movie object of the inputs
         Movie newMovie = new Movie(title, year, runningTime, plot, imgUrl);
+
         String title1 = title.toLowerCase();
         int rtHash = runningTime % runtimeHashlist.length;
         int yearHash  = year % yearHashlist.length;
         int titleHash  = Math.abs(title1.hashCode()) % titleHashlist.length;
+
         LinkedList<Movie> yearHashedList = yearHashlist[yearHash];
         LinkedList<Movie> rtHashedList = runtimeHashlist[rtHash];
         LinkedList<Movie> titleHashedList = titleHashlist[titleHash];
+
         yearHashedList.add(newMovie);
         titleHashedList.add(newMovie);
         rtHashedList.add(newMovie);
+
         System.out.println("You've just added: " + newMovie.toString());
     }
 
 
 
 
-
+//code to remove movies
     public static void removeMovie(Movie movie){
+        //getting the attributes for hashing
         int runtime = movie.getRunningTime();
         int year = movie.getYear();
         String title = movie.getTitle();
+        String title1 = title.toLowerCase();
+
         System.out.println(title);
+        System.out.println(title1);
+        System.out.println(runtimeHashlist.length);
+        IODriver.test(runtimeHashlist);
+
+        //hash each attribute
         int rtHash = runtime % runtimeHashlist.length;
         int yearHash = year %yearHashlist.length;
-        int titleHash =Math.abs(title.hashCode())%titleHashlist.length;
+        int titleHash =Math.abs(title1.hashCode())%titleHashlist.length;
+
+        System.out.println(titleHash);
+        //find the location of the movie
         LinkedList<Movie> runList = runtimeHashlist[rtHash];
         LinkedList<Movie> yearList = yearHashlist[yearHash];
         LinkedList<Movie> titleList = titleHashlist[titleHash];
+        //remove the movie from each list
+        IODriver.test(titleHashlist);
         runList.remove(movie);
         yearList.remove(movie);
         titleList.remove(movie);
@@ -115,10 +132,10 @@ private int index;
         ObjectInputStream is;
         is = xstream.createObjectInputStream(new FileReader("runtime.xml"));
         runtimeHashlist =(LinkedList<Movie>[]) is.readObject();
-        is.close();
+
         is = xstream.createObjectInputStream(new FileReader("title.xml"));
         titleHashlist =(LinkedList<Movie>[]) is.readObject();
-        is.close();
+
         is = xstream.createObjectInputStream(new FileReader("year.xml"));
         yearHashlist =(LinkedList<Movie>[]) is.readObject();
         is.close();
