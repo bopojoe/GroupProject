@@ -81,6 +81,10 @@ public class ControllerAddMovie {
             String plot = this.plot.getText();
             String url = this.url.getText();
             MovieList.addMovie(title, year, runtime, plot, url);
+            try{
+                MovieList.save();}catch (Exception e){
+                System.out.println("Error writing to file: " + e);
+            }
 
         }
     }

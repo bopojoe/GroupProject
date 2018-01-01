@@ -27,7 +27,7 @@ public class ControllerSearch {
         if (event.getSource() == exit) {
             Parent root;
             Stage stage;
-            stage = (Stage) btn2.getScene().getWindow();
+            stage = (Stage) btn22.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("../View/Start.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -104,27 +104,5 @@ public class ControllerSearch {
 
     }
 
-    @FXML
-    private void ButtonMovieDelete(ActionEvent event) throws IOException {
-        Parent root;
-        Stage stage;
-        stage = (Stage) btnMove.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("../View/DeleteMovie.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
 
-    }
-
-    @FXML
-    private void ButtonActorDelete(ActionEvent event) throws IOException {
-        Parent root;
-        Stage stage;
-        stage = (Stage) btnAct.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("../View/DeleteActor.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-    }
 }
