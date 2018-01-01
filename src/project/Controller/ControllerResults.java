@@ -84,6 +84,10 @@ public class ControllerResults implements Initializable {
         String gender = this.sGender.getText();
         String nat = this.sNationality.getText();
         ActorList.addActor(name,age,gender,nat);
+        try{
+            ActorList.save();}catch (Exception e){
+            System.out.println("Error writing to file: " + e);
+        }
 
         Stage stage = (Stage) BtnAtr.getScene().getWindow();
         // do what you have to do
@@ -119,6 +123,10 @@ public class ControllerResults implements Initializable {
     private void handleActorDelete(ActionEvent event) throws IOException {
         Actor actor = ControllerSearchActor.savedActor;
         ActorList.removeActor(actor);
+        try{
+            ActorList.save();}catch (Exception e){
+            System.out.println("Error writing to file: " + e);
+        }
         Stage stage = (Stage) BtnAtr.getScene().getWindow();
         // do what you have to do
         stage.close();

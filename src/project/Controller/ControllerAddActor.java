@@ -70,6 +70,10 @@ public class ControllerAddActor {
             String nationality = this.nationality.getText();
 
             ActorList.addActor(name,age,gender,nationality);
+            try{
+                ActorList.save();}catch (Exception e){
+                System.out.println("Error writing to file: " + e);
+            }
 
         }
 

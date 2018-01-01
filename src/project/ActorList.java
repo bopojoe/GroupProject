@@ -1,5 +1,12 @@
 package project;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Iterator;
 
 public class ActorList implements Iterable<Actor>{
@@ -72,6 +79,42 @@ public class ActorList implements Iterable<Actor>{
         nameList.remove(actor);
         genderList.remove(actor);
         ageList.remove(actor);
+    }
+
+    public static void save() throws Exception
+    {
+        XStream xstream = new XStream(new DomDriver());
+        ObjectOutputStream out;
+        out = xstream.createObjectOutputStream(new FileWriter("name.xml"));
+        out.writeObject(nameHashlist);
+        out.close();
+        out = xstream.createObjectOutputStream(new FileWriter("nat.xml"));
+        out.writeObject(natHashlist);
+        out.close();
+        out = xstream.createObjectOutputStream(new FileWriter("gender.xml"));
+        out.writeObject(genderHashlist);
+        out.close();
+        out = xstream.createObjectOutputStream(new FileWriter("age.xml"));
+        out.writeObject(ageHashlist);
+        out.close();
+    }
+
+    public static void load() throws Exception
+    {
+        XStream xstream = new XStream(new DomDriver());
+        ObjectInputStream is;
+        is = xstream.createObjectInputStream(new FileReader("name.xml"));
+        nameHashlist =(LinkedList<Actor>[]) is.readObject();
+        is.close();
+        is = xstream.createObjectInputStream(new FileReader("nat.xml"));
+        natHashlist =(LinkedList<Actor>[]) is.readObject();
+        is.close();
+        is = xstream.createObjectInputStream(new FileReader("gender.xml"));
+        genderHashlist =(LinkedList<Actor>[]) is.readObject();
+        is.close();
+        is = xstream.createObjectInputStream(new FileReader("age.xml"));
+        ageHashlist =(LinkedList<Actor>[]) is.readObject();
+        is.close();
     }
 }
 
