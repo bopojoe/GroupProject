@@ -56,7 +56,7 @@ public class ControllerSearch {
     private void handleButtonActor(ActionEvent event) throws IOException {
         Parent root;
         Stage stage;
-        stage = (Stage) btn2.getScene().getWindow();
+        stage = (Stage) btn22.getScene().getWindow();
         root = FXMLLoader.load(getClass().getResource("../View/EditActor.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
