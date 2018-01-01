@@ -43,7 +43,7 @@ public class ControllerSearchMovie {
         if (event.getSource() == exit) {
             Parent root;
             Stage stage;
-            stage = (Stage) btn2.getScene().getWindow();
+            stage = (Stage) btn8.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("../View/Start.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -70,8 +70,12 @@ public class ControllerSearchMovie {
                 runtime = Integer.parseInt(sRuntime.getText());
                 if (runtime != 0) {
                     LinkedList<Movie> returnedMovieList = IODriver.runtimeSearch(runtime);
-                    LinkedList.DataLink head = returnedMovieList.header;
-                    multiList(head);
+                    LinkedList.DataLink head =null;
+                    boolean test = true;
+                    try{
+                        head = returnedMovieList.header;}catch (NullPointerException e){test = false;}
+                    if(test){
+                        multiList(head);}else{System.out.println("Search did not return a movie.");}
                     }
 
                 else {
@@ -93,8 +97,14 @@ public class ControllerSearchMovie {
                 year = Integer.parseInt(sYear.getText());
                 if (year != 0) {
                     LinkedList<Movie> returnedMovieList = IODriver.yearSearch(year);
-                    LinkedList.DataLink head = returnedMovieList.header;
-                    multiList(head);} else {
+                    LinkedList.DataLink head =null;
+                    boolean test = true;
+                    try{
+                        head = returnedMovieList.header;}catch (NullPointerException e){test = false;}
+                    if(test){
+                        multiList(head);}else{System.out.println("Search did not return a movie.");}
+
+                } else {
                     System.out.println("Please Enter a number for year ie. 1998");
                 }
             } else {
@@ -110,8 +120,12 @@ public class ControllerSearchMovie {
         if (sTitle != null) {
                 String title = sTitle.getText();
             LinkedList<Movie> returnedMovieList = IODriver.titleSearch(title);
-            LinkedList.DataLink head = returnedMovieList.header;
-            multiList(head);
+            LinkedList.DataLink head =null;
+            boolean test = true;
+            try{
+                head = returnedMovieList.header;}catch (NullPointerException e){test = false;}
+            if(test){
+                multiList(head);}else{System.out.println("Search did not return a movie.");}
 
 
         }
@@ -150,8 +164,12 @@ public class ControllerSearchMovie {
         if (sTitle != null) {
             String title = sTitle.getText();
             LinkedList<Movie> returnedMovieList = IODriver.titleSearch(title);
-            LinkedList.DataLink head = returnedMovieList.header;
-            multiListEdit(head);
+            LinkedList.DataLink head =null;
+            boolean test = true;
+            try{
+            head = returnedMovieList.header;}catch (NullPointerException e){test = false;}
+            if(test){
+            multiListEdit(head);}else{System.out.println("Search did not return a movie.");}
 
 
         }
@@ -168,8 +186,14 @@ public class ControllerSearchMovie {
                 year = Integer.parseInt(sYear.getText());
                 if (year != 0) {
                     LinkedList<Movie> returnedMovieList = IODriver.yearSearch(year);
-                    LinkedList.DataLink head = returnedMovieList.header;
-                    multiListEdit(head);} else {
+                    LinkedList.DataLink head;
+                    head = null;
+                    check = true;
+                    try {
+                        head = returnedMovieList.header;
+                    }catch (NullPointerException e){check = false;}
+                    if (check){
+                    multiListEdit(head);}else{System.out.println("Search did not return a movie.");}} else {
                     System.out.println("Please Enter a number for year ie. 1998");
                 }
             } else {
@@ -189,8 +213,14 @@ public class ControllerSearchMovie {
                     runtime = Integer.parseInt(sRuntime.getText());
                     if (runtime != 0) {
             LinkedList<Movie> returnedMovieList = IODriver.runtimeSearch(runtime);
-            LinkedList.DataLink head = returnedMovieList.header;
-            multiListEdit(head);
+                        LinkedList.DataLink head;
+                        head = null;
+                        check = true;
+                        try {
+                            head = returnedMovieList.header;
+                        }catch (NullPointerException e){check = false;}
+                        if (check){
+                            multiListEdit(head);}else{System.out.println("Search did not return a movie.");}} else {
                         System.out.println("Please Enter a number for runtime in minutes ie. 106");
                     }
                 } else {

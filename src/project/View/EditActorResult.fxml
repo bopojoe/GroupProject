@@ -37,6 +37,7 @@
             <TextField id="sNationality" fx:id="sNationality" promptText="Nationality" />
         </children>
     </VBox>
-      <Button fx:id="BtnAtr" layoutX="294.0" layoutY="349.0" mnemonicParsing="false" onAction="#changeActorBtn" prefHeight="25.0" prefWidth="140.0" text="Submit" />
+      <Button fx:id="BtnAtr" layoutX="154.0" layoutY="349.0" mnemonicParsing="false" onAction="#changeActorBtn" prefHeight="25.0" prefWidth="140.0" text="Save" />
+      <Button fx:id="deleteActorBtn" layoutX="434.0" layoutY="349.0" mnemonicParsing="false" onAction="#handleActorDelete" prefHeight="25.0" prefWidth="140.0" text="Delete" />
     </children>
 </AnchorPane>
