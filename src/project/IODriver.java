@@ -20,11 +20,11 @@ public class IODriver {
       try{
         MovieList.load();
         } catch (Exception e)
-        {System.out.println(e);}
+        {System.out.println("Error loading Movie lists");}
         try{
             ActorList.load();
         } catch (Exception e)
-        {System.out.println(e);}
+        {System.out.println("Error loading Actor lists");}
 
         fillArray(49);
         setupAdditions(30);
