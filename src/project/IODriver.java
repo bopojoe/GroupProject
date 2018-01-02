@@ -13,22 +13,43 @@ public class IODriver {
     private Scanner input;
 
     public IODriver() {
+        //fillArray(49);
         input = new Scanner(System.in);
         test = new MovieList();
         testA = new ActorList();
-        /*try{
+      try{
         MovieList.load();
         } catch (Exception e)
-        {System.out.println("Error loading Movie lists");}
+        {System.out.println(e);}
         try{
             ActorList.load();
         } catch (Exception e)
-        {System.out.println("Error loading Actor lists");}*/
+        {System.out.println(e);}
 
         fillArray(49);
         setupAdditions(30);
 
         //homeMenu();
+
+
+    }
+
+    public static void test(LinkedList<Movie>[] list){
+        int i = 0;
+
+        while(i<=49) {
+            System.out.println(list[i]);
+            LinkedList<Movie> movielist = list[i];
+
+            LinkedList.DataLink head = movielist.header;
+
+            while (head.nextDataLink != null) {
+                //Movie movie = (Movie) head.nextDataLink.data;
+                System.out.println(head.nextDataLink.data.toString());
+                head = head.nextDataLink;}
+            i=i+1;
+        }
+
 
 
     }
@@ -274,7 +295,7 @@ public class IODriver {
             return location;}
 
 
-            //System.out.println(head.nextDataLink.data.toString());
+
             head = head.nextDataLink;
         }
         return null;

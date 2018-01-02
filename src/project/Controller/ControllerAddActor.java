@@ -25,7 +25,7 @@ public class ControllerAddActor {
     @FXML
     private Button btn2;
     @FXML
-    private TextField name,gender,nationality,age;
+    private TextField name, gender, nationality, age;
 
 
     @FXML
@@ -42,7 +42,7 @@ public class ControllerAddActor {
     }
 
 
-    public void handle(ActionEvent event){
+    public void handle(ActionEvent event) {
 
     }
 
@@ -50,28 +50,28 @@ public class ControllerAddActor {
     private void handleButtonAction(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-        if(event.getSource()==btn1){
+        if (event.getSource() == btn1) {
             //get reference to the button's stage
-            stage=(Stage) btn1.getScene().getWindow();
+            stage = (Stage) btn1.getScene().getWindow();
             //load up OTHER FXML document
             root = FXMLLoader.load(getClass().getResource("../View/Add-Search-Modify.fxml"));
-        }
-        else{
-            stage=(Stage) btn2.getScene().getWindow();
+        } else {
+            stage = (Stage) btn2.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("../View/AddActor.fxml"));
         }
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        if(name.getText() != null){
+        if (name.getText() != null) {
             String name = this.name.getText();
             int age = Integer.parseInt(this.age.getText());
             String gender = this.gender.getText();
             String nationality = this.nationality.getText();
 
-            ActorList.addActor(name,age,gender,nationality);
-            try{
-                ActorList.save();}catch (Exception e){
+            ActorList.addActor(name, age, gender, nationality);
+            try {
+                ActorList.save();
+            } catch (Exception e) {
                 System.out.println("Error writing to file: " + e);
             }
 

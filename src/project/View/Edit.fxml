@@ -5,25 +5,35 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerSearch">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.Controller.ControllerSearch">
     <children>
-        <Label fx:id="exit" onMousePressed="#handleClose" layoutX="25.0" prefHeight="36.0" prefWidth="225.0" text="Better IMDB" textFill="#e52019dc">
+        <Label fx:id="exit" onMousePressed="#handleClose" layoutX="25.0" prefHeight="36.0" prefWidth="225.0"
+               text="Better IMDB" textFill="#e52019dc">
             <font>
-                <Font size="25" />
+                <Font size="25"/>
             </font>
         </Label>
-        <AnchorPane layoutX="255.0" layoutY="122.0" prefHeight="90.0" prefWidth="190.0" style="-fx-background-color: #1C1F25">
+        <AnchorPane layoutX="255.0" layoutY="122.0" prefHeight="90.0" prefWidth="190.0"
+                    style="-fx-background-color: #1C1F25">
             <children>
-                <Button fx:id="btn22" alignment="CENTER" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleButtonMovie" prefHeight="65.0" prefWidth="165.0" text="Movie" />
-            </children></AnchorPane>
-        <AnchorPane layoutX="255.0" layoutY="212.0" prefHeight="90.0" prefWidth="190.0" style="-fx-background-color: #1C1F25">
+                <Button fx:id="btn22" alignment="CENTER" layoutX="14.0" layoutY="12.0" mnemonicParsing="false"
+                        onAction="#handleButtonMovie" prefHeight="65.0" prefWidth="165.0" text="Movie"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="255.0" layoutY="212.0" prefHeight="90.0" prefWidth="190.0"
+                    style="-fx-background-color: #1C1F25">
             <children>
-                <Button fx:id="btn13" alignment="CENTER" layoutX="15.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonActor" prefHeight="65.0" prefWidth="160.0" text="Actor" />
-            </children></AnchorPane>
-      <Label layoutX="329.0" layoutY="65.0" text="Edit" textFill="#e52019dc">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Label>
+                <Button fx:id="btn13" alignment="CENTER" layoutX="15.0" layoutY="13.0" mnemonicParsing="false"
+                        onAction="#handleButtonActor" prefHeight="65.0" prefWidth="160.0" text="Actor"/>
+            </children>
+        </AnchorPane>
+        <Label layoutX="329.0" layoutY="65.0" text="Edit" textFill="#e52019dc">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
     </children>
 </AnchorPane>

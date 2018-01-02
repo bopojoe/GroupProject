@@ -15,8 +15,8 @@ import java.util.Iterator;
  */
 
 
-public class MovieList implements Iterable<Movie>{
-private int index;
+public class MovieList implements Iterable<Movie> {
+    private int index;
 
     protected static LinkedList<Movie> runtimeHashlist[];
 
@@ -46,7 +46,6 @@ private int index;
     public MovieList() {
 
 
-
     }
 
 
@@ -59,43 +58,53 @@ private int index;
 
 
     public static void addMovie(String title, int year, int runningTime, String plot, String imgUrl) {
+        // make a movie object of the inputs
         Movie newMovie = new Movie(title, year, runningTime, plot, imgUrl);
+
         String title1 = title.toLowerCase();
         int rtHash = runningTime % runtimeHashlist.length;
-        int yearHash  = year % yearHashlist.length;
-        int titleHash  = Math.abs(title1.hashCode()) % titleHashlist.length;
+        int yearHash = year % yearHashlist.length;
+        int titleHash = Math.abs(title1.hashCode()) % titleHashlist.length;
+
         LinkedList<Movie> yearHashedList = yearHashlist[yearHash];
         LinkedList<Movie> rtHashedList = runtimeHashlist[rtHash];
         LinkedList<Movie> titleHashedList = titleHashlist[titleHash];
+
         yearHashedList.add(newMovie);
         titleHashedList.add(newMovie);
         rtHashedList.add(newMovie);
+
         System.out.println("You've just added: " + newMovie.toString());
     }
 
 
-
-
-
-    public static void removeMovie(Movie movie){
+    //code to remove movies
+    public static void removeMovie(Movie movie) {
+        //getting the attributes for hashing
         int runtime = movie.getRunningTime();
         int year = movie.getYear();
         String title = movie.getTitle();
-        System.out.println(title);
+        String title1 = title.toLowerCase();
+
+
+        //hash each attribute
         int rtHash = runtime % runtimeHashlist.length;
-        int yearHash = year %yearHashlist.length;
-        int titleHash =Math.abs(title.hashCode())%titleHashlist.length;
+        int yearHash = year % yearHashlist.length;
+        int titleHash = Math.abs(title1.hashCode()) % titleHashlist.length;
+
+
+        //find the location of the movie
         LinkedList<Movie> runList = runtimeHashlist[rtHash];
         LinkedList<Movie> yearList = yearHashlist[yearHash];
         LinkedList<Movie> titleList = titleHashlist[titleHash];
+        //remove the movie from each list
         runList.remove(movie);
         yearList.remove(movie);
         titleList.remove(movie);
-        }
+    }
 
 
-    public static void save() throws Exception
-    {
+    public static void save() throws Exception {
         XStream xstream = new XStream(new DomDriver());
         ObjectOutputStream out;
         out = xstream.createObjectOutputStream(new FileWriter("runtime.xml"));
@@ -109,21 +118,20 @@ private int index;
         out.close();
     }
 
-    public static void load() throws Exception
-    {
+    public static void load() throws Exception {
         XStream xstream = new XStream(new DomDriver());
         ObjectInputStream is;
         is = xstream.createObjectInputStream(new FileReader("runtime.xml"));
-        runtimeHashlist =(LinkedList<Movie>[]) is.readObject();
-        is.close();
+        runtimeHashlist = (LinkedList<Movie>[]) is.readObject();
+
         is = xstream.createObjectInputStream(new FileReader("title.xml"));
-        titleHashlist =(LinkedList<Movie>[]) is.readObject();
-        is.close();
+        titleHashlist = (LinkedList<Movie>[]) is.readObject();
+
         is = xstream.createObjectInputStream(new FileReader("year.xml"));
-        yearHashlist =(LinkedList<Movie>[]) is.readObject();
+        yearHashlist = (LinkedList<Movie>[]) is.readObject();
         is.close();
     }
-    }
+}
 
 
 

@@ -9,7 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Iterator;
 
-public class ActorList implements Iterable<Actor>{
+public class ActorList implements Iterable<Actor> {
 
 
     protected static LinkedList<Actor> nameHashlist[];
@@ -35,6 +35,7 @@ public class ActorList implements Iterable<Actor>{
     static {
         natHashlist = new LinkedList[50];
     }
+
     protected static LinkedList<Actor> actorlist = new LinkedList<>();
 
     @Override
@@ -42,7 +43,7 @@ public class ActorList implements Iterable<Actor>{
         return actorlist.iterator();
     }
 
-    public static void addActor(String name, int age, String gender, String nationality){
+    public static void addActor(String name, int age, String gender, String nationality) {
         Actor newActor = new Actor(name, age, gender, nationality);
         int hName = Math.abs(name.hashCode());
         int hAge = age;
@@ -55,21 +56,21 @@ public class ActorList implements Iterable<Actor>{
         System.out.println("You've just added:" + newActor.toString());
     }
 
-    private static void addHashlists(LinkedList<Actor> hList[], int hash, Actor newActor){
+    private static void addHashlists(LinkedList<Actor> hList[], int hash, Actor newActor) {
         int index = hash % hList.length;
         LinkedList<Actor> hashedList = hList[index];
         hashedList.add(newActor);
 
     }
 
-    public static void removeActor(Actor actor){
+    public static void removeActor(Actor actor) {
         int age = actor.getAge();
         String name = actor.getName();
         String nat = actor.getNationality();
         String gender = actor.getGender();
-        int nameHash = Math.abs(name.hashCode())%nameHashlist.length;
-        int natHash = Math.abs(nat.hashCode())%natHashlist.length;
-        int genderHash =Math.abs(gender.hashCode())%genderHashlist.length;
+        int nameHash = Math.abs(name.hashCode()) % nameHashlist.length;
+        int natHash = Math.abs(nat.hashCode()) % natHashlist.length;
+        int genderHash = Math.abs(gender.hashCode()) % genderHashlist.length;
         int ageHash = age % ageHashlist.length;
         LinkedList<Actor> nameList = nameHashlist[nameHash];
         LinkedList<Actor> natList = natHashlist[natHash];
@@ -81,8 +82,7 @@ public class ActorList implements Iterable<Actor>{
         ageList.remove(actor);
     }
 
-    public static void save() throws Exception
-    {
+    public static void save() throws Exception {
         XStream xstream = new XStream(new DomDriver());
         ObjectOutputStream out;
         out = xstream.createObjectOutputStream(new FileWriter("name.xml"));
@@ -99,21 +99,20 @@ public class ActorList implements Iterable<Actor>{
         out.close();
     }
 
-    public static void load() throws Exception
-    {
+    public static void load() throws Exception {
         XStream xstream = new XStream(new DomDriver());
         ObjectInputStream is;
         is = xstream.createObjectInputStream(new FileReader("name.xml"));
-        nameHashlist =(LinkedList<Actor>[]) is.readObject();
+        nameHashlist = (LinkedList<Actor>[]) is.readObject();
         is.close();
         is = xstream.createObjectInputStream(new FileReader("nat.xml"));
-        natHashlist =(LinkedList<Actor>[]) is.readObject();
+        natHashlist = (LinkedList<Actor>[]) is.readObject();
         is.close();
         is = xstream.createObjectInputStream(new FileReader("gender.xml"));
-        genderHashlist =(LinkedList<Actor>[]) is.readObject();
+        genderHashlist = (LinkedList<Actor>[]) is.readObject();
         is.close();
         is = xstream.createObjectInputStream(new FileReader("age.xml"));
-        ageHashlist =(LinkedList<Actor>[]) is.readObject();
+        ageHashlist = (LinkedList<Actor>[]) is.readObject();
         is.close();
     }
 }

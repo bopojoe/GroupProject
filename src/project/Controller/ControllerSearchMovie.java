@@ -16,6 +16,7 @@ import project.IODriver;
 import project.LinkedList;
 import project.Main;
 import project.Movie;
+
 import java.io.IOException;
 
 public class ControllerSearchMovie {
@@ -33,9 +34,6 @@ public class ControllerSearchMovie {
     private TextField sTitle, sYear, sRuntime;
 
     protected static Movie savedMovie;
-
-
-
 
 
     @FXML
@@ -56,7 +54,6 @@ public class ControllerSearchMovie {
     }
 
 
-
     /*This is the Movie runtime search, it hashes thr runtime,
     finds it's position in the array and then linearly searches
      in case of multiple hashes to this point */
@@ -70,15 +67,19 @@ public class ControllerSearchMovie {
                 runtime = Integer.parseInt(sRuntime.getText());
                 if (runtime != 0) {
                     LinkedList<Movie> returnedMovieList = IODriver.runtimeSearch(runtime);
-                    LinkedList.DataLink head =null;
+                    LinkedList.DataLink head = null;
                     boolean test = true;
-                    try{
-                        head = returnedMovieList.header;}catch (NullPointerException e){test = false;}
-                    if(test){
-                        multiList(head);}else{System.out.println("Search did not return a movie.");}
+                    try {
+                        head = returnedMovieList.header;
+                    } catch (NullPointerException e) {
+                        test = false;
                     }
-
-                else {
+                    if (test) {
+                        multiList(head);
+                    } else {
+                        System.out.println("Search did not return a movie.");
+                    }
+                } else {
                     System.out.println("Please Enter a number for runtime in minutes ie. 106 ");
                 }
             } else {
@@ -97,12 +98,18 @@ public class ControllerSearchMovie {
                 year = Integer.parseInt(sYear.getText());
                 if (year != 0) {
                     LinkedList<Movie> returnedMovieList = IODriver.yearSearch(year);
-                    LinkedList.DataLink head =null;
+                    LinkedList.DataLink head = null;
                     boolean test = true;
-                    try{
-                        head = returnedMovieList.header;}catch (NullPointerException e){test = false;}
-                    if(test){
-                        multiList(head);}else{System.out.println("Search did not return a movie.");}
+                    try {
+                        head = returnedMovieList.header;
+                    } catch (NullPointerException e) {
+                        test = false;
+                    }
+                    if (test) {
+                        multiList(head);
+                    } else {
+                        System.out.println("Search did not return a movie.");
+                    }
 
                 } else {
                     System.out.println("Please Enter a number for year ie. 1998");
@@ -118,22 +125,28 @@ public class ControllerSearchMovie {
     @FXML
     private void handleButtonSeven(ActionEvent event) throws IOException {
         if (sTitle != null) {
-                String title = sTitle.getText();
+            String title = sTitle.getText();
             LinkedList<Movie> returnedMovieList = IODriver.titleSearch(title);
-            LinkedList.DataLink head =null;
+            LinkedList.DataLink head = null;
             boolean test = true;
-            try{
-                head = returnedMovieList.header;}catch (NullPointerException e){test = false;}
-            if(test){
-                multiList(head);}else{System.out.println("Search did not return a movie.");}
+            try {
+                head = returnedMovieList.header;
+            } catch (NullPointerException e) {
+                test = false;
+            }
+            if (test) {
+                multiList(head);
+            } else {
+                System.out.println("Search did not return a movie.");
+            }
 
 
         }
     }
 
     private void multiList(LinkedList.DataLink data) throws IOException {
-        while(data.nextDataLink!=null){
-            savedMovie = (Movie)data.nextDataLink.data;
+        while (data.nextDataLink != null) {
+            savedMovie = (Movie) data.nextDataLink.data;
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../View/MovieResultsPage.fxml"));
             Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
@@ -146,8 +159,8 @@ public class ControllerSearchMovie {
     }
 
     private void multiListEdit(LinkedList.DataLink data) throws IOException {
-        while(data.nextDataLink!=null){
-            savedMovie = (Movie)data.nextDataLink.data;
+        while (data.nextDataLink != null) {
+            savedMovie = (Movie) data.nextDataLink.data;
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../View/EditMovieResult.fxml"));
             Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
@@ -164,12 +177,18 @@ public class ControllerSearchMovie {
         if (sTitle != null) {
             String title = sTitle.getText();
             LinkedList<Movie> returnedMovieList = IODriver.titleSearch(title);
-            LinkedList.DataLink head =null;
+            LinkedList.DataLink head = null;
             boolean test = true;
-            try{
-            head = returnedMovieList.header;}catch (NullPointerException e){test = false;}
-            if(test){
-            multiListEdit(head);}else{System.out.println("Search did not return a movie.");}
+            try {
+                head = returnedMovieList.header;
+            } catch (NullPointerException e) {
+                test = false;
+            }
+            if (test) {
+                multiListEdit(head);
+            } else {
+                System.out.println("Search did not return a movie.");
+            }
 
 
         }
@@ -191,9 +210,15 @@ public class ControllerSearchMovie {
                     check = true;
                     try {
                         head = returnedMovieList.header;
-                    }catch (NullPointerException e){check = false;}
-                    if (check){
-                    multiListEdit(head);}else{System.out.println("Search did not return a movie.");}} else {
+                    } catch (NullPointerException e) {
+                        check = false;
+                    }
+                    if (check) {
+                        multiListEdit(head);
+                    } else {
+                        System.out.println("Search did not return a movie.");
+                    }
+                } else {
                     System.out.println("Please Enter a number for year ie. 1998");
                 }
             } else {
@@ -206,28 +231,34 @@ public class ControllerSearchMovie {
     @FXML
     private void handleButtonRuntime(ActionEvent event) throws IOException {
 
-            int runtime;
-            if (sRuntime != null) {
-                boolean check = Main.parseCheck(sRuntime.getText());
-                if (check) {
-                    runtime = Integer.parseInt(sRuntime.getText());
-                    if (runtime != 0) {
-            LinkedList<Movie> returnedMovieList = IODriver.runtimeSearch(runtime);
-                        LinkedList.DataLink head;
-                        head = null;
-                        check = true;
-                        try {
-                            head = returnedMovieList.header;
-                        }catch (NullPointerException e){check = false;}
-                        if (check){
-                            multiListEdit(head);}else{System.out.println("Search did not return a movie.");}} else {
-                        System.out.println("Please Enter a number for runtime in minutes ie. 106");
+        int runtime;
+        if (sRuntime != null) {
+            boolean check = Main.parseCheck(sRuntime.getText());
+            if (check) {
+                runtime = Integer.parseInt(sRuntime.getText());
+                if (runtime != 0) {
+                    LinkedList<Movie> returnedMovieList = IODriver.runtimeSearch(runtime);
+                    LinkedList.DataLink head;
+                    head = null;
+                    check = true;
+                    try {
+                        head = returnedMovieList.header;
+                    } catch (NullPointerException e) {
+                        check = false;
+                    }
+                    if (check) {
+                        multiListEdit(head);
+                    } else {
+                        System.out.println("Search did not return a movie.");
                     }
                 } else {
                     System.out.println("Please Enter a number for runtime in minutes ie. 106");
                 }
-
+            } else {
+                System.out.println("Please Enter a number for runtime in minutes ie. 106");
             }
+
+        }
     }
 }
 

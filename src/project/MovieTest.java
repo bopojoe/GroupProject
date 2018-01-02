@@ -1,11 +1,12 @@
 package project;
 
 
-
 import static org.junit.Assert.*;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 public class MovieTest {
 
     private Movie movie1;
@@ -13,14 +14,14 @@ public class MovieTest {
 
     /**
      * Set up test fixtures
-     *
+     * <p>
      * Called before every test method
      */
 
     @Before
     public void setUp() throws Exception {
         movie1 = new Movie("title1", 1001, 234, "plot1", "www.image.com");
-        movieInvalid = new Movie("Title is invalid, Invalid Title",2344,234564,"plotinvalid", "ddwa.dadwa.image");
+        movieInvalid = new Movie("Title is invalid, Invalid Title", 2344, 234564, "plotinvalid", "ddwa.dadwa.image");
     }
 
     /**
@@ -28,13 +29,13 @@ public class MovieTest {
      */
 
     @Test
-    public void testConstructor(){
-         assertNotNull(movie1);
-         assertEquals("Title is invalid, Invalid Title", movieInvalid.getTitle());
-         assertEquals(2344, movieInvalid.getYear());
-         assertEquals(234564, movieInvalid.getRunningTime());
-         assertEquals("plotinvalid", movieInvalid.getPlot());
-         assertEquals("ddwa.dadwa.image", movieInvalid.getImgUrl());
+    public void testConstructor() {
+        assertNotNull(movie1);
+        assertEquals("Title is invalid, Invalid Title", movieInvalid.getTitle());
+        assertEquals(2344, movieInvalid.getYear());
+        assertEquals(234564, movieInvalid.getRunningTime());
+        assertEquals("plotinvalid", movieInvalid.getPlot());
+        assertEquals("ddwa.dadwa.image", movieInvalid.getImgUrl());
     }
 
     /**
@@ -42,7 +43,7 @@ public class MovieTest {
      */
 
     @Test
-    public void testGetters(){
+    public void testGetters() {
         assertEquals("title1", movie1.getTitle());
         assertEquals(1001, movie1.getYear());
         assertEquals(234, movie1.getRunningTime());
@@ -76,16 +77,17 @@ public class MovieTest {
         movie1.setImgUrl("dsjahio.oijd.sdoih");
         assertEquals("dsjahio.oijd.sdoih", movie1.getImgUrl());
     }
+
     @Test
     public void testToString() {
         assertEquals(
-                "Movie info: [name:"+"title1"+
-                        ", "+"Year:"+1001+
-                        ", "+"Film Length: "+234+
-                        ", "+"Plot: "+"plot1"+
-                        ", "+"Film Img Url: "+"www.image.com"+"] \n"
-                        ,
-                        movie1.toString());
+                "Movie info: [name:" + "title1" +
+                        ", " + "Year:" + 1001 +
+                        ", " + "Film Length: " + 234 +
+                        ", " + "Plot: " + "plot1" +
+                        ", " + "Film Img Url: " + "www.image.com" + "] \n"
+                ,
+                movie1.toString());
     }
 
 }

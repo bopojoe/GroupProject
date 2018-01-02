@@ -7,30 +7,39 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerStart">
+<AnchorPane maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.Controller.ControllerStart">
     <children>
-        <AnchorPane layoutX="183.0" layoutY="36.0" prefHeight="197.0" prefWidth="334.0" style="-fx-background-color: #1C1F25">
-         <children>
-            <ImageView fitHeight="197.0" fitWidth="335.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../home-page.png" />
-               </image>
-            </ImageView>
-         </children></AnchorPane>
-        <Label fx:id="exit" onMousePressed="#handleClose" layoutX="25.0" prefHeight="36.0" prefWidth="147.0" text="Better IMDB" textFill="#e52019dc" wrapText="true">
+        <AnchorPane layoutX="183.0" layoutY="36.0" prefHeight="197.0" prefWidth="334.0"
+                    style="-fx-background-color: #1C1F25">
+            <children>
+                <ImageView fitHeight="197.0" fitWidth="335.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../home-page.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Label fx:id="exit" onMousePressed="#handleClose" layoutX="25.0" prefHeight="36.0" prefWidth="147.0"
+               text="Better IMDB" textFill="#e52019dc" wrapText="true">
             <font>
-                <Font size="25.0" />
+                <Font size="25.0"/>
             </font>
         </Label>
-      <AnchorPane layoutX="214.0" layoutY="251.0" prefHeight="53.0" prefWidth="273.0" style="-fx-background-color: #1C1F25">
-         <children>
-            <ImageView fitHeight="116.0" fitWidth="273.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../enter.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="btn1" mnemonicParsing="false" onAction="#handleButtonAction" opacity="0.0" prefHeight="61.0" prefWidth="273.0" />
-         </children></AnchorPane>
+        <AnchorPane layoutX="214.0" layoutY="251.0" prefHeight="53.0" prefWidth="273.0"
+                    style="-fx-background-color: #1C1F25">
+            <children>
+                <ImageView fitHeight="116.0" fitWidth="273.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../enter.png"/>
+                    </image>
+                </ImageView>
+                <Button fx:id="btn1" mnemonicParsing="false" onAction="#handleButtonAction" opacity="0.0"
+                        prefHeight="61.0" prefWidth="273.0"/>
+            </children>
+        </AnchorPane>
     </children>
 
 </AnchorPane>

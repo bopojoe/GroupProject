@@ -35,7 +35,7 @@ public class ControllerSearch {
         }
     }
 
-    public void handle(ActionEvent event){
+    public void handle(ActionEvent event) {
 
     }
 
@@ -43,20 +43,20 @@ public class ControllerSearch {
     private void handleButtonAction(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-        if(event.getSource()==btn1){
+        if (event.getSource() == btn1) {
             //get reference to the button's stage
-            stage=(Stage) btn1.getScene().getWindow();
+            stage = (Stage) btn1.getScene().getWindow();
             //load up OTHER FXML document
             root = FXMLLoader.load(getClass().getResource("../View/SearchActor.fxml"));
-        }
-        else{
-            stage=(Stage) btn2.getScene().getWindow();
+        } else {
+            stage = (Stage) btn2.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("../View/SearchMovie.fxml"));
         }
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
     private void handleButtonActor(ActionEvent event) throws IOException {
         Parent root;
@@ -69,6 +69,7 @@ public class ControllerSearch {
 
 
     }
+
     @FXML
     private void handleButtonMovie(ActionEvent event) throws IOException {
         Parent root;
@@ -80,6 +81,7 @@ public class ControllerSearch {
         stage.show();
 
     }
+
     @FXML
     private void handleButtonEdit(ActionEvent event) throws IOException {
         Parent root;
