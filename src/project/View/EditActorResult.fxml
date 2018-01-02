@@ -8,36 +8,41 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerResults">
+<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.Controller.ControllerResults">
 
     <children>
-        <Label fx:id="exit" layoutX="677.0" onMousePressed="#handleClose" prefHeight="35.0" prefWidth="18.0" text="X" textFill="#e52019dc">
+        <Label fx:id="exit" layoutX="677.0" onMousePressed="#handleClose" prefHeight="35.0" prefWidth="18.0" text="X"
+               textFill="#e52019dc">
             <font>
-                <Font name="Helvetica" size="25.0" />
+                <Font name="Helvetica" size="25.0"/>
             </font>
         </Label>
         <Label layoutX="25.0" prefHeight="36.0" prefWidth="225.0" text="Better IMDB" textFill="#e52019dc">
             <font>
-                <Font size="25" />
+                <Font size="25"/>
             </font>
         </Label>
         <Label layoutX="264.0" layoutY="69.0" text="Edit Actor Results " textFill="#e52019dc">
             <font>
-                <Font size="25.0" />
+                <Font size="25.0"/>
             </font>
         </Label>
         <VBox layoutX="294.0" layoutY="129.0" prefHeight="200.0" prefWidth="140.0">
-         <children>
-            <TextField id="sName" fx:id="sName" promptText="Name" />
-            <Separator prefHeight="32.0" prefWidth="100.0" visible="false" />
-            <TextField id="sAge" fx:id="sAge" prefWidth="100.0" promptText="Age" />
-            <Separator prefHeight="32.0" prefWidth="100.0" visible="false" />
-            <TextField id="sGender" fx:id="sGender" promptText="Gender" />
-            <Separator prefHeight="32.0" prefWidth="100.0" visible="false" />
-            <TextField id="sNationality" fx:id="sNationality" promptText="Nationality" />
-        </children>
-    </VBox>
-      <Button fx:id="BtnAtr" layoutX="154.0" layoutY="349.0" mnemonicParsing="false" onAction="#changeActorBtn" prefHeight="25.0" prefWidth="140.0" text="Save" />
-      <Button fx:id="deleteActorBtn" layoutX="434.0" layoutY="349.0" mnemonicParsing="false" onAction="#handleActorDelete" prefHeight="25.0" prefWidth="140.0" text="Delete" />
+            <children>
+                <TextField id="sName" fx:id="sName" promptText="Name"/>
+                <Separator prefHeight="32.0" prefWidth="100.0" visible="false"/>
+                <TextField id="sAge" fx:id="sAge" prefWidth="100.0" promptText="Age"/>
+                <Separator prefHeight="32.0" prefWidth="100.0" visible="false"/>
+                <TextField id="sGender" fx:id="sGender" promptText="Gender"/>
+                <Separator prefHeight="32.0" prefWidth="100.0" visible="false"/>
+                <TextField id="sNationality" fx:id="sNationality" promptText="Nationality"/>
+            </children>
+        </VBox>
+        <Button fx:id="BtnAtr" layoutX="154.0" layoutY="349.0" mnemonicParsing="false" onAction="#changeActorBtn"
+                prefHeight="25.0" prefWidth="140.0" text="Save"/>
+        <Button fx:id="deleteActorBtn" layoutX="434.0" layoutY="349.0" mnemonicParsing="false"
+                onAction="#handleActorDelete" prefHeight="25.0" prefWidth="140.0" text="Delete"/>
     </children>
 </AnchorPane>

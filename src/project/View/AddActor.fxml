@@ -6,28 +6,35 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerAddActor">
-   <children>
-      <Label fx:id="exit" onMousePressed="#handleClose" layoutX="25.0" prefHeight="36.0" prefWidth="225.0" text="Better IMDB" textFill="#e52019dc">
-         <font>
-            <Font size="25.0" />
-         </font></Label>
-      <AnchorPane layoutX="266.0" layoutY="312.0" prefHeight="51.0" prefWidth="165.0" style="-fx-background-color: #1C1F25">
-         <children>
-            <Button fx:id="btn1" alignment="CENTER" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="36.0" prefWidth="137.0" text="Submit" />
-         </children></AnchorPane>
-      <Label layoutX="266.0" layoutY="69.0" text="Add New Actor" textFill="#e52019dc">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Label>
-      <TextField id="name" fx:id="name" layoutX="72.0" layoutY="118.0" promptText="Name" />
-      <TextField id="age" fx:id="age" layoutX="72.0" layoutY="175.0" promptText="Age" />
-      <TextField id="gender" fx:id="gender" layoutX="72.0" layoutY="225.0" promptText="Gender" />
-      <TextField id="nationality" fx:id="nationality" layoutX="72.0" layoutY="282.0" promptText="Nationality" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.Controller.ControllerAddActor">
+    <children>
+        <Label fx:id="exit" onMousePressed="#handleClose" layoutX="25.0" prefHeight="36.0" prefWidth="225.0"
+               text="Better IMDB" textFill="#e52019dc">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        <AnchorPane layoutX="266.0" layoutY="312.0" prefHeight="51.0" prefWidth="165.0"
+                    style="-fx-background-color: #1C1F25">
+            <children>
+                <Button fx:id="btn1" alignment="CENTER" layoutX="14.0" layoutY="4.0" mnemonicParsing="false"
+                        onAction="#handleButtonAction" prefHeight="36.0" prefWidth="137.0" text="Submit"/>
+            </children>
+        </AnchorPane>
+        <Label layoutX="266.0" layoutY="69.0" text="Add New Actor" textFill="#e52019dc">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        <TextField id="name" fx:id="name" layoutX="72.0" layoutY="118.0" promptText="Name"/>
+        <TextField id="age" fx:id="age" layoutX="72.0" layoutY="175.0" promptText="Age"/>
+        <TextField id="gender" fx:id="gender" layoutX="72.0" layoutY="225.0" promptText="Gender"/>
+        <TextField id="nationality" fx:id="nationality" layoutX="72.0" layoutY="282.0" promptText="Nationality"/>
 
 
-
-   </children>
+    </children>
 
 </AnchorPane>

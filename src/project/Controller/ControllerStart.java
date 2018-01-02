@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -30,9 +31,8 @@ public class ControllerStart implements EventHandler<ActionEvent>, Initializable
     private Button btn2;
 
 
-
-     @FXML
-     public void initialize(URL location, ResourceBundle resources) {
+    @FXML
+    public void initialize(URL location, ResourceBundle resources) {
 
         // ImageView.fitWidth().bind(stage.getWidth());
     }
@@ -51,22 +51,21 @@ public class ControllerStart implements EventHandler<ActionEvent>, Initializable
         }
     }
 
-    public void handle(ActionEvent event){
+    public void handle(ActionEvent event) {
 
     }
 
     @FXML
-    private void handleButtonAction(ActionEvent event) throws IOException{
+    private void handleButtonAction(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-        if(event.getSource()==btn1){
+        if (event.getSource() == btn1) {
             //get reference to the button's stage
-            stage=(Stage) btn1.getScene().getWindow();
+            stage = (Stage) btn1.getScene().getWindow();
             //load up OTHER FXML document
             root = FXMLLoader.load(getClass().getResource("../View/Add-Search-Modify.fxml"));
-        }
-        else{
-            stage=(Stage) btn2.getScene().getWindow();
+        } else {
+            stage = (Stage) btn2.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("../View/Add-Search-Modify.fxml"));
         }
 
@@ -77,11 +76,11 @@ public class ControllerStart implements EventHandler<ActionEvent>, Initializable
         stage.show();
     }
 
-    public void setScene(Scene scene){
+    public void setScene(Scene scene) {
         this.scene = scene;
     }
 
-    public void setStage(Stage stage){
+    public void setStage(Stage stage) {
         this.stage = stage;
     }
 

@@ -6,33 +6,50 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerResults">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.Controller.ControllerResults">
     <children>
         <Label layoutX="25.0" prefHeight="36.0" prefWidth="225.0" text="Better IMDB" textFill="#e52019dc">
             <font>
-                <Font size="25" />
+                <Font size="25"/>
             </font>
         </Label>
-        <AnchorPane layoutX="501.0" layoutY="150.0" prefHeight="51.0" prefWidth="165.0" style="-fx-background-color: #1C1F25">
+        <AnchorPane layoutX="501.0" layoutY="150.0" prefHeight="51.0" prefWidth="165.0"
+                    style="-fx-background-color: #1C1F25">
             <children>
-                <Button fx:id="changeBtn" alignment="CENTER" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleButtonChange" prefHeight="36.0" prefWidth="137.0" text="Submit" />
-            </children></AnchorPane>
+                <Button fx:id="changeBtn" alignment="CENTER" layoutX="14.0" layoutY="4.0" mnemonicParsing="false"
+                        onAction="#handleButtonChange" prefHeight="36.0" prefWidth="137.0" text="Submit"/>
+            </children>
+        </AnchorPane>
         <Label layoutX="248.0" layoutY="36.0" text="Edit Movie Results" textFill="#e52019dc">
             <font>
-                <Font size="25.0" />
+                <Font size="25.0"/>
             </font>
         </Label>
-        <Label id="mTitle" fx:id="mTitle" layoutX="72.0" layoutY="118.0" style="-fx-font-weight: bold" text="Movie Title" textFill="#42A5DC" />
-      <TextField id="mTitle" fx:id="mTitle2" layoutX="72.0" layoutY="136.0" prefHeight="17.0" prefWidth="179.0" text="Movie Title" />
-        <Label id="year" fx:id="year" layoutX="72.0" layoutY="175.0" style="-fx-font-weight: bold" text="Year Of Release" textFill="#42A5DC" />
-      <TextField id="year" fx:id="year2" layoutX="72.0" layoutY="192.0" prefHeight="25.0" prefWidth="179.0" text="Year Of Release" />
-        <Label id="runtime" fx:id="runtime" layoutX="72.0" layoutY="225.0" style="-fx-font-weight: bold" text="Runtime" textFill="#42A5DC" />
-      <TextField id="runtime" fx:id="runtime2" layoutX="72.0" layoutY="242.0" prefHeight="17.0" prefWidth="78.0" text="Runtime" />
-        <Label id="plot" fx:id="plot" layoutX="266.0" layoutY="114.0" prefHeight="26.0" prefWidth="137.0" style="-fx-font-weight: bold" text="Plot" textFill="#42A5DC" />
-      <TextField id="plot" fx:id="plot2" layoutX="266.0" layoutY="134.0" prefHeight="204.0" prefWidth="204.0" text="Plot" />
-        <Label id="url" fx:id="url" layoutX="72.0" layoutY="282.0" style="-fx-font-weight: bold" text="Img url" textFill="#42A5DC" />
-      <TextField id="url" fx:id="url2" layoutX="69.0" layoutY="304.0" prefHeight="25.0" prefWidth="179.0" text="Img url" />
-      <Button fx:id="deleteMovieBtn" layoutX="517.0" layoutY="219.0" mnemonicParsing="false" onAction="#handleMovieDelete" prefHeight="36.0" prefWidth="137.0" text="Delete" />
+        <Label id="mTitle" fx:id="mTitle" layoutX="72.0" layoutY="118.0" style="-fx-font-weight: bold"
+               text="Movie Title" textFill="#42A5DC"/>
+        <TextField id="mTitle" fx:id="mTitle2" layoutX="72.0" layoutY="136.0" prefHeight="17.0" prefWidth="179.0"
+                   text="Movie Title"/>
+        <Label id="year" fx:id="year" layoutX="72.0" layoutY="175.0" style="-fx-font-weight: bold"
+               text="Year Of Release" textFill="#42A5DC"/>
+        <TextField id="year" fx:id="year2" layoutX="72.0" layoutY="192.0" prefHeight="25.0" prefWidth="179.0"
+                   text="Year Of Release"/>
+        <Label id="runtime" fx:id="runtime" layoutX="72.0" layoutY="225.0" style="-fx-font-weight: bold" text="Runtime"
+               textFill="#42A5DC"/>
+        <TextField id="runtime" fx:id="runtime2" layoutX="72.0" layoutY="242.0" prefHeight="17.0" prefWidth="78.0"
+                   text="Runtime"/>
+        <Label id="plot" fx:id="plot" layoutX="266.0" layoutY="114.0" prefHeight="26.0" prefWidth="137.0"
+               style="-fx-font-weight: bold" text="Plot" textFill="#42A5DC"/>
+        <TextField id="plot" fx:id="plot2" layoutX="266.0" layoutY="134.0" prefHeight="204.0" prefWidth="204.0"
+                   text="Plot"/>
+        <Label id="url" fx:id="url" layoutX="72.0" layoutY="282.0" style="-fx-font-weight: bold" text="Img url"
+               textFill="#42A5DC"/>
+        <TextField id="url" fx:id="url2" layoutX="69.0" layoutY="304.0" prefHeight="25.0" prefWidth="179.0"
+                   text="Img url"/>
+        <Button fx:id="deleteMovieBtn" layoutX="517.0" layoutY="219.0" mnemonicParsing="false"
+                onAction="#handleMovieDelete" prefHeight="36.0" prefWidth="137.0" text="Delete"/>
     </children>
     <opaqueInsets>
 

@@ -7,13 +7,13 @@ package project;
 
 public class Movie {
 
-private String title;
-private int year;
-private int runningTime; //minutes
+    private String title;
+    private int year;
+    private int runningTime; //minutes
 
-private String plot;
-private String imgUrl;
-private LinkedList<Actor> actors;
+    private String plot;
+    private String imgUrl;
+    private LinkedList<Actor> actors;
 
 
     public Movie(String title, int year, int runningTime, String plot, String imgUrl) {
@@ -61,12 +61,11 @@ private LinkedList<Actor> actors;
         return imgUrl;
     }
 
-    private String sanitizeImgUrl (String imgUrl) {
+    private String sanitizeImgUrl(String imgUrl) {
 
         if (imgUrl.length() > 40) {
             return imgUrl.substring(0, 40);
-        }
-        else {
+        } else {
             return imgUrl;
         }
     }
@@ -77,7 +76,7 @@ private LinkedList<Actor> actors;
 
     @Override
     public String toString() {
-        String str = "Movie info: [name:"+getTitle()+", "+"Year:"+getYear()+", "+"Film Length: "+getRunningTime()+", "+"Plot: "+getPlot()+", "+"Film Img Url: "+getImgUrl()+"] \n";
+        String str = "Movie info: [name:" + getTitle() + ", " + "Year:" + getYear() + ", " + "Film Length: " + getRunningTime() + ", " + "Plot: " + getPlot() + ", " + "Film Img Url: " + getImgUrl() + "] \n";
         return str;
     }
 

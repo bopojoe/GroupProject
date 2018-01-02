@@ -7,27 +7,35 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerAddMovie">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.Controller.ControllerAddMovie">
     <children>
-        <Label fx:id="exit" onMousePressed="#handleClose" layoutX="25.0" prefHeight="36.0" prefWidth="225.0" text="Better IMDB" textFill="#e52019dc">
+        <Label fx:id="exit" onMousePressed="#handleClose" layoutX="25.0" prefHeight="36.0" prefWidth="225.0"
+               text="Better IMDB" textFill="#e52019dc">
             <font>
-                <Font size="25" />
+                <Font size="25"/>
             </font>
         </Label>
-        <AnchorPane layoutX="266.0" layoutY="312.0" prefHeight="51.0" prefWidth="165.0" style="-fx-background-color: #1C1F25">
+        <AnchorPane layoutX="266.0" layoutY="312.0" prefHeight="51.0" prefWidth="165.0"
+                    style="-fx-background-color: #1C1F25">
             <children>
-                <Button fx:id="btn1" alignment="CENTER" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="36.0" prefWidth="137.0" text="Submit" />
-            </children></AnchorPane>
+                <Button fx:id="btn1" alignment="CENTER" layoutX="14.0" layoutY="4.0" mnemonicParsing="false"
+                        onAction="#handleButtonAction" prefHeight="36.0" prefWidth="137.0" text="Submit"/>
+            </children>
+        </AnchorPane>
         <Label layoutX="260.0" layoutY="71.0" text="Add New Movie" textFill="#e52019dc">
             <font>
-                <Font size="25.0" />
+                <Font size="25.0"/>
             </font>
         </Label>
-        <TextField id="mTitle" fx:id="mTitle" layoutX="72.0" layoutY="118.0" promptText="Title" />
-      <TextField id="year" fx:id="year" layoutX="72.0" layoutY="175.0" promptText="Year of film" />
-      <TextField id="runtime" fx:id="runtime" layoutX="72.0" layoutY="225.0" promptText="Runtime" />
-      <TextArea id="plot" fx:id="plot" layoutX="444.0" layoutY="118.0" prefHeight="200.0" prefWidth="200.0" promptText="Plot " />
-      <TextField id="url" fx:id="url" layoutX="72.0" layoutY="282.0" promptText="Image URL" />
+        <TextField id="mTitle" fx:id="mTitle" layoutX="72.0" layoutY="118.0" promptText="Title"/>
+        <TextField id="year" fx:id="year" layoutX="72.0" layoutY="175.0" promptText="Year of film"/>
+        <TextField id="runtime" fx:id="runtime" layoutX="72.0" layoutY="225.0" promptText="Runtime"/>
+        <TextArea id="plot" fx:id="plot" layoutX="444.0" layoutY="118.0" prefHeight="200.0" prefWidth="200.0"
+                  promptText="Plot "/>
+        <TextField id="url" fx:id="url" layoutX="72.0" layoutY="282.0" promptText="Image URL"/>
     </children>
     <opaqueInsets>
 

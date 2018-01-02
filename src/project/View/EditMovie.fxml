@@ -8,34 +8,38 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ControllerSearchMovie">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            onMouseClicked="#handleClose" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #1C1F25"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.Controller.ControllerSearchMovie">
     <children>
-        <Label fx:id="exit" onMousePressed="#handleClose" layoutX="25.0" prefHeight="36.0" prefWidth="225.0" text="Better IMDB" textFill="#e52019dc">
+        <Label fx:id="exit" onMousePressed="#handleClose" layoutX="25.0" prefHeight="36.0" prefWidth="225.0"
+               text="Better IMDB" textFill="#e52019dc">
             <font>
-                <Font size="25" />
+                <Font size="25"/>
             </font>
         </Label>
         <Label layoutX="292.0" layoutY="71.0" text="Edit Movie" textFill="#e52019dc">
             <font>
-                <Font size="25.0" />
+                <Font size="25.0"/>
             </font>
         </Label>
         <VBox layoutX="150.0" layoutY="128.0" prefHeight="200.0" prefWidth="140.0">
             <children>
-                <TextField id="sTitle" fx:id="sTitle" promptText="Title" />
-                <Separator prefHeight="32.0" prefWidth="100.0" visible="false" />
-                <TextField id="sYear" fx:id="sYear" prefWidth="100.0" promptText="Year" />
-                <Separator prefHeight="32.0" prefWidth="100.0" visible="false" />
-                <TextField id="sRuntime" fx:id="sRuntime" promptText="Run Time" />
+                <TextField id="sTitle" fx:id="sTitle" promptText="Title"/>
+                <Separator prefHeight="32.0" prefWidth="100.0" visible="false"/>
+                <TextField id="sYear" fx:id="sYear" prefWidth="100.0" promptText="Year"/>
+                <Separator prefHeight="32.0" prefWidth="100.0" visible="false"/>
+                <TextField id="sRuntime" fx:id="sRuntime" promptText="Run Time"/>
             </children>
         </VBox>
         <VBox layoutX="434.0" layoutY="128.0" prefHeight="200.0" prefWidth="100.0">
             <children>
-                <Button fx:id="btn7" mnemonicParsing="false" onAction="#handleButtonTitle" text="Search" />
-                <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
-                <Button fx:id="btn8" onAction="#handleButtonyear" prefHeight="25.0" prefWidth="52.0" text="Search" />
-                <Separator prefHeight="32.0" prefWidth="200.0" visible="false" />
-                <Button fx:id="btn9" onAction="#handleButtonRuntime" text="Search" />
+                <Button fx:id="btn7" mnemonicParsing="false" onAction="#handleButtonTitle" text="Search"/>
+                <Separator prefHeight="32.0" prefWidth="200.0" visible="false"/>
+                <Button fx:id="btn8" onAction="#handleButtonyear" prefHeight="25.0" prefWidth="52.0" text="Search"/>
+                <Separator prefHeight="32.0" prefWidth="200.0" visible="false"/>
+                <Button fx:id="btn9" onAction="#handleButtonRuntime" text="Search"/>
             </children>
         </VBox>
     </children>

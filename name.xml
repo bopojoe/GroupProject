@@ -3,21 +3,47 @@
     <project.LinkedList>
       <header>
         <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name12</name>
+            <age>22</age>
+            <gender>gender12</gender>
+            <nationality>nationality12</nationality>
+          </data>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
         <outer-class reference="../.."/>
       </header>
-      <size>0</size>
+      <size>1</size>
     </project.LinkedList>
     <project.LinkedList>
       <header>
         <index>0</index>
         <nextDataLink>
           <index>0</index>
-          <data class="project.Movie">
-            <title>title 19</title>
-            <year>1019</year>
-            <runningTime>451</runningTime>
-            <plot>Plot 19</plot>
-            <imgUrl>imgUrl 19</imgUrl>
+          <data class="project.Actor">
+            <name>name11</name>
+            <age>21</age>
+            <gender>gender11</gender>
+            <nationality>nationality11</nationality>
+          </data>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>1</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name10</name>
+            <age>20</age>
+            <gender>gender10</gender>
+            <nationality>nationality10</nationality>
           </data>
           <outer-class reference="../../.."/>
         </nextDataLink>
@@ -42,20 +68,9 @@
     <project.LinkedList>
       <header>
         <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 8</title>
-            <year>1008</year>
-            <runningTime>154</runningTime>
-            <plot>Plot 8</plot>
-            <imgUrl>imgUrl 8</imgUrl>
-          </data>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
         <outer-class reference="../.."/>
       </header>
-      <size>1</size>
+      <size>0</size>
     </project.LinkedList>
     <project.LinkedList>
       <header>
@@ -67,20 +82,23 @@
     <project.LinkedList>
       <header>
         <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 4</title>
-            <year>1004</year>
-            <runningTime>106</runningTime>
-            <plot>Plot 4</plot>
-            <imgUrl>imgUrl 4</imgUrl>
-          </data>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
         <outer-class reference="../.."/>
       </header>
-      <size>1</size>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
     </project.LinkedList>
     <project.LinkedList>
       <header>
@@ -101,69 +119,11 @@
         <index>0</index>
         <nextDataLink>
           <index>0</index>
-          <data class="project.Movie">
-            <title>title 13</title>
-            <year>1013</year>
-            <runningTime>259</runningTime>
-            <plot>Plot 13</plot>
-            <imgUrl>imgUrl 13</imgUrl>
-          </data>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
-        <outer-class reference="../.."/>
-      </header>
-      <size>1</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 11</title>
-            <year>1011</year>
-            <runningTime>211</runningTime>
-            <plot>Plot 11</plot>
-            <imgUrl>imgUrl 11</imgUrl>
-          </data>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
-        <outer-class reference="../.."/>
-      </header>
-      <size>1</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 18</title>
-            <year>1018</year>
-            <runningTime>414</runningTime>
-            <plot>Plot 18</plot>
-            <imgUrl>imgUrl 18</imgUrl>
+          <data class="project.Actor">
+            <name>name29</name>
+            <age>39</age>
+            <gender>gender29</gender>
+            <nationality>nationality29</nationality>
           </data>
           <outer-class reference="../../.."/>
         </nextDataLink>
@@ -176,383 +136,70 @@
         <index>0</index>
         <nextDataLink>
           <index>0</index>
-          <data class="project.Movie">
-            <title>title 5</title>
-            <year>1005</year>
-            <runningTime>115</runningTime>
-            <plot>Plot 5</plot>
-            <imgUrl>imgUrl 5</imgUrl>
+          <data class="project.Actor">
+            <name>name28</name>
+            <age>38</age>
+            <gender>gender28</gender>
+            <nationality>nationality28</nationality>
+          </data>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>1</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name27</name>
+            <age>37</age>
+            <gender>gender27</gender>
+            <nationality>nationality27</nationality>
+          </data>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>1</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name26</name>
+            <age>36</age>
+            <gender>gender26</gender>
+            <nationality>nationality26</nationality>
+          </data>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>1</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name25</name>
+            <age>35</age>
+            <gender>gender25</gender>
+            <nationality>nationality25</nationality>
           </data>
           <nextDataLink>
             <index>0</index>
-            <data class="project.Movie">
-              <title>title 25</title>
-              <year>1025</year>
-              <runningTime>715</runningTime>
-              <plot>Plot 25</plot>
-              <imgUrl>imgUrl 25</imgUrl>
-            </data>
-            <nextDataLink>
-              <index>0</index>
-              <data class="project.Movie">
-                <title>title 15</title>
-                <year>1015</year>
-                <runningTime>315</runningTime>
-                <plot>Plot 15</plot>
-                <imgUrl>imgUrl 15</imgUrl>
-              </data>
-              <outer-class reference="../../../../.."/>
-            </nextDataLink>
-            <outer-class reference="../../../.."/>
-          </nextDataLink>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
-        <outer-class reference="../.."/>
-      </header>
-      <size>3</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 24</title>
-            <year>1024</year>
-            <runningTime>666</runningTime>
-            <plot>Plot 24</plot>
-            <imgUrl>imgUrl 24</imgUrl>
-          </data>
-          <nextDataLink>
-            <index>0</index>
-            <data class="project.Movie">
-              <title>title 26</title>
-              <year>1026</year>
-              <runningTime>766</runningTime>
-              <plot>Plot 26</plot>
-              <imgUrl>imgUrl 26</imgUrl>
-            </data>
-            <outer-class reference="../../../.."/>
-          </nextDataLink>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
-        <outer-class reference="../.."/>
-      </header>
-      <size>2</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 23</title>
-            <year>1023</year>
-            <runningTime>619</runningTime>
-            <plot>Plot 23</plot>
-            <imgUrl>imgUrl 23</imgUrl>
-          </data>
-          <nextDataLink>
-            <index>0</index>
-            <data class="project.Movie">
-              <title>title 27</title>
-              <year>1027</year>
-              <runningTime>819</runningTime>
-              <plot>Plot 27</plot>
-              <imgUrl>imgUrl 27</imgUrl>
-            </data>
-            <outer-class reference="../../../.."/>
-          </nextDataLink>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
-        <outer-class reference="../.."/>
-      </header>
-      <size>2</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 9</title>
-            <year>1009</year>
-            <runningTime>171</runningTime>
-            <plot>Plot 9</plot>
-            <imgUrl>imgUrl 9</imgUrl>
-          </data>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
-        <outer-class reference="../.."/>
-      </header>
-      <size>1</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 22</title>
-            <year>1022</year>
-            <runningTime>574</runningTime>
-            <plot>Plot 22</plot>
-            <imgUrl>imgUrl 22</imgUrl>
-          </data>
-          <nextDataLink>
-            <index>0</index>
-            <data class="project.Movie">
-              <title>title 28</title>
-              <year>1028</year>
-              <runningTime>874</runningTime>
-              <plot>Plot 28</plot>
-              <imgUrl>imgUrl 28</imgUrl>
-            </data>
-            <outer-class reference="../../../.."/>
-          </nextDataLink>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
-        <outer-class reference="../.."/>
-      </header>
-      <size>2</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 6</title>
-            <year>1006</year>
-            <runningTime>126</runningTime>
-            <plot>Plot 6</plot>
-            <imgUrl>imgUrl 6</imgUrl>
-          </data>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
-        <outer-class reference="../.."/>
-      </header>
-      <size>1</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 17</title>
-            <year>1017</year>
-            <runningTime>379</runningTime>
-            <plot>Plot 17</plot>
-            <imgUrl>imgUrl 17</imgUrl>
-          </data>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
-        <outer-class reference="../.."/>
-      </header>
-      <size>1</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 21</title>
-            <year>1021</year>
-            <runningTime>531</runningTime>
-            <plot>Plot 21</plot>
-            <imgUrl>imgUrl 21</imgUrl>
-          </data>
-          <nextDataLink>
-            <index>0</index>
-            <data class="project.Movie">
-              <title>title 29</title>
-              <year>1029</year>
-              <runningTime>931</runningTime>
-              <plot>Plot 29</plot>
-              <imgUrl>imgUrl 29</imgUrl>
-            </data>
-            <outer-class reference="../../../.."/>
-          </nextDataLink>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
-        <outer-class reference="../.."/>
-      </header>
-      <size>2</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 12</title>
-            <year>1012</year>
-            <runningTime>234</runningTime>
-            <plot>Plot 12</plot>
-            <imgUrl>imgUrl 12</imgUrl>
-          </data>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
-        <outer-class reference="../.."/>
-      </header>
-      <size>1</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 14</title>
-            <year>1014</year>
-            <runningTime>286</runningTime>
-            <plot>Plot 14</plot>
-            <imgUrl>imgUrl 14</imgUrl>
-          </data>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
-        <outer-class reference="../.."/>
-      </header>
-      <size>1</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 7</title>
-            <year>1007</year>
-            <runningTime>139</runningTime>
-            <plot>Plot 7</plot>
-            <imgUrl>imgUrl 7</imgUrl>
-          </data>
-          <outer-class reference="../../.."/>
-        </nextDataLink>
-        <outer-class reference="../.."/>
-      </header>
-      <size>1</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <nextDataLink>
-          <index>0</index>
-          <data class="project.Movie">
-            <title>title 10</title>
-            <year>1010</year>
-            <runningTime>190</runningTime>
-            <plot>Plot 10</plot>
-            <imgUrl>imgUrl 10</imgUrl>
-          </data>
-          <nextDataLink>
-            <index>0</index>
-            <data class="project.Movie">
-              <title>title 20</title>
-              <year>1020</year>
-              <runningTime>490</runningTime>
-              <plot>Plot 20</plot>
-              <imgUrl>imgUrl 20</imgUrl>
+            <data class="project.Actor">
+              <name>name1</name>
+              <age>11</age>
+              <gender>gender1</gender>
+              <nationality>nationality1</nationality>
             </data>
             <outer-class reference="../../../.."/>
           </nextDataLink>
@@ -567,12 +214,180 @@
         <index>0</index>
         <nextDataLink>
           <index>0</index>
-          <data class="project.Movie">
-            <title>title 1</title>
-            <year>1001</year>
-            <runningTime>91</runningTime>
-            <plot>Plot 1</plot>
-            <imgUrl>imgUrl 1</imgUrl>
+          <data class="project.Actor">
+            <name>name2</name>
+            <age>12</age>
+            <gender>gender2</gender>
+            <nationality>nationality2</nationality>
+          </data>
+          <nextDataLink>
+            <index>0</index>
+            <data class="project.Actor">
+              <name>name24</name>
+              <age>34</age>
+              <gender>gender24</gender>
+              <nationality>nationality24</nationality>
+            </data>
+            <outer-class reference="../../../.."/>
+          </nextDataLink>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>2</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name3</name>
+            <age>13</age>
+            <gender>gender3</gender>
+            <nationality>nationality3</nationality>
+          </data>
+          <nextDataLink>
+            <index>0</index>
+            <data class="project.Actor">
+              <name>name23</name>
+              <age>33</age>
+              <gender>gender23</gender>
+              <nationality>nationality23</nationality>
+            </data>
+            <outer-class reference="../../../.."/>
+          </nextDataLink>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>2</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name4</name>
+            <age>14</age>
+            <gender>gender4</gender>
+            <nationality>nationality4</nationality>
+          </data>
+          <nextDataLink>
+            <index>0</index>
+            <data class="project.Actor">
+              <name>name22</name>
+              <age>32</age>
+              <gender>gender22</gender>
+              <nationality>nationality22</nationality>
+            </data>
+            <outer-class reference="../../../.."/>
+          </nextDataLink>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>2</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name5</name>
+            <age>15</age>
+            <gender>gender5</gender>
+            <nationality>nationality5</nationality>
+          </data>
+          <nextDataLink>
+            <index>0</index>
+            <data class="project.Actor">
+              <name>name21</name>
+              <age>31</age>
+              <gender>gender21</gender>
+              <nationality>nationality21</nationality>
+            </data>
+            <outer-class reference="../../../.."/>
+          </nextDataLink>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>2</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name6</name>
+            <age>16</age>
+            <gender>gender6</gender>
+            <nationality>nationality6</nationality>
+          </data>
+          <nextDataLink>
+            <index>0</index>
+            <data class="project.Actor">
+              <name>name20</name>
+              <age>30</age>
+              <gender>gender20</gender>
+              <nationality>nationality20</nationality>
+            </data>
+            <outer-class reference="../../../.."/>
+          </nextDataLink>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>2</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name7</name>
+            <age>17</age>
+            <gender>gender7</gender>
+            <nationality>nationality7</nationality>
+          </data>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>1</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name8</name>
+            <age>18</age>
+            <gender>gender8</gender>
+            <nationality>nationality8</nationality>
+          </data>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>1</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name9</name>
+            <age>19</age>
+            <gender>gender9</gender>
+            <nationality>nationality9</nationality>
           </data>
           <outer-class reference="../../.."/>
         </nextDataLink>
@@ -597,14 +412,125 @@
     <project.LinkedList>
       <header>
         <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <outer-class reference="../.."/>
+      </header>
+      <size>0</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
         <nextDataLink>
           <index>0</index>
-          <data class="project.Movie">
-            <title>title 2</title>
-            <year>1002</year>
-            <runningTime>94</runningTime>
-            <plot>Plot 2</plot>
-            <imgUrl>imgUrl 2</imgUrl>
+          <data class="project.Actor">
+            <name>name19</name>
+            <age>29</age>
+            <gender>gender19</gender>
+            <nationality>nationality19</nationality>
           </data>
           <outer-class reference="../../.."/>
         </nextDataLink>
@@ -615,21 +541,13 @@
     <project.LinkedList>
       <header>
         <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
         <nextDataLink>
           <index>0</index>
-          <data class="project.Movie">
-            <title>title 16</title>
-            <year>1016</year>
-            <runningTime>346</runningTime>
-            <plot>Plot 16</plot>
-            <imgUrl>imgUrl 16</imgUrl>
+          <data class="project.Actor">
+            <name>name18</name>
+            <age>28</age>
+            <gender>gender18</gender>
+            <nationality>nationality18</nationality>
           </data>
           <outer-class reference="../../.."/>
         </nextDataLink>
@@ -640,28 +558,81 @@
     <project.LinkedList>
       <header>
         <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name17</name>
+            <age>27</age>
+            <gender>gender17</gender>
+            <nationality>nationality17</nationality>
+          </data>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
         <outer-class reference="../.."/>
       </header>
-      <size>0</size>
-    </project.LinkedList>
-    <project.LinkedList>
-      <header>
-        <index>0</index>
-        <outer-class reference="../.."/>
-      </header>
-      <size>0</size>
+      <size>1</size>
     </project.LinkedList>
     <project.LinkedList>
       <header>
         <index>0</index>
         <nextDataLink>
           <index>0</index>
-          <data class="project.Movie">
-            <title>title 3</title>
-            <year>1003</year>
-            <runningTime>99</runningTime>
-            <plot>Plot 3</plot>
-            <imgUrl>imgUrl 3</imgUrl>
+          <data class="project.Actor">
+            <name>name16</name>
+            <age>26</age>
+            <gender>gender16</gender>
+            <nationality>nationality16</nationality>
+          </data>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>1</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name15</name>
+            <age>25</age>
+            <gender>gender15</gender>
+            <nationality>nationality15</nationality>
+          </data>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>1</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name14</name>
+            <age>24</age>
+            <gender>gender14</gender>
+            <nationality>nationality14</nationality>
+          </data>
+          <outer-class reference="../../.."/>
+        </nextDataLink>
+        <outer-class reference="../.."/>
+      </header>
+      <size>1</size>
+    </project.LinkedList>
+    <project.LinkedList>
+      <header>
+        <index>0</index>
+        <nextDataLink>
+          <index>0</index>
+          <data class="project.Actor">
+            <name>name13</name>
+            <age>23</age>
+            <gender>gender13</gender>
+            <nationality>nationality13</nationality>
           </data>
           <outer-class reference="../../.."/>
         </nextDataLink>

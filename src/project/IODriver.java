@@ -20,11 +20,11 @@ public class IODriver {
       try{
         MovieList.load();
         } catch (Exception e)
-        {System.out.println("Error loading Movie lists");}
+        {System.out.println(e);}
         try{
             ActorList.load();
         } catch (Exception e)
-        {System.out.println("Error loading Actor lists");}
+        {System.out.println(e);}
 
         fillArray(49);
         setupAdditions(30);
@@ -295,7 +295,7 @@ public class IODriver {
             return location;}
 
 
-            //System.out.println(head.nextDataLink.data.toString());
+
             head = head.nextDataLink;
         }
         return null;

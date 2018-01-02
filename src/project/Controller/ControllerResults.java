@@ -37,7 +37,7 @@ public class ControllerResults implements Initializable {
     @FXML
     private Button btn2;
     @FXML
-    private Label year1, runtime1, plot1, url1, mTitle1, name1 ,age1, gender1, nationality1;
+    private Label year1, runtime1, plot1, url1, mTitle1, name1, age1, gender1, nationality1;
     @FXML
     private TextField year2, runtime2, plot2, url2, mTitle2, sName, sAge, sGender, sNationality;
 
@@ -57,20 +57,21 @@ public class ControllerResults implements Initializable {
 
     @FXML
     private void handleButtonChange(ActionEvent event) throws IOException {
-       Movie movie = ControllerSearchMovie.savedMovie;
-       MovieList.removeMovie(movie);
+        Movie movie = ControllerSearchMovie.savedMovie;
+        MovieList.removeMovie(movie);
         String title = this.mTitle2.getText();
         int year = Integer.parseInt(this.year2.getText());
         int runtime = Integer.parseInt(this.runtime2.getText());
         String plot = this.plot2.getText();
         String url = this.url2.getText();
         MovieList.addMovie(title, year, runtime, plot, url);
-        try{
-            MovieList.save();}catch (Exception e){
+        try {
+            MovieList.save();
+        } catch (Exception e) {
             System.out.println("Error writing to file: " + e);
         }
         ControllerSearchMovie.savedMovie = null;
-            System.out.println(ControllerSearchMovie.savedMovie);
+        System.out.println(ControllerSearchMovie.savedMovie);
         Stage stage = (Stage) changeBtn.getScene().getWindow();
         // do what you have to do
         stage.close();
@@ -85,9 +86,10 @@ public class ControllerResults implements Initializable {
         int age = Integer.parseInt(this.sAge.getText());
         String gender = this.sGender.getText();
         String nat = this.sNationality.getText();
-        ActorList.addActor(name,age,gender,nat);
-        try{
-            ActorList.save();}catch (Exception e){
+        ActorList.addActor(name, age, gender, nat);
+        try {
+            ActorList.save();
+        } catch (Exception e) {
             System.out.println("Error writing to file: " + e);
         }
         ControllerSearchActor.savedActor = null;
@@ -97,7 +99,7 @@ public class ControllerResults implements Initializable {
 
     }
 
-    public void handle(ActionEvent event){
+    public void handle(ActionEvent event) {
 
     }
 
@@ -105,14 +107,13 @@ public class ControllerResults implements Initializable {
     private void handleButtonAction(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-        if(event.getSource()==btn1){
+        if (event.getSource() == btn1) {
             //get reference to the button's stage
-            stage=(Stage) btn1.getScene().getWindow();
+            stage = (Stage) btn1.getScene().getWindow();
             //load up OTHER FXML document
             root = FXMLLoader.load(getClass().getResource("../View/SearchActor.fxml"));
-        }
-        else{
-            stage=(Stage) btn2.getScene().getWindow();
+        } else {
+            stage = (Stage) btn2.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("../View/SearchMovie.fxml"));
         }
         Scene scene = new Scene(root);
@@ -125,8 +126,9 @@ public class ControllerResults implements Initializable {
     private void handleActorDelete(ActionEvent event) throws IOException {
         Actor actor = ControllerSearchActor.savedActor;
         ActorList.removeActor(actor);
-        try{
-            ActorList.save();}catch (Exception e){
+        try {
+            ActorList.save();
+        } catch (Exception e) {
             System.out.println("Error writing to file: " + e);
         }
         ControllerSearchActor.savedActor = null;
@@ -139,8 +141,9 @@ public class ControllerResults implements Initializable {
     private void handleMovieDelete(ActionEvent event) throws IOException {
         Movie movie = ControllerSearchMovie.savedMovie;
         MovieList.removeMovie(movie);
-        try{
-        MovieList.save();}catch (Exception e){
+        try {
+            MovieList.save();
+        } catch (Exception e) {
             System.out.println("Error writing to file: " + e);
         }
         ControllerSearchMovie.savedMovie = null;
@@ -151,51 +154,54 @@ public class ControllerResults implements Initializable {
     }
 
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         boolean test = false;
 
-            if (ControllerSearchMovie.savedMovie != null) {
+        if (ControllerSearchMovie.savedMovie != null) {
 
-                String runt = Integer.toString(ControllerSearchMovie.savedMovie.getRunningTime());
-                String year = Integer.toString(ControllerSearchMovie.savedMovie.getYear());
-                String title = ControllerSearchMovie.savedMovie.getTitle();
-                String plot = ControllerSearchMovie.savedMovie.getPlot();
-                String url = ControllerSearchMovie.savedMovie.getImgUrl();
-                try{
+            String runt = Integer.toString(ControllerSearchMovie.savedMovie.getRunningTime());
+            String year = Integer.toString(ControllerSearchMovie.savedMovie.getYear());
+            String title = ControllerSearchMovie.savedMovie.getTitle();
+            String plot = ControllerSearchMovie.savedMovie.getPlot();
+            String url = ControllerSearchMovie.savedMovie.getImgUrl();
+            try {
                 mTitle1.setText(title);
                 plot1.setText(plot);
                 url1.setText(url);
                 year1.setText(year);
                 runtime1.setText(runt);
-            } catch (NullPointerException e) {test = true;}
-                if (test){
-
-                    mTitle2.setText(title);
-                    plot2.setText(plot);
-                    url2.setText(url);
-                    year2.setText(year);
-                    runtime2.setText(runt);
-                }
-            } else {
-                String name = ControllerSearchActor.savedActor.getName();
-                String age = Integer.toString(ControllerSearchActor.savedActor.getAge());
-                String gender = ControllerSearchActor.savedActor.getGender();
-                String nationality = ControllerSearchActor.savedActor.getNationality();
-                try {
-                    name1.setText(name);
-                    age1.setText(age);
-                    gender1.setText(gender);
-                    nationality1.setText(nationality);
-                }catch (NullPointerException e) {test = true;}
-                if (test) {
-                    sName.setText(name);
-                    sAge.setText(age);
-                    sGender.setText(gender);
-                    sNationality.setText(nationality);
-                }
+            } catch (NullPointerException e) {
+                test = true;
             }
+            if (test) {
+
+                mTitle2.setText(title);
+                plot2.setText(plot);
+                url2.setText(url);
+                year2.setText(year);
+                runtime2.setText(runt);
+            }
+        } else {
+            String name = ControllerSearchActor.savedActor.getName();
+            String age = Integer.toString(ControllerSearchActor.savedActor.getAge());
+            String gender = ControllerSearchActor.savedActor.getGender();
+            String nationality = ControllerSearchActor.savedActor.getNationality();
+            try {
+                name1.setText(name);
+                age1.setText(age);
+                gender1.setText(gender);
+                nationality1.setText(nationality);
+            } catch (NullPointerException e) {
+                test = true;
+            }
+            if (test) {
+                sName.setText(name);
+                sAge.setText(age);
+                sGender.setText(gender);
+                sNationality.setText(nationality);
+            }
+        }
 
     }
 }

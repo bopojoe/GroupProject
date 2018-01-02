@@ -82,18 +82,24 @@ public class ControllerSearchActor {
         String name;
         if (sName != null) {
             name = sName.getText();
-                    LinkedList<Actor> returnedActorList = IODriver.nameSearch(name);
-            LinkedList.DataLink head =null;
+            LinkedList<Actor> returnedActorList = IODriver.nameSearch(name);
+            LinkedList.DataLink head = null;
             boolean test = true;
-            try{
-                head = returnedActorList.header;}catch (NullPointerException e){test = false;}
-            if(test){
-                multiList(head);}else{System.out.println("Search did not return a movie.");}
+            try {
+                head = returnedActorList.header;
+            } catch (NullPointerException e) {
+                test = false;
+            }
+            if (test) {
+                multiList(head);
+            } else {
+                System.out.println("Search did not return a movie.");
+            }
         } else {
-                    System.out.println("Please Enter a valid search for name");
-                }
-
+            System.out.println("Please Enter a valid search for name");
         }
+
+    }
 
 
     @FXML
@@ -105,12 +111,18 @@ public class ControllerSearchActor {
                 age = Integer.parseInt(sAge.getText());
                 if (age != 0) {
                     LinkedList<Actor> returnedActorList = IODriver.ageSearch(age);
-                    LinkedList.DataLink head =null;
+                    LinkedList.DataLink head = null;
                     boolean test = true;
-                    try{
-                        head = returnedActorList.header;}catch (NullPointerException e){test = false;}
-                    if(test){
-                        multiList(head);}else{System.out.println("Search did not return a movie.");}
+                    try {
+                        head = returnedActorList.header;
+                    } catch (NullPointerException e) {
+                        test = false;
+                    }
+                    if (test) {
+                        multiList(head);
+                    } else {
+                        System.out.println("Search did not return a movie.");
+                    }
                 } else {
                     System.out.println("Please Enter a number for year ie. 1998");
                 }
@@ -127,12 +139,18 @@ public class ControllerSearchActor {
         if (sGender != null) {
             gender = sGender.getText();
             LinkedList<Actor> returnedActorList = IODriver.genderSearch(gender);
-            LinkedList.DataLink head =null;
+            LinkedList.DataLink head = null;
             boolean test = true;
-            try{
-                head = returnedActorList.header;}catch (NullPointerException e){test = false;}
-            if(test){
-                multiList(head);}else{System.out.println("Search did not return a movie.");}
+            try {
+                head = returnedActorList.header;
+            } catch (NullPointerException e) {
+                test = false;
+            }
+            if (test) {
+                multiList(head);
+            } else {
+                System.out.println("Search did not return a movie.");
+            }
         } else {
             System.out.println("Please Enter a valid search for gender");
         }
@@ -145,12 +163,18 @@ public class ControllerSearchActor {
         if (sNationality != null) {
             nat = sNationality.getText();
             LinkedList<Actor> returnedActorList = IODriver.natSearch(nat);
-            LinkedList.DataLink head =null;
+            LinkedList.DataLink head = null;
             boolean test = true;
-            try{
-                head = returnedActorList.header;}catch (NullPointerException e){test = false;}
-            if(test){
-                multiList(head);}else{System.out.println("Search did not return a movie.");}
+            try {
+                head = returnedActorList.header;
+            } catch (NullPointerException e) {
+                test = false;
+            }
+            if (test) {
+                multiList(head);
+            } else {
+                System.out.println("Search did not return a movie.");
+            }
         } else {
             System.out.println("Please Enter a valid search for nationality");
         }
@@ -159,8 +183,8 @@ public class ControllerSearchActor {
 
 
     private void multiList(LinkedList.DataLink data) throws IOException {
-        while(data.nextDataLink!=null){
-            savedActor = (Actor)data.nextDataLink.data;
+        while (data.nextDataLink != null) {
+            savedActor = (Actor) data.nextDataLink.data;
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../View/ActorResultsPage.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
@@ -173,8 +197,8 @@ public class ControllerSearchActor {
     }
 
     private void multiListEdit(LinkedList.DataLink data) throws IOException {
-        while(data.nextDataLink!=null){
-            savedActor = (Actor)data.nextDataLink.data;
+        while (data.nextDataLink != null) {
+            savedActor = (Actor) data.nextDataLink.data;
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../View/EditActorResult.fxml"));
             Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
@@ -187,19 +211,24 @@ public class ControllerSearchActor {
     }
 
 
-
     @FXML
     private void handleButtonName(ActionEvent event) throws IOException {
         String name;
         if (sName != null) {
             name = sName.getText();
             LinkedList<Actor> returnedActorList = IODriver.nameSearch(name);
-            LinkedList.DataLink head =null;
+            LinkedList.DataLink head = null;
             boolean test = true;
-            try{
-                head = returnedActorList.header;}catch (NullPointerException e){test = false;}
-            if(test){
-                multiListEdit(head);}else{System.out.println("Search did not return a movie.");}
+            try {
+                head = returnedActorList.header;
+            } catch (NullPointerException e) {
+                test = false;
+            }
+            if (test) {
+                multiListEdit(head);
+            } else {
+                System.out.println("Search did not return a movie.");
+            }
         } else {
             System.out.println("Please Enter a valid search for name");
         }
@@ -216,12 +245,18 @@ public class ControllerSearchActor {
                 age = Integer.parseInt(sAge.getText());
                 if (age != 0) {
                     LinkedList<Actor> returnedActorList = IODriver.ageSearch(age);
-                    LinkedList.DataLink head =null;
+                    LinkedList.DataLink head = null;
                     boolean test = true;
-                    try{
-                        head = returnedActorList.header;}catch (NullPointerException e){test = false;}
-                    if(test){
-                        multiListEdit(head);}else{System.out.println("Search did not return a movie.");}
+                    try {
+                        head = returnedActorList.header;
+                    } catch (NullPointerException e) {
+                        test = false;
+                    }
+                    if (test) {
+                        multiListEdit(head);
+                    } else {
+                        System.out.println("Search did not return a movie.");
+                    }
                 } else {
                     System.out.println("Please Enter a number for year ie. 1998");
                 }
@@ -239,12 +274,18 @@ public class ControllerSearchActor {
         if (sGender != null) {
             gender = sGender.getText();
             LinkedList<Actor> returnedActorList = IODriver.genderSearch(gender);
-            LinkedList.DataLink head =null;
+            LinkedList.DataLink head = null;
             boolean test = true;
-            try{
-                head = returnedActorList.header;}catch (NullPointerException e){test = false;}
-            if(test){
-                multiListEdit(head);}else{System.out.println("Search did not return a movie.");}
+            try {
+                head = returnedActorList.header;
+            } catch (NullPointerException e) {
+                test = false;
+            }
+            if (test) {
+                multiListEdit(head);
+            } else {
+                System.out.println("Search did not return a movie.");
+            }
         } else {
             System.out.println("Please Enter a valid search for gender");
         }
@@ -258,12 +299,18 @@ public class ControllerSearchActor {
         if (sNationality != null) {
             nat = sNationality.getText();
             LinkedList<Actor> returnedActorList = IODriver.natSearch(nat);
-            LinkedList.DataLink head =null;
+            LinkedList.DataLink head = null;
             boolean test = true;
-            try{
-                head = returnedActorList.header;}catch (NullPointerException e){test = false;}
-            if(test){
-                multiListEdit(head);}else{System.out.println("Search did not return a movie.");}
+            try {
+                head = returnedActorList.header;
+            } catch (NullPointerException e) {
+                test = false;
+            }
+            if (test) {
+                multiListEdit(head);
+            } else {
+                System.out.println("Search did not return a movie.");
+            }
         } else {
             System.out.println("Please Enter a valid search for nationality");
         }

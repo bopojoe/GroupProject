@@ -9,9 +9,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 
-public class ControllerAdd{
+public class ControllerAdd {
 
     @FXML
     private Label exit;
@@ -34,7 +35,7 @@ public class ControllerAdd{
         }
     }
 
-    public void handle(ActionEvent event){
+    public void handle(ActionEvent event) {
 
     }
 
@@ -42,28 +43,25 @@ public class ControllerAdd{
     private void handleButtonAction(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-        if(event.getSource()==btn1){
+        if (event.getSource() == btn1) {
             //get reference to the button's stage
-            stage=(Stage) btn1.getScene().getWindow();
+            stage = (Stage) btn1.getScene().getWindow();
             //load up OTHER FXML document
             root = FXMLLoader.load(getClass().getResource("../View/AddMovie.fxml"));
-        }
-        else{
-            stage=(Stage) btn2.getScene().getWindow();
+        } else {
+            stage = (Stage) btn2.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("../View/AddActor.fxml"));
         }
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
     private void handleButtonActorMovie(ActionEvent event) throws IOException {
 
 
-
     }
-
-
 
 
 }

@@ -32,8 +32,6 @@ public class ControllerAddMovie {
     private TextField mTitle;
 
 
-
-
     @FXML
     private Button btn1;
     @FXML
@@ -52,7 +50,7 @@ public class ControllerAddMovie {
         }
     }
 
-    public void handle(ActionEvent event){
+    public void handle(ActionEvent event) {
 
     }
 
@@ -60,29 +58,29 @@ public class ControllerAddMovie {
     private void handleButtonAction(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-        if(event.getSource().equals(btn1)){
+        if (event.getSource().equals(btn1)) {
             //get reference to the button's stage
-            stage=(Stage) btn1.getScene().getWindow();
+            stage = (Stage) btn1.getScene().getWindow();
             //load up OTHER FXML document
             root = FXMLLoader.load(getClass().getResource("../View/Add-Search-Modify.fxml"));
-        }
-        else{
-            stage=(Stage) btn2.getScene().getWindow();
+        } else {
+            stage = (Stage) btn2.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("../View/Search.fxml"));
         }
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
 
-        if(mTitle.getText() != null){
+        if (mTitle.getText() != null) {
             String title = this.mTitle.getText();
             int year = Integer.parseInt(this.year.getText());
             int runtime = Integer.parseInt(this.runtime.getText());
             String plot = this.plot.getText();
             String url = this.url.getText();
             MovieList.addMovie(title, year, runtime, plot, url);
-            try{
-                MovieList.save();}catch (Exception e){
+            try {
+                MovieList.save();
+            } catch (Exception e) {
                 System.out.println("Error writing to file: " + e);
             }
 

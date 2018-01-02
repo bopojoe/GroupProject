@@ -15,8 +15,6 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 
-
-
 public class Main extends Application {
 
     private double xOffset = 0;
@@ -82,12 +80,6 @@ public class Main extends Application {
         }
         return parsable;
     }
-
-
-
-
-
-
 
 
     public static void main(String[] args) {
