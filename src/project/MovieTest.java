@@ -25,7 +25,7 @@ public class MovieTest {
     }
 
     /**
-     * Test the contsructor
+     * Test the constructor
      */
 
     @Test

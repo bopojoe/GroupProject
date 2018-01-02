@@ -32,8 +32,6 @@ public class Main extends Application {
 
 
         Parent root = FXMLLoader.load(getClass().getResource("View/Start.fxml"));
-        // stage.initStyle(StageStyle.UNIFIED);
-        // stage.initStyle(StageStyle.TRANSPARENT);
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -61,24 +59,16 @@ public class Main extends Application {
 
     }
 
-/*    public void ButtonClicked(ActionEvent e) {
-        if (e.getSource() == btnScene0)
-            stage.setScene(scene0);
-        else if (e.getSource() == btnScene1)
-            stage.setScene(scene1);
-        else
-            stage.setScene(scene2);
-    }*/
-
+    // check to see if the string inputted was parseable to int
     public static boolean parseCheck(String V) {
 
-        boolean parsable = true;
+        boolean parseable = true;
         try {
             Integer.parseInt(V);
         } catch (NumberFormatException e) {
-            parsable = false;
+            parseable = false;
         }
-        return parsable;
+        return parseable;
     }
 
 

@@ -36,7 +36,7 @@ public class ActorTest {
     }
 
     /**
-     * Test the contsructor
+     * Test the constructor
      */
 
     @Test

@@ -17,14 +17,16 @@ public class IODriver {
         input = new Scanner(System.in);
         test = new MovieList();
         testA = new ActorList();
-      try{
-        MovieList.load();
-        } catch (Exception e)
-        {System.out.println("Error loading Movie lists");}
-        try{
+        try {
+            MovieList.load();
+        } catch (Exception e) {
+            System.out.println("Error loading Movie lists");
+        }
+        try {
             ActorList.load();
-        } catch (Exception e)
-        {System.out.println("Error loading Actor lists");}
+        } catch (Exception e) {
+            System.out.println("Error loading Actor lists");
+        }
 
         fillArray(49);
         setupAdditions(30);
@@ -33,6 +35,9 @@ public class IODriver {
 
 
     }
+
+    //input output driver before javafx
+/*
 
     public static void test(LinkedList<Movie>[] list){
         int i = 0;
@@ -178,19 +183,7 @@ public class IODriver {
 
     }
 
-    protected void fillArray(int amount){
 
-        for (int i = 0; i <= amount; i++) {
-            MovieList.runtimeHashlist[i] = new LinkedList<>();
-            MovieList.yearHashlist[i] = new LinkedList<>();
-            MovieList.titleHashlist[i] = new LinkedList<>();
-            ActorList.nameHashlist[i] = new LinkedList<>();
-            ActorList.ageHashlist[i] = new LinkedList<>();
-            ActorList.genderHashlist[i] = new LinkedList<>();
-            ActorList.natHashlist[i] = new LinkedList<>();
-        }
-
-    }
 
     private void addMovie() {
         input.nextLine();
@@ -281,140 +274,224 @@ public class IODriver {
 
     }
 
+*/
+
+    //for first run to fill array with linked lists in case of no xml files
+    protected void fillArray(int amount) {
+
+        for (int i = 0; i <= amount; i++) {
+            MovieList.runtimeHashlist[i] = new LinkedList<>();
+            MovieList.yearHashlist[i] = new LinkedList<>();
+            MovieList.titleHashlist[i] = new LinkedList<>();
+            ActorList.nameHashlist[i] = new LinkedList<>();
+            ActorList.ageHashlist[i] = new LinkedList<>();
+            ActorList.genderHashlist[i] = new LinkedList<>();
+            ActorList.natHashlist[i] = new LinkedList<>();
+        }
+
+    }
+
+    //method for searching the runtime hashed list for movie requested
     public static LinkedList<Movie> runtimeSearch(int runtime) {
+        //hashes the input
         int hash = runtime % MovieList.runtimeHashlist.length;
+        //finds the location of the movie
         LinkedList<Movie> location = MovieList.runtimeHashlist[hash];
+        //sets the head of the list to head of hashed location
         LinkedList.DataLink head = location.header;
 
 
         while (head.nextDataLink != null) {
+            //runs until next data link is null and gets each movie
             Movie movie = (Movie) head.nextDataLink.data;
 
+            //checks the runtime of the movie to inputted runtime
+            if (movie.getRunningTime() == runtime) {
+                //if it's the same it returns the movie
+                return location;
+            }
 
-            if(movie.getRunningTime() == runtime){
-            return location;}
 
-
-
+            //or moves to next link
             head = head.nextDataLink;
         }
+        //returns null if the list does not match input
         return null;
 
 
     }
 
+    //method for searching the year hashed list for movie requested
     public static LinkedList<Movie> yearSearch(int year) {
+        //hashes the input
         int hash = year % MovieList.yearHashlist.length;
+        //finds the location of the movie
         LinkedList<Movie> location = MovieList.yearHashlist[hash];
+        //sets the head of the list to head of hashed location
         LinkedList.DataLink head = location.header;
 
 
         while (head.nextDataLink != null) {
+            //runs until next data link is null and gets each movie
             Movie movie = (Movie) head.nextDataLink.data;
-            if (movie.getYear() == year){
+            //checks the year of the movie to inputted year
+            if (movie.getYear() == year) {
+                //if it's the same it returns the movie
                 return location;
-        }else{
-            head = head.nextDataLink;
+                //or moves to next link
+            } else {
+                head = head.nextDataLink;
+            }
         }
+        //returns null if the list does not match input
+        return null;
+
+
     }
-            return null;
 
-
-}
-
-    public static LinkedList<Movie> titleSearch(String title){
+    //method for searching the title hashed list for movie requested
+    public static LinkedList<Movie> titleSearch(String title) {
+        //sets title to lower case
         String title1 = title.toLowerCase();
-        int hash = Math.abs(title1.hashCode()) %MovieList.titleHashlist.length;
+        //hashes lower cased title
+        int hash = Math.abs(title1.hashCode()) % MovieList.titleHashlist.length;
+        //finds the location of the linked list
         LinkedList<Movie> location = MovieList.titleHashlist[hash];
+        //sets the head to the head of the linked list
         LinkedList.DataLink head = location.header;
 
 
-        while(head.nextDataLink!=null){
-            Movie movie = (Movie)head.nextDataLink.data;
-            if(movie.getTitle().toLowerCase().equals(title.toLowerCase())){
-            return location;}else{
-            head = head.nextDataLink;}
+        while (head.nextDataLink != null) {
+            //runs until next data link is null and gets each movie
+            Movie movie = (Movie) head.nextDataLink.data;
+            //checks the title of the movie to inputted title
+            if (movie.getTitle().toLowerCase().equals(title.toLowerCase())) {
+                //if it's the same it returns the movie
+                return location;
+                //or moves to next link
+            } else {
+                head = head.nextDataLink;
+            }
         }
-            return null;
+        //returns null if the list does not match input
+        return null;
 
     }
 
 
-
+    //method for searching the name hashed list for actor requested
     public static LinkedList<Actor> nameSearch(String name) {
+        //sets name to lower case
         String hname = name.toLowerCase();
+        //hashes the lower cased name
         int hash = Math.abs(hname.hashCode()) % ActorList.nameHashlist.length;
+        //finds the location of the linked list
         LinkedList<Actor> location = ActorList.nameHashlist[hash];
+        //sets the head to the head of the linked list
         LinkedList.DataLink head = location.header;
 
 
         while (head.nextDataLink != null) {
+            //runs until next data link is null and gets each Actor
             Actor actor = (Actor) head.nextDataLink.data;
-            if (actor.getName().toLowerCase().equals(hname)){
+            //checks the name of the actor to inputted name
+            if (actor.getName().toLowerCase().equals(hname)) {
+                //if it's the same it returns the actor
                 return location;
-            }else{
+                //or moves to next link
+            } else {
                 head = head.nextDataLink;
             }
         }
+        //returns null if the list does not match input
         return null;
 
 
     }
 
+    //method for searching the age hashed list for actor requested
     public static LinkedList<Actor> ageSearch(int age) {
+        //hashes the age
         int hash = age % ActorList.ageHashlist.length;
+        //finds the hashed location in the array
         LinkedList<Actor> location = ActorList.ageHashlist[hash];
+        //makes head the head of the linked list
         LinkedList.DataLink head = location.header;
 
 
         while (head.nextDataLink != null) {
+            //runs until next data link is null and gets each Actor
             Actor actor = (Actor) head.nextDataLink.data;
-            if (actor.getAge() == age){
+            //checks the age of the actor to inputted age
+            if (actor.getAge() == age) {
+                //if it's the same it returns the actor list
                 return location;
-            }else{
+            } else {
+                //or it moves on in the list
                 head = head.nextDataLink;
             }
         }
+        //if none match it returns null
         return null;
 
 
     }
 
+    //method for searching the gender hashed list for actor requested
     public static LinkedList<Actor> genderSearch(String gender) {
+        //sets gender to lower case
         String hGender = gender.toLowerCase();
+        //hashes the gender
         int hash = Math.abs(hGender.hashCode()) % ActorList.genderHashlist.length;
+        //finds the location of the actor
         LinkedList<Actor> location = ActorList.genderHashlist[hash];
+        //sets head to head of linked list
         LinkedList.DataLink head = location.header;
 
 
         while (head.nextDataLink != null) {
+            //runs until next data link is null and gets each Actor
             Actor actor = (Actor) head.nextDataLink.data;
-            if (actor.getGender().toLowerCase().equals(hGender)){
+            //checks the age of the actor to inputted gender
+            if (actor.getGender().toLowerCase().equals(hGender)) {
+                //returns the location
                 return location;
-            }else{
+                //or moves on in the list
+            } else {
                 head = head.nextDataLink;
             }
         }
+        // returns null if none match
         return null;
 
 
     }
 
+    //method for searching the Nationality hashed list for actor requested
     public static LinkedList<Actor> natSearch(String nat) {
+        //sets nat to lower case
         String hNat = nat.toLowerCase();
+        //hashes the lower cased nat
         int hash = Math.abs(hNat.hashCode()) % ActorList.natHashlist.length;
+        //finds the location that it should have been hashed to
         LinkedList<Actor> location = ActorList.natHashlist[hash];
+        //sets head to head of the linked list
         LinkedList.DataLink head = location.header;
 
 
         while (head.nextDataLink != null) {
+            //runs until next data link is null and gets each Actor
             Actor actor = (Actor) head.nextDataLink.data;
-            if (actor.getNationality().toLowerCase().equals(hNat)){
+            //checks for a match
+            if (actor.getNationality().toLowerCase().equals(hNat)) {
+                //if it matches, return the location
                 return location;
-            }else{
+                //or else move on
+            } else {
                 head = head.nextDataLink;
             }
         }
+        //if no match return null
         return null;
 
 
@@ -422,24 +499,13 @@ public class IODriver {
 
 
     /**
-     * messy system to add loads of test stuff
-     *
+     * messy system to add loads of generic stuff
      */
-   /* private void addMoviehelper(String title, int year,int runningTime,String plot,String imgUrl){
-        LinkedList<Movie> listAtIndex = MovieList.hashlist[runningTime];
 
-        listAtIndex.add(new Movie(title, year,runningTime,plot,imgUrl));
-
-        LinkedList<Movie> hashedList = MovieList.hashlist[hash];
-        hashedList.add(newMovie);
+    protected void setupAdditions(int amount) {
 
 
-    }
-*/
-    protected void setupAdditions(int amount){
-
-
-        for (int i = 1; i!= amount; i++){
+        for (int i = 1; i != amount; i++) {
             int runTime = ((i * i) + 90);
             MovieList.addMovie("title " + i, i + 1000, runTime, "Plot " + i, "imgUrl " + i);
             ActorList.addActor("name" + i, i + 10, "gender" + i, "nationality" + i);
@@ -448,7 +514,6 @@ public class IODriver {
         }
 
     }
-
 
 
 }
