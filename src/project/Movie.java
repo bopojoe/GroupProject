@@ -15,7 +15,7 @@ public class Movie {
     private String imgUrl;
     private LinkedList<Actor> actors;
 
-
+    //movie constructor
     public Movie(String title, int year, int runningTime, String plot, String imgUrl) {
         this.title = title;
         this.year = year;
