@@ -10,3 +10,5 @@ IODriver main class(Initially for testing) and a Gui version for the finished pr
 There is a hardcoded version of the data that crudely creates test data for testing 
 
 and also an xml stream system that can read in the data from XML files and also export the data for persistence.
+
+This was really fun to make.
